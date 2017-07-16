@@ -4,6 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import 'whatwg-fetch'
+
+require('./assets/styles/basscss.min.css')
+require('./assets/styles/basic.css')
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
