@@ -1,5 +1,5 @@
 <template>
-  <div class="p3 bg-dark-brown white">
+  <div class="p3 white">
     <section>
       <div class="border-top-delimeter"></div>
       <h2 class="pt2 mb4">Публикации в СМИ</h2>

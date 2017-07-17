@@ -1,16 +1,23 @@
 <template>
-  <div class="p3 bg-dark-brown white">
+  <div class="p3 white">
     <section>
       <div class="border-top-delimeter"></div>
       <h2 class="pt2 mb4">Материалы экспертов, репортажи с Полесья</h2>
 
       <div class="pt3 flex flex-wrap justify-end">
         <div class="flex flex-wrap lg-col-10 md-col-10 xm-col-12 xs-col-12">
-          <div class="article-item lg-col-4 md-col-6 sm-col-6 xs-col-6 pr4 pb4 flex flex-wrap" v-for="item in posts" :key="item.id">
-            <div class="flex-auto bg-medium-grey p2">
-              <h3 class="m0">{{ item.title }}</h3>
-              <p class="lead">{{ item.lead }}</p>
-            </div>
+          <div class="article-item lg-col-4 md-col-6 sm-col-6 xs-col-6 pr3 pb3 flex flex-wrap" v-for="item in posts" :key="item.id">
+            <article class="flex flex-column flex-auto justify-between bg-medium-grey">
+              <header class="bg-dark-brown p2">
+                <h3 class="m0 mb2">{{ item.title }}</h3>
+                <p class="lead m0">{{ item.lead }}</p>
+              </header>
+              <footer class="bg-dark-brown flex items-end flex-auto p2">
+                <ul class="list-reset m0">
+                  <li>2017-09-01</li>
+                </ul>
+              </footer>
+            </article>
           </div>
         </div>
       </div>
@@ -23,19 +30,19 @@ export default {
   data () {
     return {
       posts: [
-        {id: 1, title: 'Проект водного пути Е40', lead: '500 км водного пути через Припять и 11 охраняемых природных территории'},
-        {id: 2, title: 'Охраняемые территории, через которые пройдёт водный путь Е40', lead: ''},
-        {id: 3, title: 'Как принимаются экологические законы в ЕС', lead: ''},
-        {id: 4, title: 'Интервью о радиации', lead: ''},
-        {id: 5, title: 'Аналогичные проекты по спрямлению рек', lead: ''}
+        {id: 1, title: 'Проект водного пути Е40', lead: '500 км водного пути через Припять и 11 охраняемых природных территории', cover: 'http://e40restoration.eu/images/242.jpg'},
+        {id: 2, title: 'Охраняемые территории, через которые пройдёт водный путь Е40', lead: '', cover: ''},
+        {id: 3, title: 'Как принимаются экологические законы в ЕС', lead: '', cover: ''},
+        {id: 4, title: 'Интервью о радиации', lead: '', cover: ''},
+        {id: 5, title: 'Аналогичные проекты по спрямлению рек', lead: '', cover: ''}
       ]
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
 .article-item {
-  height: 30em;
+  height: 25em;
 }
 </style>

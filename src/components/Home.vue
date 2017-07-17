@@ -1,14 +1,16 @@
 <template>
   <div class="home flex flex-column">
-    <div class="hero-image">
+    <header class="hero-image">
       <top-nav></top-nav>
       <!-- <action-nav></action-nav> -->
       <hero-unit></hero-unit>
-    </div>
-    <problem-description></problem-description>
-    <articles-list></articles-list>
-    <media-publications></media-publications>
-    <social-feeds></social-feeds>
+    </header>
+    <section class="bg-graphics">
+      <problem-description></problem-description>
+      <articles-list></articles-list>
+      <media-publications></media-publications>
+      <social-feeds></social-feeds>
+    </section>
   </div>
 </template>
 
@@ -48,4 +50,22 @@ export default {
   background-size: cover;
   background-position-y: 60%;
 }
+
+.bg-graphics {
+  background-image:
+    url('../assets/images/bg-graphics-2.png'),
+    linear-gradient(to bottom, #706B67, #9D9B9B);
+  background-repeat: no-repeat;
+  background-position-y: 55%;
+  background-size: contain;
+}
+
+.bg-photo-1 {
+  background-image: url('../assets/images/pripyat-0.jpg');
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-size: cover;
+  height: 20em;
+}
+
 </style>
