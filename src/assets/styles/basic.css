@@ -47,7 +47,7 @@ h4, h5, h6 {
   margin-bottom: .5em;
 }
 
-h1 { font-size: 2rem }
+h1 { font-size: 2.5rem }
 h2 { font-size: 1.5rem }
 h3 { font-size: 1.25rem }
 h4 { font-size: 1rem }
@@ -103,6 +103,27 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
+}
+
+a.white-link {
+  color: white;
+}
+a.white-link:hover {
+  color: #FFD500;
+}
+
+a.accent-link {
+  color: #FFD500;
+}
+a.accent-link:hover {
+  color: white;
+}
+
+a.accent-black-link {
+  color: #FFD500;
+}
+a.accent-black-link:hover {
+  color: black;
 }
 
 .white {
@@ -165,4 +186,27 @@ h3 {
   bottom: 0;
   width: 5em;
   border-bottom: 4px solid white;
+}
+
+.site-title {
+  font-family: 'Teko', sans-serif;
+  font-weight: 900;
+}
+
+.bold-border-white {
+  border: 3px solid white;
+}
+.bold-border-white:hover {
+  background: white;
+  color: #706B67;
+  cursor: pointer;
+}
+
+.bold-border-black {
+  border: 3px solid black;
+}
+.bold-border-black:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
 }

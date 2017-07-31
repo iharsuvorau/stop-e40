@@ -1,7 +1,7 @@
 <template>
   <div class="home flex flex-column">
     <header class="hero-image">
-      <top-nav></top-nav>
+      <top-nav :isWhite="true"></top-nav>
       <!-- <action-nav></action-nav> -->
       <hero-unit></hero-unit>
     </header>
@@ -53,11 +53,11 @@ export default {
 
 .bg-graphics {
   background-image:
-    url('../assets/images/bg-graphics-2.png'),
+    url('../assets/images/bg-graphics.svg'),
     linear-gradient(to bottom, #706B67, #9D9B9B);
   background-repeat: no-repeat;
   background-position-y: 55%;
-  background-size: contain;
+  background-size: 100%;
 }
 
 .bg-photo-1 {

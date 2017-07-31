@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Articles from '@/components/Articles'
+import Article from '@/components/Article'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
@@ -21,6 +22,13 @@ export default new Router({
       name: 'Articles',
       components: {
         default: Articles
+      }
+    },
+    {
+      path: '/articles/:slug',
+      name: 'Article',
+      components: {
+        default: Article
       }
     },
     {

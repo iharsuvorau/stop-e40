@@ -58,7 +58,7 @@ export default {
 
   methods: {
     showTab: (e, id, tabs) => {
-      // e.preventDefault()
+      e.preventDefault()
       for (let t of tabs) {
         if (t.id === id) {
           t.show = true
