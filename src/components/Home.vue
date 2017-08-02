@@ -1,15 +1,13 @@
 <template>
-  <div class="home flex flex-column">
-    <header class="hero-image">
-      <top-nav :isWhite="true"></top-nav>
-      <!-- <action-nav></action-nav> -->
+  <div class="home flex flex-column full-width">
+    <header class="">
+      <top-nav :isWhite="false"></top-nav>
+       <!-- <action-nav></action-nav> -->
       <hero-unit></hero-unit>
     </header>
-    <section class="bg-graphics">
+    <section class="">
       <problem-description></problem-description>
       <articles-list></articles-list>
-      <media-publications></media-publications>
-      <social-feeds></social-feeds>
     </section>
   </div>
 </template>
@@ -20,8 +18,8 @@ import TopNav from '@/components/TopNav'
 import ActionNav from '@/components/ActionNav'
 import ProblemDescription from '@/components/ProblemDescription'
 import ArticlesList from '@/components/ArticlesList'
-import MediaPublications from '@/components/MediaPublications'
-import SocialFeeds from '@/components/SocialFeeds'
+// import MediaPublications from '@/components/MediaPublications'
+// import SocialFeeds from '@/components/SocialFeeds'
 
 export default {
   name: 'home',
@@ -31,9 +29,9 @@ export default {
     'top-nav': TopNav,
     'action-nav': ActionNav,
     'problem-description': ProblemDescription,
-    'articles-list': ArticlesList,
-    'media-publications': MediaPublications,
-    'social-feeds': SocialFeeds
+    'articles-list': ArticlesList
+    // 'media-publications': MediaPublications,
+    // 'social-feeds': SocialFeeds
   },
 
   data () {
@@ -45,27 +43,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hero-image {
-  background-image: url('../assets/images/pripyat-2.jpg');
-  background-size: cover;
-  background-position-y: 60%;
-}
-
-.bg-graphics {
-  background-image:
-    url('../assets/images/bg-graphics.svg'),
-    linear-gradient(to bottom, #706B67, #9D9B9B);
-  background-repeat: no-repeat;
-  background-position-y: 55%;
-  background-size: 100%;
-}
-
-.bg-photo-1 {
-  background-image: url('../assets/images/pripyat-0.jpg');
-  background-repeat: no-repeat;
-  background-position-y: 50%;
-  background-size: cover;
-  height: 20em;
-}
 
 </style>

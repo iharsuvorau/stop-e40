@@ -1,12 +1,11 @@
 <template>
-  <section class="hero-unit p3 flex flex-wrap justify-center col-12">
-    <div class="lg-col-6 md-col-12 sm-col-12 xs-col-12 pr4">
-      <h1 class="m0 white big site-title col-12">{{ title }}</h1>
+  <section class="hero-unit p3 py4 flex flex-wrap justify-center col-12">
+    <div class="lg-col-9 md-col-9 col-12 pr4 flex flex-column justify-between">
+      <h1 class="m0 mb4 col-12 font-ferry">{{ title }}</h1>
+      <p class="tagline h1 m0 pb2" v-html="tagline"></p>
     </div>
 
-    <action-nav :isWhite="true" class="lg-col-6 col-12 py2"></action-nav>
-
-    <p id="tagline" class="h2 tagline white lg-col-8">{{ tagline }}</p>
+    <action-nav :isWhite="false" class="lg-col-3 md-col-3 col-12 py2"></action-nav>
   </section>
 </template>
 
@@ -27,38 +26,8 @@ export default {
 }
 </script>
 
-<style scoped>
-/* .action-nav {
-  position: sticky;
-  top: 0;
-} */
-
-.border-btn {
-  min-height: 5em;
-  /* min-width: 10em; */
-  transition: all 0.1s ease-in;
-}
-
-.border-btn:hover {
-  background: white;
-  color: #706B67;
-  cursor: pointer;
-}
-
-h1.big {
-  font-size: 96px;
-}
-h1.medium {
-  font-size: 72px;
-}
-
+<style lang="scss" scoped>
 .tagline {
-  font-size: 36px;
-  line-height: 48px;
-  font-weight: 700;
-}
-
-.border {
-  border: 3px solid white;
+  max-width: 40em;
 }
 </style>

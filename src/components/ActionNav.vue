@@ -1,17 +1,17 @@
 <template>
-  <nav class="action-nav flex" :class="{white: isWhite}">
-    <div class="col-4 xs-col-12 pr1 pb1">
-      <div class="border-btn border-box bold flex flex-auto items-end" :class="{'bold-border-white': isWhite, 'bold-border-black': !isWhite}">
+  <nav class="flex flex-column items-center" :class="{white: isWhite}">
+    <div class="mb1">
+      <div class="border-btn border3 bold flex items-end" :class="{'border-white': isWhite, 'border-accent': !isWhite}">
         <span class="pl1 pb1 pr3">Петиция</span>
       </div>
     </div>
-    <div class="col-4 xs-col-12 pr1 pb1">
-      <div class="border-btn border-box bold flex flex-auto items-end" :class="{'bold-border-white': isWhite, 'bold-border-black': !isWhite}">
+    <div class="mb1">
+      <div class="border-btn border3 bold flex items-end" :class="{'border-white': isWhite, 'border-accent': !isWhite}">
         <span class="pl1 pb1 pr3">Меморандум</span>
       </div>
     </div>
-    <div class="col-4 xs-col-12 pb1">
-      <div class="border-btn border-box bold flex flex-auto items-end" :class="{'bold-border-white': isWhite, 'bold-border-black': !isWhite}">
+    <div class="mb1">
+      <div class="border-btn border3 bold flex items-end" :class="{'border-white': isWhite, 'border-accent': !isWhite}">
         <span class="pl1 pb1 pr3">Пресс-кит</span>
       </div>
     </div>
@@ -24,17 +24,16 @@ export default {
 }
 </script>
 
-<style scoped>
-/* .action-nav {
-  position: absolute;
-  top: 10.5em;
-  right: 6em;
-} */
+<style lang="scss" scoped>
+$red: #FA5C77;
 
-.border-btn {
-  min-height: 5em;
-  /* min-width: 10em; */
-  transition: all 0.1s ease-in;
+.border-accent {
+  border-color: $red;
+  color: $red;
+
+  &:hover, &:focus {
+    background: $red;
+    color: white;
+  }
 }
-
 </style>

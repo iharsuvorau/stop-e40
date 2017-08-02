@@ -11,10 +11,10 @@ html {
 body {
   font-family:
     'Helvetica Neue',
+    'Helvetica',
     'Arial',
     -apple-system,
     BlinkMacSystemFont,
-    Helvetica,
     sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -53,6 +53,8 @@ h3 { font-size: 1.25rem }
 h4 { font-size: 1rem }
 h5 { font-size: .875rem }
 h6 { font-size: .75rem }
+
+.h2 { font-size: 1.8rem; }
 
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
@@ -96,35 +98,35 @@ hr {
   border-bottom-color: #ccc;
 }
 
-/* */
+/* Custom */
 
- /* @import url('https://fonts.googleapis.com/css?family=Rubik:700,900&subset=cyrillic'); */
- @import url('https://fonts.googleapis.com/css?family=Rubik:700|Teko:700&subset=cyrillic');
+/* ... */
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rubik', sans-serif;
-}
-
-a.white-link {
-  color: white;
-}
-a.white-link:hover {
-  color: #FFD500;
+.font-ferry {
+  font-family: "Ferry";
 }
 
-a.accent-link {
-  color: #FFD500;
-}
-a.accent-link:hover {
-  color: white;
+.full-width {
+  width: 100%;
 }
 
-a.accent-black-link {
-  color: #FFD500;
+.border3 {
+  border-width: 3px;
+  border-style: solid;
 }
-a.accent-black-link:hover {
-  color: black;
+
+.border-btn {
+  min-height: 4.5em;
+  max-width: 20em;
+  width: 15em;
+  transition: all 0.1s ease-in;
 }
+
+.border-btn:hover {
+  cursor: pointer;
+}
+
+/* Colors */
 
 .white {
   color: white;
@@ -134,79 +136,18 @@ a.accent-black-link:hover {
   color: black;
 }
 
-.brown {
-  color: #B38A67;
+.border-white {
+  border-color: white;
+}
+.border-white:hover {
+  color: black;
+  background-color: white;
 }
 
-.accent {
-  color: #FFD500;
+.border-black {
+  border-color: black;
 }
-
-.bg-accent {
-  background-color: #FFD500;
-}
-
-.bg-black {
-  background-color: black;
-}
-
-.bg-dark-brown {
-  background-color: #706B67;
-}
-
-.bg-dark-brown-gradient {
-  background: linear-gradient(180deg, #706B67, #9D9B9B);
-}
-
-.bg-medium-grey {
-  background-color: #9D9B9B;
-}
-
-.full-width {
-  width: 100%;
-}
-
-h2 {
-  font-size: 36px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-.border-top-delimeter {
-  position: absolute;
-  width: 5em;
-  border-top: 4px solid white;
-}
-
-.border-bottom-delimeter {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 5em;
-  border-bottom: 4px solid white;
-}
-
-.site-title {
-  font-family: 'Teko', sans-serif;
-  font-weight: 900;
-}
-
-.bold-border-white {
-  border: 3px solid white;
-}
-.bold-border-white:hover {
-  background: white;
-  color: #706B67;
-  cursor: pointer;
-}
-
-.bold-border-black {
-  border: 3px solid black;
-}
-.bold-border-black:hover {
-  background: black;
+.border-black:hover {
   color: white;
-  cursor: pointer;
+  background-color: black;
 }
