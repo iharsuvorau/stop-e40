@@ -27,6 +27,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/styles/colors';
+
+h1 {
+  font-size: 3.25rem;
+  line-height: 1.05;
+}
+
 .tagline {
   max-width: 40em;
 }

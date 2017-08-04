@@ -20,12 +20,12 @@
 
 <script>
 export default {
-  props: ['isWhite']
+  props: ['isWhite', 'isFlex']
 }
 </script>
 
 <style lang="scss" scoped>
-$red: #FA5C77;
+@import '../assets/styles/colors';
 
 .border-accent {
   border-color: $red;

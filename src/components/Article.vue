@@ -1,18 +1,41 @@
 <template>
-  <div class="full-width flex flex-column">
-    <header class="mb4 flex flex-column">
-      <top-nav :hasLogo="true"></top-nav>
-      <action-nav class="px3 lg-col-8 col-12 self-center"></action-nav>
-    </header>
-    <article class="p3 lg-col-8 col-12 self-center">
-      <h1 class="mb4 center" v-html="title"></h1>
-      <p class="px4 italic" v-html="lead"></p>
-      <section class="mt4" v-for="section in sections" :key="section.id">
-        <h2 class="h2" v-html="section.title"></h2>
-        <p v-for="paragraph in section.paragraphs" :key="paragraph.id" v-html="paragraph.text"></p>
-      </section>
+  <main class="full-width flex flex-column">
+    <top-nav :hasLogo="true"></top-nav>
+    <article class="flex flex-wrap justify-between">
+      <header class="px3 py4 col-12 bg-light-grey">
+        <div class="col-9">
+          <h1 class="m0" v-html="title"></h1>
+          <ul class="list-reset dark-grey">
+            <li class="inline-block mr2">{{ date }}</li>
+            <li class="inline-block mr2">{{ tag.title }}</li>
+          </ul>
+          <p class="m0 h3 mt3" v-html="lead"></p>
+        </div>
+      </header>
+
+      <aside class="lg-col-2 md-col-3 sm-col-12 xs-col-12 mt4 pl3">
+        <nav id="toc" class="sticky">
+          <ul class="list-reset m0">
+            <li class="mb2" v-for="section in sections" :key="section.id">
+              <a :href="'#section'+section.id" class="dark-grey" :class="{'active': section.isActive}" v-html="section.title" @click="smoothScroll($event, section.id)"></a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4">
+        <section class="px3" v-for="section in sections" :key="section.id">
+          <h2 class="h2 mt4" :id="'section'+section.id" v-html="section.title"></h2>
+          <p v-for="paragraph in section.paragraphs" :key="paragraph.id" v-html="paragraph.text"></p>
+        </section>
+      </div>
+
+      <aside class="lg-col-3 md-col-12 sm-col-12 xs-col-12 mt4 px3">
+        <action-nav class="sticky"></action-nav>
+      </aside>
+
     </article>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -32,11 +55,14 @@ export default {
   data () {
     return {
       title: 'Какими правовыми актами регулируются экологические вопросы в&nbsp;Беларуси',
-      lead: 'Законы и кодексы закладывают правовые основы регулирования общественных отношений, связанных с охраной окружающей среды. На уровне Правительства и профильных министерств, местных исполнительных и распорядительных органов принимаются те постановления и решения, которые уточняют нормы законов, устанавливают процедуры, порядок действий, особые условия.',
+      lead: 'На вопросы отвечает эксперт Наталья Минченко, бывший сотрудник Министерства охраны природы в Беларуси',
+      tag: {id: 1, title: 'закон', slug: 'law'},
+      date: '2017-07-31',
       sections: [
         {
           id: 1,
           title: 'Какими правовыми актами регулируются экологические вопросы в Беларуси?',
+          isActive: false,
           paragraphs: [
             {id: 1, text: 'Статьей 46 Конституции Республики Беларусь гарантировано право граждан на благоприятную окружающую среду и на возмещение вреда, причиненного нарушением этого права.'},
             {id: 2, text: 'Основополагающим законом в этой области является Закон Республики Беларусь «Об охране окружающей среды». С учетом норм данного закона и исходя из компонентов окружающей среды (лес, животный мир и так далее) в Беларуси приняты следующие законы: Водный кодекс, Лесной кодекс, кодексы о земле, о недрах, Законы Республики Беларусь «О животном мире», «О растительном мире», «Об охране атмосферного воздуха», «Об охране озонового слоя», «Об особо охраняемых природных территориях», «Об обращении с отходами», «О государственной экологической экспертизе, стратегической экологической оценке и оценке воздействия на окружающую среду» и другие.'},
@@ -47,6 +73,7 @@ export default {
         {
           id: 2,
           title: 'Что происходит, если страна нарушает международные природоохранные конвенции?',
+          isActive: false,
           paragraphs: [
             {id: 1, text: 'В случае, если кто-то из членов международного договора нарушает требования этого договора, ему направляются рекомендации по выполнению условий соглашения. Они, как правило, рассматриваются на заседании рабочих органов международного договора, в том числе на конференциях сторон. В таких случаях страдает имидж страны, иногда это могут быть экономические санкции либо санкции неэкономического характера от других членов международных договоров, как, например, запрет, установленный ЕС на ввоз в страны Евросоюза из Беларуси трофеев волка https://news.tut.by/society/287437.html. Однако страна сама решает, как себя вести в том или ином случае и прислушиваться ли к рекомендациям.'}
           ]
@@ -54,6 +81,7 @@ export default {
         {
           id: 3,
           title: 'Какие бывают виды <abbr title="особо охраняемые природные территории">ООПТ</abbr> и чем они отличаются?',
+          isActive: false,
           paragraphs: [
             {id: 1, text: 'В соответствии с Законом Республики Беларусь «Об особо охраняемых природных территориях» в Республике Беларусь выделяется четыре категории особо охраняемых природных территорий.'},
             {id: 2, text: 'Заповедник – особо охраняемая природная территория, объявленная в целях сохранения эталонных и иных ценных природных комплексов и объектов, изучения животного и растительного мира, естественных экологических систем и ландшафтов, создания условий для обеспечения естественного течения природных процессов. На территории заповедника ограничивается любая хозяйственная деятельность, за исключением деятельности, направленной на обеспечение функционирования заповедника. Заповедник объявляется с изъятием земельных участков у землепользователей.'},
@@ -63,10 +91,31 @@ export default {
         }
       ]
     }
+  },
+
+  methods: {
+    smoothScroll: function (event, sid) {
+      event.preventDefault()
+      this.sections.forEach((el) => {
+        if (el.id === sid) {
+          el.isActive = true
+        } else {
+          el.isActive = false
+        }
+      })
+      let ref = document.getElementById('section' + sid)
+      ref.scrollIntoView({behavior: 'smooth'})
+      window.location.hash = '#section' + sid
+    }
   }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '../assets/styles/colors';
 
+.sticky {
+  position: sticky;
+  top: 2em;
+}
 </style>

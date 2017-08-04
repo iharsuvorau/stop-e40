@@ -2,7 +2,7 @@
   <nav class="px3 py2 bold shadow-bottom" :class="{white: isWhite}">
     <div class="flex flex-wrap justify-between">
       <ul class="list-reset m0 sm-hide xs-hide">
-        <li class=" h3 inline-block mr3" v-if="hasLogo"><a href="/" class="accent-black-link">#STOP_E40</a></li>
+        <li class=" h3 inline-block mr3" v-if="hasLogo"><a href="/" class="font-ferry black">#STOP_E40</a></li>
         <li class="inline-block mr3" v-for="item in items" :key="item.id"><a href="#">{{ item.title }}</a></li>
       </ul>
       <span class="lg-hide md-hide"><a href="#" @click="showSideNav($event)">Меню</a></span>
@@ -15,7 +15,7 @@
         <ul class="list-reset m0 p3">
           <li class="mb2" v-for="item in items" :key="item.id"><a href="#">{{ item.title }}</a></li>
         </ul>
-        <h1 class="font-ferry m0 px3 py3 h2">#stop_e40</h1>
+        <h1 class="font-ferry m0 px3 py3 h2 blue">#stop_e40</h1>
       </section>
     </div>
   </nav>
@@ -55,16 +55,16 @@ export default {
     stopPropagation: function (event) {
       event.stopPropagation()
     }
-  },
-
-  mounted: () => {
-    console.log('created')
   }
 }
 </script>
 
 <style lang="scss" scoped>
-$shadow-color: rgba(130, 147, 153, .2);
+@import '../assets/styles/colors';
+
+nav {
+  z-index: 999;
+}
 
 .shadow-bottom {
   box-shadow: 0 2px 4px $shadow-color;

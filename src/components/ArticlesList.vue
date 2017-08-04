@@ -67,7 +67,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$dark-grey: #829399;
+@import '../assets/styles/colors';
 
 article {
   height: 25em;

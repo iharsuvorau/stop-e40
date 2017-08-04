@@ -5,6 +5,8 @@ import Articles from '@/components/Articles'
 import Article from '@/components/Article'
 import NotFound from '@/components/NotFound'
 
+require('smoothscroll-polyfill').polyfill()
+
 Vue.use(Router)
 
 export default new Router({

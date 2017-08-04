@@ -1,0 +1,59 @@
+$blue: #4CD0FF;
+$light-grey: rgb(242, 246, 247);
+$yellow: rgb(255, 228, 94);
+$red: #FA5C77;
+$dark-grey: #829399;
+$shadow-color: rgba(130, 147, 153, .2);
+
+.blue {
+  color: $blue;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+
+  &:hover, &:focus {
+    color: $blue;
+  }
+}
+
+.dark-grey {
+  color: $dark-grey;
+}
+
+a.dark-grey {
+  color: $dark-grey;
+
+  &:hover, &:focus {
+    color: black;
+  }
+
+  &.active {
+    color: black;
+  }
+}
+
+.bg-light-grey {
+  background-color: $light-grey;
+}
+
+.border-white {
+  border-color: white;
+}
+.border-white:hover {
+  color: black;
+  background-color: white;
+}
+
+.border-black {
+  border-color: black;
+}
+.border-black:hover {
+  color: white;
+  background-color: black;
+}
+

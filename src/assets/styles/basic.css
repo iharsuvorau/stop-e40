@@ -34,7 +34,8 @@ svg {
 }
 
 a {
-  color: #07c;
+  /* color: #07c; */
+  color: #4CD0FF;
   text-decoration: none;
   transition: all 0.2s ease-out;
 }
@@ -47,7 +48,8 @@ h4, h5, h6 {
   margin-bottom: .5em;
 }
 
-h1 { font-size: 2.5rem }
+h1 { font-size: 2.5rem; line-height: 1.05; }
+.h1 { line-height: 1.4 }
 h2 { font-size: 1.5rem }
 h3 { font-size: 1.25rem }
 h4 { font-size: 1rem }
@@ -100,6 +102,11 @@ hr {
 
 /* Custom */
 
+@font-face {
+  font-family: Ferry;
+  src: url('../fonts/ferry.otf');
+}
+
 /* ... */
 
 .font-ferry {
@@ -117,8 +124,8 @@ hr {
 
 .border-btn {
   min-height: 4.5em;
-  max-width: 20em;
-  width: 15em;
+   max-width: 20em;
+   width: 15em;
   transition: all 0.1s ease-in;
 }
 
@@ -126,28 +133,3 @@ hr {
   cursor: pointer;
 }
 
-/* Colors */
-
-.white {
-  color: white;
-}
-
-.black {
-  color: black;
-}
-
-.border-white {
-  border-color: white;
-}
-.border-white:hover {
-  color: black;
-  background-color: white;
-}
-
-.border-black {
-  border-color: black;
-}
-.border-black:hover {
-  color: white;
-  background-color: black;
-}

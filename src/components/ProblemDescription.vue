@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-wrap">
-    <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 col-12 image2"></div>
-    <div class="descr-block lg-col-6 col-12 flex flex-column justify-between">
+    <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12 image2"></div>
+    <div class="descr-block lg-col-6 md-col-12 sm-col-12 xs-col-12 flex flex-column justify-between">
       <article class="pt3 pl3 pr3" v-for="tab in tabs" :key="tab.id" v-if="tab.show">
         <h1 class="h2 m0"><a href="" v-html="tab.title"></a></h1>
         <p v-for="p in tab.paragraphs" :key="p.id">{{ p.text }}</p>
@@ -75,20 +75,14 @@ export default {
         }
       }
 
-      document.getElementById('descr-image-wrapper').className = 'descr-image-wrapper col-6 ' + imageClass
+      document.getElementById('descr-image-wrapper').className = 'descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12  ' + imageClass
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-$blue: #4CD0FF;
-$light-grey: rgb(242, 246, 247);
-$yellow: rgb(255, 228, 94);
-
-.descr-image-wrapper, img {
-  transition: all 0.5s ease-out;
-}
+@import '../assets/styles/colors';
 
 nav a {
   color: black;
@@ -114,6 +108,7 @@ section {
 }
 
 .descr-image-wrapper {
+  transition: all 0.5s ease-out;
   background: $light-grey;
   background-size: cover;
   background-position-y: 50%;
@@ -131,7 +126,7 @@ section {
 }
 
 .image0 {
-  background-image: url('../assets/images/pripyat-0-opt.jpg');
+  background-image: url('../assets/images/pripyat-opt.jpg');
 }
 .image1 {
   background-image: url('../assets/images/pripyat-1-opt.jpg');
