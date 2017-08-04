@@ -2,12 +2,12 @@
   <section class="flex flex-wrap">
     <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12 image2"></div>
     <div class="descr-block lg-col-6 md-col-12 sm-col-12 xs-col-12 flex flex-column justify-between">
-      <article class="pt3 pl3 pr3" v-for="tab in tabs" :key="tab.id" v-if="tab.show">
+      <article class="pt3 pl3 pr3" v-for="tab in content.tabs" :key="tab.id" v-if="tab.show">
         <h1 class="h2 m0"><a href="" v-html="tab.title"></a></h1>
         <p v-for="p in tab.paragraphs" :key="p.id">{{ p.text }}</p>
       </article>
       <nav class="flex bold px3 pb2">
-        <a v-for="t in tabs" :key="t.id" @click="showTab($event, t.id, tabs)" :class="t.className" :href="'#' + t.name">&mdash;</a>
+        <a v-for="t in content.tabs" :key="t.id" @click="showTab($event, t.id, content.tabs)" :class="t.className" :href="'#' + t.name">&mdash;</a>
       </nav>
     </div>
   </section>
@@ -15,46 +15,23 @@
 
 <script>
 export default {
+  props: ['lang'],
+
+  created () {
+    this.content = this.loadContent(this.lang, 'problem-description')
+  },
+
+  watch: {
+    '$route' (to, from) {
+      if (from.params.lang !== to.params.lang) {
+        this.content = this.loadContent(this.lang, 'problem-description')
+      }
+    }
+  },
+
   data () {
     return {
-      tabs: [
-        {
-          id: 1,
-          name: 'stop',
-          title: 'Почему проект Е40 нужно остановить',
-          next: 'why',
-          show: true,
-          className: 'active',
-          imageClass: 'image2',
-          paragraphs: [
-            {id: 1, text: 'Е40 — это проект судоходного пути длиной более 2000 километров, который может пройти по территории Польши, Беларуси и Украины. Предполагается, что Е40 станет новой торговой трассой между портами Балтийского и Чёрного морей. Проект Е40 финансируется Евросоюзом. Ведущий партнер со стороны Польши — Морской институт в Гданьске, со стороны Беларуси — Днепро-Бугский водный канал.'}
-          ]
-        },
-        {
-          id: 2,
-          name: 'e40',
-          title: 'Проект Е40',
-          next: 'what',
-          show: false,
-          className: '',
-          imageClass: 'image1',
-          paragraphs: [
-            {id: 2, text: 'По территории Беларуси пройдет более 500 км водной трассы, основная часть которых — по уникальной реке Припять и через ряд важных охраняемых природных территорий на ее берегах. Строительство водного пути предполагает.'}
-          ]
-        },
-        {
-          id: 3,
-          name: 'pripyat',
-          title: 'Припять',
-          next: 'pripyat',
-          show: false,
-          className: '',
-          imageClass: 'image0',
-          paragraphs: [
-            {id: 1, text: 'Припять-река.'}
-          ]
-        }
-      ]
+      content: {}
     }
   },
 

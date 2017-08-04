@@ -1,13 +1,13 @@
 <template>
   <div class="home flex flex-column full-width">
     <header class="">
-      <top-nav :isWhite="false"></top-nav>
+      <top-nav :isWhite="false" :lang="$route.params.lang || defaultLang"></top-nav>
        <!-- <action-nav></action-nav> -->
-      <hero-unit></hero-unit>
+      <hero-unit :lang="$route.params.lang || defaultLang"></hero-unit>
     </header>
     <section class="">
-      <problem-description></problem-description>
-      <articles-list></articles-list>
+      <problem-description :lang="$route.params.lang || defaultLang"></problem-description>
+      <articles-list :lang="$route.params.lang || defaultLang"></articles-list>
     </section>
   </div>
 </template>
@@ -36,6 +36,22 @@ export default {
 
   data () {
     return {
+      defaultLang: 'ru',
+      acceptableLangs: ['en', 'be', 'ru']
+    }
+  },
+
+  created: function () {
+    // define the browser's default language which matches accepted languages
+    if (!this.$route.params.lang) {
+      let userLangs = window.navigator.languages
+      for (let i = 0; i < userLangs.length; i++) {
+        let lang = userLangs[i].split('-')[0]
+        if (this.acceptableLangs.indexOf(lang) > -1) {
+          this.defaultLang = lang
+          break
+        }
+      }
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "main": [
+    {"id": 1, "title": "Materials", "path": "#"},
+    {"id": 2, "title": "Timeline", "path": "#"},
+    {"id": 3, "title": "Social", "path": "#"},
+    {"id": 4, "title": "Publications", "path": "#"},
+    {"id": 5, "title": "Gallery", "path": "#"}
+  ],
+  "langs": [
+    {"id": 6, "title": "English", "path": "en"},
+    {"id": 7, "title": "русский", "path": "ru"}
+  ]
+}

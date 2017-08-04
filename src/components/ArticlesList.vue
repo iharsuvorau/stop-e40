@@ -1,6 +1,6 @@
 <template>
   <section class="py4">
-    <h1 class="m0 center">Материалы экспертов, репортажи с Полесья</h1>
+    <h1 class="m0 center" v-html="content.title"></h1>
     <ul class="tag-list list-reset center">
       <li class="inline-block mr2" v-for="tag in tags" :key="tag.id"><a href="#">{{ tag.title }}</a></li>
     </ul>
@@ -8,12 +8,12 @@
     <div class="py3 flex flex-wrap justify-center">
       <article class="flex flex-column justify-between m2" v-for="item in posts" :key="item.id">
         <header class="p2">
-          <h2 class="h3 m0 mb2"><router-link class="" :to="{name: 'Article', params: {slug: item.slug}}">{{ item.title }}</router-link></h2>
-          <p class="lead m0">{{ item.lead }}</p>
+          <h2 class="h3 m0 mb2"><router-link class="" :to="{name: 'Article', params: {slug: item.slug}}" v-html="item.title"></router-link></h2>
+          <p class="lead m0" v-html="item.lead"></p>
         </header>
         <footer class="flex items-end flex-auto p2">
           <ul class="list-reset m0">
-            <li class="inline-block mr1">2017-09-01</li>
+            <li class="inline-block mr1">{{ item.date }}</li>
             <li class="inline-block mr1"><a href="#">{{ item.tag.title }}</a></li>
           </ul>
         </footer>
@@ -24,21 +24,46 @@
 
 <script>
 export default {
+  props: ['lang'],
+
+  created: function () {
+    this.content = this.loadContent(this.lang, 'articles-list')
+    this.posts = this.getPosts(this.lang)
+    this.getTags()
+  },
+
+  watch: {
+    '$route' (to, from) {
+      if (from.params.lang !== to.params.lang) {
+        this.content = this.loadContent(this.lang, 'articles-list')
+        this.posts = this.getPosts(this.lang)
+        this.getTags()
+      }
+    }
+  },
+
   data () {
     return {
-      posts: [
-        {id: 1, tag: {id: 1, title: 'е40', slug: 'e40'}, slug: 'foo', title: 'Проект водного пути Е40', lead: '500 км водного пути через Припять и 11 охраняемых природных территории', cover: 'http://e40restoration.eu/images/242.jpg'},
-        {id: 2, tag: {id: 1, title: 'оопт', slug: 'oopt'}, slug: 'bar', title: 'Охраняемые территории, через которые пройдёт водный путь Е40', lead: '', cover: ''},
-        {id: 3, tag: {id: 1, title: 'закон', slug: 'law'}, slug: 'eco-law', title: 'Какими правовыми актами регулируются экологические вопросы в Беларуси', lead: 'На вопросы отвечает эксперт Наталья Минченко, бывший сотрудник Министерства охраниы природы в Беларуси', cover: ''},
-        {id: 4, tag: {id: 1, title: 'репортажи', slug: 'report'}, slug: 'baz', title: 'Интервью о радиации', lead: '', cover: ''},
-        {id: 5, tag: {id: 1, title: 'репортажи', slug: 'report'}, slug: 'bag', title: 'Аналогичные проекты по спрямлению рек', lead: '', cover: ''}
-      ],
-
+      content: {},
+      posts: [],
       tags: []
     }
   },
 
   methods: {
+    requireAll (requireContext) {
+      // ref: https://webpack.github.io/docs/context.html#context-module-api
+      return requireContext.keys().map(requireContext)
+    },
+
+    getPosts (lang) {
+      if (lang === 'ru') {
+        return this.requireAll(require.context('../assets/content/articles/ru/', false, /\.json$/))
+      } else if (lang === 'en') {
+        return this.requireAll(require.context('../assets/content/articles/en/', false, /\.json$/))
+      }
+    },
+
     getTags: function () {
       let tags = [{id: 0, title: 'все', slug: 'all'}]
 
@@ -58,10 +83,6 @@ export default {
 
       this.tags = tags
     }
-  },
-
-  created: function () {
-    this.getTags()
   }
 }
 </script>

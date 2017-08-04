@@ -1,0 +1,40 @@
+{
+  "tabs": [
+  {
+    "id": 1,
+    "name": "stop",
+    "title": "Why we need to stop E40 renovation",
+    "next": "why",
+    "show": true,
+    "className": "active",
+    "imageClass": "image2",
+    "paragraphs": [
+      {"id": 1, "text": "translation here"}
+    ]
+  },
+  {
+    "id": 2,
+    "name": "e40",
+    "title": "The Е40 Project",
+    "next": "what",
+    "show": false,
+    "className": "",
+    "imageClass": "image1",
+    "paragraphs": [
+      {"id": 2, "text": "translation here"}
+    ]
+  },
+  {
+    "id": 3,
+    "name": "pripyat",
+    "title": "the Pripyat river",
+    "next": "pripyat",
+    "show": false,
+    "className": "",
+    "imageClass": "image0",
+    "paragraphs": [
+      {"id": 1, "text": "translation here"}
+    ]
+  }
+  ]
+}

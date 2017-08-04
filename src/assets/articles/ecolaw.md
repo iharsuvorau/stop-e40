@@ -1,3 +1,0 @@
-# EcoLaw
-
-hello **world**!

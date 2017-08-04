@@ -9,12 +9,33 @@ require('smoothscroll-polyfill').polyfill()
 
 Vue.use(Router)
 
+Vue.mixin({
+  methods: {
+    loadContent (lang, basename) {
+      let content
+      if (lang === 'en') {
+        content = require('../assets/content/' + basename + '.en.json')
+      } else if (lang === 'ru') {
+        content = require('../assets/content/' + basename + '.ru.json')
+      }
+      return content
+    }
+  }
+})
+
 export default new Router({
   mode: 'history',
   routes: [
     {
       path: '/',
       name: 'Home',
+      components: {
+        default: Home
+      }
+    },
+    {
+      path: '/:lang',
+      name: 'HomeLang',
       components: {
         default: Home
       }

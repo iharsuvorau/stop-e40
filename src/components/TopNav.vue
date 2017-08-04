@@ -2,18 +2,20 @@
   <nav class="px3 py2 bold shadow-bottom" :class="{white: isWhite}">
     <div class="flex flex-wrap justify-between">
       <ul class="list-reset m0 sm-hide xs-hide">
-        <li class=" h3 inline-block mr3" v-if="hasLogo"><a href="/" class="font-ferry black">#STOP_E40</a></li>
-        <li class="inline-block mr3" v-for="item in items" :key="item.id"><a href="#">{{ item.title }}</a></li>
+        <li class="h3 inline-block mr3" v-if="hasLogo"><a href="/" class="font-ferry black">#STOP_E40</a></li>
+        <li class="inline-block mr3" v-for="item in content.main" :key="item.id"><a href="#">{{ item.title }}</a></li>
       </ul>
       <span class="lg-hide md-hide"><a href="#" @click="showSideNav($event)">Меню</a></span>
 
       <ul class="list-reset m0">
-        <li class="inline-block" v-for="item in alternative" :key="item.id"><a href="#">{{ item.title }}</a></li>
+        <li class="inline-block" v-for="item in content.langs" :key="item.id">
+          <router-link class="mr3" v-show="lang !== item.path" :to="{name: 'HomeLang', params: {lang: item.path}}">{{ item.title }}</router-link>
+        </li>
       </ul>
 
       <section id="sidenav" class="flex flex-column justify-between" v-if="sideNavVisible" @click="stopPropagation($event)">
         <ul class="list-reset m0 p3">
-          <li class="mb2" v-for="item in items" :key="item.id"><a href="#">{{ item.title }}</a></li>
+          <li class="mb2" v-for="item in content.items" :key="item.id"><a href="#">{{ item.title }}</a></li>
         </ul>
         <h1 class="font-ferry m0 px3 py3 h2 blue">#stop_e40</h1>
       </section>
@@ -23,26 +25,29 @@
 
 <script>
 export default {
-  props: ['isWhite', 'hasLogo'],
+  props: ['isWhite', 'hasLogo', 'lang'],
+
+  created () {
+    this.content = this.loadContent(this.lang, 'top-nav')
+  },
+
+  watch: {
+    '$route' (to, from) {
+      if (from.params.lang !== to.params.lang) {
+        this.content = this.loadContent(this.lang, 'top-nav')
+      }
+    }
+  },
 
   data () {
     return {
       sideNavVisible: false,
-      items: [
-        {title: 'Материалы', path: '#', id: 1},
-        {title: 'Хронология', path: '#', id: 2},
-        {title: 'Соц-сети', path: '#', id: 3},
-        {title: 'Публикации в СМИ', path: '#', id: 4},
-        {title: 'Галерея', path: '#', id: 5}
-      ],
-      alternative: [
-        {title: 'English', path: '#', id: 6}
-      ]
+      content: {menu: [], langs: []}
     }
   },
 
   methods: {
-    showSideNav: function (event) {
+    showSideNav (event) {
       event.stopPropagation()
 
       this.sideNavVisible = true
@@ -52,7 +57,7 @@ export default {
       })
     },
 
-    stopPropagation: function (event) {
+    stopPropagation (event) {
       event.stopPropagation()
     }
   }
@@ -73,7 +78,7 @@ nav {
 a {
   color: rgba(130, 147, 153, 1);
 
-  &:hover, &:focus {
+  &:hover, &:focus, &.router-link-active {
     color: black;
   }
 }
