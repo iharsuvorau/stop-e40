@@ -34,10 +34,18 @@ svg {
 }
 
 a {
-  /* color: #07c; */
   color: #4CD0FF;
   text-decoration: none;
   transition: all 0.2s ease-out;
+}
+
+p a {
+  color: #07c;
+  text-decoration: underline;
+  transition: all 0.2s ease-out;
+}
+p a:visited {
+  color: purple;
 }
 
 h1, h2, h3,
@@ -108,6 +116,10 @@ hr {
 }
 
 /* ... */
+
+.medium {
+  font-weight: 500;
+}
 
 .font-ferry {
   font-family: "Ferry";

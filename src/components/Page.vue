@@ -2,13 +2,9 @@
   <main class="full-width flex flex-column">
     <top-nav :isWhite="false" :hasLogo="true" :lang="$route.params.lang"></top-nav>
     <article class="flex flex-wrap justify-between">
-      <header class="px3 py4 col-12 bg-light-grey">
+      <header class="px3 py4 col-12">
         <div class="col-9">
           <h1 class="m0" v-html="content.title"></h1>
-          <ul class="list-reset dark-grey">
-            <li class="inline-block mr2">{{ content.date }}</li>
-            <li class="inline-block mr2">{{ content.tag.title }}</li>
-          </ul>
           <p class="m0 h3 mt3" v-html="content.teaser"></p>
         </div>
       </header>
@@ -52,22 +48,22 @@ import TopNav from '@/components/TopNav'
 import ActionNav from '@/components/ActionNav'
 
 export default {
+  components: {
+    'hero-unit': HeroUnit,
+    'top-nav': TopNav,
+    'action-nav': ActionNav
+  },
+
   created () {
-    this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
+    this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
   },
 
   watch: {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang) {
-        this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
+        this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
       }
     }
-  },
-
-  components: {
-    'hero-unit': HeroUnit,
-    'top-nav': TopNav,
-    'action-nav': ActionNav
   },
 
   data () {
@@ -97,12 +93,12 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/colors';
 
+#toc {
+  font-size: .8em;
+}
+
 .sticky {
   position: sticky;
   top: 2em;
-}
-
-#toc {
-  font-size: .8em;
 }
 </style>

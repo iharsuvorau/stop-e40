@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Article from '@/components/Article'
+import Page from '@/components/Page'
 import NotFound from '@/components/NotFound'
 
 require('smoothscroll-polyfill').polyfill()
@@ -17,6 +18,11 @@ Vue.mixin({
   },
 
   methods: {
+    requireAll (requireContext) {
+      // ref: https://webpack.github.io/docs/context.html#context-module-api
+      return requireContext.keys().map(requireContext)
+    },
+
     loadContent (lang, basename) {
       // loads UI content of the component depending on the provided language
       let content
@@ -40,6 +46,17 @@ Vue.mixin({
         }
       }
       return 'ru'
+    },
+
+    compareById (a, b) {
+      // compares arrays of objects by the ID attribute
+      if (a.id < b.id) {
+        return -1
+      }
+      if (a.id > b.id) {
+        return 1
+      }
+      return 0
     }
   }
 })
@@ -66,6 +83,13 @@ const router = new Router({
       name: 'Article',
       components: {
         default: Article
+      }
+    },
+    {
+      path: '/:lang/pages/:slug',
+      name: 'Page',
+      components: {
+        default: Page
       }
     },
     {

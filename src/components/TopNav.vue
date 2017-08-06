@@ -2,8 +2,13 @@
   <nav class="px3 py2 bold shadow-bottom" :class="{white: isWhite}">
     <div class="flex flex-wrap justify-between">
       <ul class="list-reset m0 sm-hide xs-hide">
-        <li class="h3 inline-block mr3" v-if="hasLogo"><a href="/" class="font-ferry black">#STOP_E40</a></li>
-        <li class="inline-block mr3" v-for="item in content.main" :key="item.id"><a href="#">{{ item.title }}</a></li>
+        <li class="h3 inline-block mr3" v-if="hasLogo"><a :href="'/' + lang" class="font-ferry black">#STOP_E40</a></li>
+        <li class="inline-block mr3" v-for="item in content.main" :key="item.id">
+          <router-link :to="{path: getCurrentPathWithLang(lang) + '/' + item.slug}">{{ item.title }}</router-link>
+        </li>
+        <li class="inline-block mr3" v-for="item in pages" :key="item.id">
+          <router-link :to="{name: 'Page', params: {lang: $route.params.lang, slug: item.slug}}">{{ item.title }}</router-link>
+        </li>
         <li class="inline-block"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)"></a></li>
       </ul>
       <span class="lg-hide md-hide"><a href="#" @click="showSideNav($event)">Меню</a></span>
@@ -36,6 +41,7 @@ export default {
 
   created () {
     this.content = this.loadContent(this.lang, 'top-nav')
+    this.pages = this.getPages(this.lang).sort(this.compareById)
   },
 
   mounted () {
@@ -48,8 +54,10 @@ export default {
 
   watch: {
     '$route' (to, from) {
+      console.log('watch')
       if (from.params.lang !== to.params.lang) {
         this.content = this.loadContent(this.lang, 'top-nav')
+        this.pages = this.getPages(this.lang).sort(this.compareById)
       }
     }
   },
@@ -58,11 +66,21 @@ export default {
     return {
       sideNavVisible: false,
       movieVisible: false,
-      content: {menu: [], langs: []}
+      content: {},
+      pages: []
     }
   },
 
   methods: {
+    getPages (lang) {
+      if (lang === 'ru') {
+        // requireAll is a global helper method
+        return this.requireAll(require.context('../assets/content/pages/ru/', false, /\.json$/))
+      } else if (lang === 'en') {
+        return this.requireAll(require.context('../assets/content/pages/en/', false, /\.json$/))
+      }
+    },
+
     showSideNav (event) {
       event.stopPropagation()
 

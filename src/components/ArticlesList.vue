@@ -9,7 +9,7 @@
       <article class="flex flex-column justify-between m2" v-for="item in posts" :key="item.id">
         <header class="p2">
           <h2 class="h3 m0 mb2"><router-link class="" :to="{name: 'Article', params: {lang: lang, slug: item.slug}}" v-html="item.title"></router-link></h2>
-          <p class="lead m0" v-html="item.lead"></p>
+          <p class="lead m0" v-html="item.teaser"></p>
         </header>
         <footer class="flex items-end flex-auto p2">
           <ul class="list-reset m0">
@@ -27,8 +27,9 @@ export default {
   props: ['lang'],
 
   created: function () {
+    // loadContent is a global helper method
     this.content = this.loadContent(this.lang, 'articles-list')
-    this.posts = this.getPosts(this.lang)
+    this.posts = this.getPosts(this.lang).sort(this.compareById)
     // this.getTags()
   },
 
@@ -36,7 +37,7 @@ export default {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang) {
         this.content = this.loadContent(this.lang, 'articles-list')
-        this.posts = this.getPosts(this.lang)
+        this.posts = this.getPosts(this.lang).sort(this.compareById)
         this.getTags()
       }
     }
@@ -51,13 +52,9 @@ export default {
   },
 
   methods: {
-    requireAll (requireContext) {
-      // ref: https://webpack.github.io/docs/context.html#context-module-api
-      return requireContext.keys().map(requireContext)
-    },
-
     getPosts (lang) {
       if (lang === 'ru') {
+        // requireAll is a global helper method
         return this.requireAll(require.context('../assets/content/articles/ru/', false, /\.json$/))
       } else if (lang === 'en') {
         return this.requireAll(require.context('../assets/content/articles/en/', false, /\.json$/))
