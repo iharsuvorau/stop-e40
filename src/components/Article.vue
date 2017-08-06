@@ -1,22 +1,22 @@
 <template>
   <main class="full-width flex flex-column">
-    <top-nav :hasLogo="true"></top-nav>
+    <top-nav :isWhite="false" :hasLogo="true" :lang="$route.params.lang"></top-nav>
     <article class="flex flex-wrap justify-between">
       <header class="px3 py4 col-12 bg-light-grey">
         <div class="col-9">
-          <h1 class="m0" v-html="title"></h1>
+          <h1 class="m0" v-html="content.title"></h1>
           <ul class="list-reset dark-grey">
-            <li class="inline-block mr2">{{ date }}</li>
-            <li class="inline-block mr2">{{ tag.title }}</li>
+            <li class="inline-block mr2">{{ content.date }}</li>
+            <li class="inline-block mr2">{{ content.tag.title }}</li>
           </ul>
-          <p class="m0 h3 mt3" v-html="lead"></p>
+          <p class="m0 h3 mt3" v-html="content.lead"></p>
         </div>
       </header>
 
       <aside class="lg-col-2 md-col-3 sm-col-12 xs-col-12 mt4 pl3">
         <nav id="toc" class="sticky">
           <ul class="list-reset m0">
-            <li class="mb2" v-for="section in sections" :key="section.id">
+            <li class="mb2" v-for="section in content.sections" :key="section.id">
               <a :href="'#section'+section.id" class="dark-grey" :class="{'active': section.isActive}" v-html="section.title" @click="smoothScroll($event, section.id)"></a>
             </li>
           </ul>
@@ -24,7 +24,7 @@
       </aside>
 
       <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4">
-        <section class="px3" v-for="section in sections" :key="section.id">
+        <section class="px3" v-for="section in content.sections" :key="section.id">
           <h2 class="h2 mt4" :id="'section'+section.id" v-html="section.title"></h2>
           <p v-for="paragraph in section.paragraphs" :key="paragraph.id" v-html="paragraph.text"></p>
         </section>
@@ -44,7 +44,17 @@ import TopNav from '@/components/TopNav'
 import ActionNav from '@/components/ActionNav'
 
 export default {
-  name: 'article',
+  created () {
+    this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
+  },
+
+  watch: {
+    '$route' (to, from) {
+      if (from.params.lang !== to.params.lang) {
+        this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
+      }
+    }
+  },
 
   components: {
     'hero-unit': HeroUnit,
@@ -54,49 +64,14 @@ export default {
 
   data () {
     return {
-      title: 'Какими правовыми актами регулируются экологические вопросы в&nbsp;Беларуси',
-      lead: 'На вопросы отвечает эксперт Наталья Минченко, бывший сотрудник Министерства охраны природы в Беларуси',
-      tag: {id: 1, title: 'закон', slug: 'law'},
-      date: '2017-07-31',
-      sections: [
-        {
-          id: 1,
-          title: 'Какими правовыми актами регулируются экологические вопросы в Беларуси?',
-          isActive: false,
-          paragraphs: [
-            {id: 1, text: 'Статьей 46 Конституции Республики Беларусь гарантировано право граждан на благоприятную окружающую среду и на возмещение вреда, причиненного нарушением этого права.'},
-            {id: 2, text: 'Основополагающим законом в этой области является Закон Республики Беларусь «Об охране окружающей среды». С учетом норм данного закона и исходя из компонентов окружающей среды (лес, животный мир и так далее) в Беларуси приняты следующие законы: Водный кодекс, Лесной кодекс, кодексы о земле, о недрах, Законы Республики Беларусь «О животном мире», «О растительном мире», «Об охране атмосферного воздуха», «Об охране озонового слоя», «Об особо охраняемых природных территориях», «Об обращении с отходами», «О государственной экологической экспертизе, стратегической экологической оценке и оценке воздействия на окружающую среду» и другие.'},
-            {id: 2, text: 'Законы и кодексы закладывают правовые основы регулирования общественных отношений, связанных с охраной окружающей среды. На уровне Правительства и профильных министерств, местных исполнительных и распорядительных органов принимаются те постановления и решения, которые уточняют нормы законов, устанавливают процедуры, порядок действий, особые условия'},
-            {id: 2, text: 'Республика Беларусь активно участвует в международном сотрудничестве, наша страна является стороной ряда международных договоров http://minpriroda.gov.by/ru/konvencia-ru/. Согласно законодательству Республики Беларусь, если нормы законов противоречат международным договорам Республики Беларусь, то в спорных случаях применяются нормы международных договоров.'}
-          ]
-        },
-        {
-          id: 2,
-          title: 'Что происходит, если страна нарушает международные природоохранные конвенции?',
-          isActive: false,
-          paragraphs: [
-            {id: 1, text: 'В случае, если кто-то из членов международного договора нарушает требования этого договора, ему направляются рекомендации по выполнению условий соглашения. Они, как правило, рассматриваются на заседании рабочих органов международного договора, в том числе на конференциях сторон. В таких случаях страдает имидж страны, иногда это могут быть экономические санкции либо санкции неэкономического характера от других членов международных договоров, как, например, запрет, установленный ЕС на ввоз в страны Евросоюза из Беларуси трофеев волка https://news.tut.by/society/287437.html. Однако страна сама решает, как себя вести в том или ином случае и прислушиваться ли к рекомендациям.'}
-          ]
-        },
-        {
-          id: 3,
-          title: 'Какие бывают виды <abbr title="особо охраняемые природные территории">ООПТ</abbr> и чем они отличаются?',
-          isActive: false,
-          paragraphs: [
-            {id: 1, text: 'В соответствии с Законом Республики Беларусь «Об особо охраняемых природных территориях» в Республике Беларусь выделяется четыре категории особо охраняемых природных территорий.'},
-            {id: 2, text: 'Заповедник – особо охраняемая природная территория, объявленная в целях сохранения эталонных и иных ценных природных комплексов и объектов, изучения животного и растительного мира, естественных экологических систем и ландшафтов, создания условий для обеспечения естественного течения природных процессов. На территории заповедника ограничивается любая хозяйственная деятельность, за исключением деятельности, направленной на обеспечение функционирования заповедника. Заповедник объявляется с изъятием земельных участков у землепользователей.'},
-            {id: 2, text: ''},
-            {id: 2, text: 'Республика Беларусь активно участвует в международном сотрудничестве, наша страна является стороной ряда международных договоров http://minpriroda.gov.by/ru/konvencia-ru/. Согласно законодательству Республики Беларусь, если нормы законов противоречат международным договорам Республики Беларусь, то в спорных случаях применяются нормы международных договоров.'}
-          ]
-        }
-      ]
+      content: {}
     }
   },
 
   methods: {
     smoothScroll: function (event, sid) {
       event.preventDefault()
-      this.sections.forEach((el) => {
+      this.content.sections.forEach((el) => {
         if (el.id === sid) {
           el.isActive = true
         } else {
@@ -117,5 +92,9 @@ export default {
 .sticky {
   position: sticky;
   top: 2em;
+}
+
+#toc {
+  font-size: .8em;
 }
 </style>

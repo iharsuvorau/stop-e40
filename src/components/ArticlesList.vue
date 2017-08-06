@@ -1,14 +1,14 @@
 <template>
   <section class="py4">
     <h1 class="m0 center" v-html="content.title"></h1>
-    <ul class="tag-list list-reset center">
+    <!-- <ul class="tag-list list-reset center">
       <li class="inline-block mr2" v-for="tag in tags" :key="tag.id"><a href="#">{{ tag.title }}</a></li>
-    </ul>
+    </ul> -->
 
     <div class="py3 flex flex-wrap justify-center">
       <article class="flex flex-column justify-between m2" v-for="item in posts" :key="item.id">
         <header class="p2">
-          <h2 class="h3 m0 mb2"><router-link class="" :to="{name: 'Article', params: {slug: item.slug}}" v-html="item.title"></router-link></h2>
+          <h2 class="h3 m0 mb2"><router-link class="" :to="{name: 'Article', params: {lang: lang, slug: item.slug}}" v-html="item.title"></router-link></h2>
           <p class="lead m0" v-html="item.lead"></p>
         </header>
         <footer class="flex items-end flex-auto p2">
@@ -29,7 +29,7 @@ export default {
   created: function () {
     this.content = this.loadContent(this.lang, 'articles-list')
     this.posts = this.getPosts(this.lang)
-    this.getTags()
+    // this.getTags()
   },
 
   watch: {

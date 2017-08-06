@@ -1,10 +1,10 @@
 <template>
   <section class="flex flex-wrap">
-    <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12 image2"></div>
+    <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12 image1"></div>
     <div class="descr-block lg-col-6 md-col-12 sm-col-12 xs-col-12 flex flex-column justify-between">
       <article class="pt3 pl3 pr3" v-for="tab in content.tabs" :key="tab.id" v-if="tab.show">
         <h1 class="h2 m0"><a href="" v-html="tab.title"></a></h1>
-        <p v-for="p in tab.paragraphs" :key="p.id">{{ p.text }}</p>
+        <p v-for="p in tab.paragraphs" :key="p.id" v-html="p.text"></p>
       </article>
       <nav class="flex bold px3 pb2">
         <a v-for="t in content.tabs" :key="t.id" @click="showTab($event, t.id, content.tabs)" :class="t.className" :href="'#' + t.name">&mdash;</a>
@@ -103,12 +103,12 @@ section {
 }
 
 .image0 {
-  background-image: url('../assets/images/pripyat-opt.jpg');
+  background-image: url('../assets/images/pripyat-google.jpg');
 }
 .image1 {
-  background-image: url('../assets/images/pripyat-1-opt.jpg');
+  background-image: url('../assets/images/pripyat-2-opt.jpg');
 }
 .image2 {
-  background-image: url('../assets/images/pripyat-2-opt.jpg');
+  background-image: url('../assets/images/map-opt.jpg');
 }
 </style>
