@@ -86,9 +86,20 @@ export default {
           el.isActive = false
         }
       })
+
+      // scroll to the target
       let ref = document.getElementById('section' + sid)
       ref.scrollIntoView({behavior: 'smooth'})
-      window.location.hash = '#section' + sid
+
+      // update the URL
+      let parts = window.location.hash.split('/')
+      let prevHashes = parts[parts.length - 1].split('#')
+      if (prevHashes.length > 1) {
+        prevHashes[1] = 'section' + sid
+        window.location.hash = parts.slice(0, parts.length - 1).join('/') + '/' + prevHashes.join('#')
+      } else {
+        window.location.hash += '#section' + sid
+      }
     }
   }
 }

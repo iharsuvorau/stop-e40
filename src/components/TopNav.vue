@@ -2,7 +2,9 @@
   <nav class="px3 py2 bold shadow-bottom" :class="{white: isWhite}">
     <div class="flex flex-wrap justify-between">
       <ul class="list-reset m0 sm-hide xs-hide">
-        <li class="h3 inline-block mr3" v-if="hasLogo"><a :href="'/' + lang" class="font-ferry black">#STOP_E40</a></li>
+        <li class="h3 inline-block mr3" v-if="hasLogo">
+          <router-link class="font-ferry black" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
+        </li>
         <!-- <li class="inline-block mr3" v-for="(item, index) in content.main" :key="index">
           <a :href="'/#/' + item.slug" @click="smoothScroll($event, item.slug)">{{ item.title }}</a>
         </li> -->
