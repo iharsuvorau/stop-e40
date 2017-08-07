@@ -4,8 +4,8 @@
     <article class="flex flex-wrap justify-between">
       <header class="px3 py4 col-12">
         <div class="col-9">
-          <h1 class="m0" v-html="content.title"></h1>
-          <p class="m0 h3 mt3" v-html="content.teaser"></p>
+          <h1 class="m0" v-if="content.title" v-html="content.title"></h1>
+          <p class="m0 h3 mt3" v-if="content.teaser" v-html="content.teaser"></p>
         </div>
       </header>
 
@@ -19,16 +19,28 @@
         </nav>
       </aside>
 
-      <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4">
+      <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4 default-links">
         <p class="px3 mt4 h3 medium" v-if="content.lead" v-html="content.lead"></p>
         <section class="px3 mt4" v-for="(section, index) in content.sections" :key="index">
           <h2 class="h2" :id="'section'+index" v-if="section.title" v-html="section.title"></h2>
-          <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
+          <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.text" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
+          <ul v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.list">
+            <li v-for="(item, index) in paragraph.list" :key="index">
+              <a v-if="item.link" :href="item.link" :title="item.text" v-html="item.text"></a>
+              <span v-if="!item.link" v-html="item.text"></span>
+            </li>
+          </ul>
 
           <div v-if="section.sections">
             <section v-for="(section, index) in section.sections" :key="index">
               <h3 class="h3" v-if="section.title" v-html="section.title"></h3>
-              <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
+              <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.text" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
+              <ul v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.list">
+                <li v-for="(item, index) in paragraph.list" :key="index">
+                  <a v-if="item.link" :href="item.link" :title="item.text" v-html="item.text"></a>
+                  <span v-if="!item.link" v-html="item.text"></span>
+                </li>
+              </ul>
             </section>
           </div>
         </section>
@@ -60,7 +72,7 @@ export default {
 
   watch: {
     '$route' (to, from) {
-      if (from.params.lang !== to.params.lang) {
+      if (from.params.lang !== to.params.lang || from.params.slug !== to.params.slug) {
         this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
       }
     }

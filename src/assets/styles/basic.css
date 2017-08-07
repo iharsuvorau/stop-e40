@@ -39,12 +39,20 @@ a {
   transition: all 0.2s ease-out;
 }
 
-p a {
+p a, .default-link {
   color: #07c;
   text-decoration: underline;
   transition: all 0.2s ease-out;
 }
-p a:visited {
+p a:visited, .default-link {
+  color: purple;
+}
+.default-links a {
+  color: #07c;
+  text-decoration: underline;
+  transition: all 0.2s ease-out;
+}
+.default-links a {
   color: purple;
 }
 

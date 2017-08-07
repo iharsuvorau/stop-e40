@@ -6,8 +6,8 @@
         <div class="col-9">
           <h1 class="m0" v-html="content.title"></h1>
           <ul class="list-reset dark-grey">
-            <li class="inline-block mr2">{{ content.date }}</li>
-            <li class="inline-block mr2">{{ content.tag.title }}</li>
+            <li class="inline-block mr2" v-if="content.date">{{ content.date }}</li>
+            <li class="inline-block mr2" v-if="content.tag">{{ content.tag.title }}</li>
           </ul>
           <p class="m0 h3 mt3" v-html="content.teaser"></p>
         </div>

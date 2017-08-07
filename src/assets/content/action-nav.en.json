@@ -1,0 +1,7 @@
+{
+  "items": [
+    {"title": "Petition", "slug": "petition"},
+    {"title": "Memorandum", "slug": "memorandum"},
+    {"title": "Press Kit", "slug": "press-kit"}
+  ]
+}

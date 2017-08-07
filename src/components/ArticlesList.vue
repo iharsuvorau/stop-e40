@@ -1,10 +1,6 @@
 <template>
-  <section class="py4">
+  <section id="materials" class="pt4 px3">
     <h1 class="m0 center" v-html="content.title"></h1>
-    <!-- <ul class="tag-list list-reset center">
-      <li class="inline-block mr2" v-for="tag in tags" :key="tag.id"><a href="#">{{ tag.title }}</a></li>
-    </ul> -->
-
     <div class="py3 flex flex-wrap justify-center">
       <article class="flex flex-column justify-between m2" v-for="item in posts" :key="item.id">
         <header class="p2">
@@ -14,7 +10,6 @@
         <footer class="flex items-end flex-auto p2">
           <ul class="list-reset m0">
             <li class="inline-block mr1">{{ item.date }}</li>
-            <li class="inline-block mr1"><a href="#">{{ item.tag.title }}</a></li>
           </ul>
         </footer>
       </article>
@@ -30,7 +25,6 @@ export default {
     // loadContent is a global helper method
     this.content = this.loadContent(this.lang, 'articles-list')
     this.posts = this.getPosts(this.lang).sort(this.compareById)
-    // this.getTags()
   },
 
   watch: {
@@ -38,7 +32,6 @@ export default {
       if (from.params.lang !== to.params.lang) {
         this.content = this.loadContent(this.lang, 'articles-list')
         this.posts = this.getPosts(this.lang).sort(this.compareById)
-        this.getTags()
       }
     }
   },

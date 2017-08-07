@@ -1,0 +1,78 @@
+{
+  "id": 4,
+  "slug": "press-kit",
+  "title": "Пресс-кит",
+  "teaser": "Информация для СМИ, видео с&nbsp;пресс-конференции кампании и&nbsp;другие материалы, полезные для распространения информации о&nbsp;проблеме строительства водного пути Е40",
+  "lead": "",
+  "cover": "",
+  "date": "",
+  "sections": [
+    {
+      "title": "Материалы к&nbsp;пресс-конференции",
+      "isActive": false,
+      "paragraphs": [
+        {
+          "list": [
+            {"text": "Журнал к&nbsp;пресс-конференции против Е40", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3SkVxS1prazcxeDg"},
+            {"text": "Видео-презентация кампании против строительства водного пути Е40", "link": "https://www.youtube.com/watch?v=75KGIq7SToU"},
+            {"text": "Фотографии c пресс-конференции", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3QUxpS09Ca3lObUk"},
+            {"text": "Пресс-релиз к&nbsp;конференции со&nbsp;СМИ 17&nbsp;июля 2017", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3OEhNbXJueXB5Ym8"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Тезисы экспертов",
+      "isActive": false,
+      "paragraphs": [
+        {
+          "list": [
+            {"text": "Тезисы Герасименко И.О.", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3WVNYTzFoM3ZnaUU"},
+            {"text": "Тезисы Волосюка И.О.", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3TzlhVGwxUTU3cUk"},
+            {"text": "Тезисы Пинчику И.О. и Карлинова И.О.", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3WGNDTEJRZTd0ZEk"},
+            {"text": "Тезисы Винчевского И.О.", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3dmJWckV5V1V0NnM"},
+            {"text": "Общая позиция", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3dmJWckV5V1V0NnM"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Графические материалы, фотографии",
+      "isActive": false,
+      "paragraphs": [
+        {
+          "list": [
+            {"text": "Фотографии с Припяти", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3SjVRUXk2ZWd6ZWs"},
+            {"text": "Фотографии с акции против строительства водного пути Е40", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3UXZON09FMWZoZm8"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ответы госорганизаций по вопросу Е40",
+      "isActive": false,
+      "paragraphs": [
+        {
+          "list": [
+            {"text": "Академия наук РБ", "link": "#"},
+            {"text": "БЖД", "link": "#"},
+            {"text": "Гомельоблисполком", "link": "#"},
+            {"text": "Госинспекция", "link": "#"},
+            {"text": "Днепро-Буг канал", "link": "#"},
+            {"text": "Ивановский райисполком", "link": "#"},
+            {"text": "Минприроды", "link": "#"},
+            {"text": "Минсельхозпро", "link": "#"},
+            {"text": "Минспорта и туризма", "link": "#"},
+            {"text": "Минэкономики", "link": "#"},
+            {"text": "Полесский радиологический заповедник РБ", "link": "#"},
+            {"text": "Припятский нацпарк РБ", "link": "#"},
+            {"text": "Управление делами президента", "link": "#"},
+            {"text": "Министерство транспорта и туриза", "link": "#"},
+            {"text": "Брестоблисполком", "link": "#"},
+            {"text": "ЦНИИКИВР", "link": "#"}
+          ]
+        }
+      ]
+    }
+  ]
+}

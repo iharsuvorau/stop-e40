@@ -7,6 +7,7 @@
     <section class="">
       <problem-description :lang="$route.params.lang || defaultLang"></problem-description>
       <articles-list :lang="$route.params.lang || defaultLang"></articles-list>
+      <media-publications :lang="$route.params.lang || defaultLang"></media-publications>
     </section>
   </div>
 </template>
@@ -16,6 +17,7 @@ import HeroUnit from '@/components/HeroUnit'
 import TopNav from '@/components/TopNav'
 import ProblemDescription from '@/components/ProblemDescription'
 import ArticlesList from '@/components/ArticlesList'
+import MediaPublications from '@/components/MediaPublications'
 
 export default {
   name: 'home',
@@ -24,7 +26,8 @@ export default {
     'hero-unit': HeroUnit,
     'top-nav': TopNav,
     'problem-description': ProblemDescription,
-    'articles-list': ArticlesList
+    'articles-list': ArticlesList,
+    'media-publications': MediaPublications
   },
 
   data () {

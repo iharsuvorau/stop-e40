@@ -1,0 +1,7 @@
+{
+  "items": [
+    {"title": "Петиция", "slug": "petition"},
+    {"title": "Меморандум", "slug": "memorandum"},
+    {"title": "Пресс-кит", "slug": "press-kit"}
+  ]
+}

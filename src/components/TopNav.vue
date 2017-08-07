@@ -3,25 +3,31 @@
     <div class="flex flex-wrap justify-between">
       <ul class="list-reset m0 sm-hide xs-hide">
         <li class="h3 inline-block mr3" v-if="hasLogo"><a :href="'/' + lang" class="font-ferry black">#STOP_E40</a></li>
-        <li class="inline-block mr3" v-for="item in content.main" :key="item.id">
-          <router-link :to="{path: getCurrentPathWithLang(lang) + '/' + item.slug}">{{ item.title }}</router-link>
+        <li class="inline-block mr3" v-for="(item, index) in content.main" :key="index">
+          <a :href="'#' + item.slug" @click="smoothScroll($event, item.slug)">{{ item.title }}</a>
         </li>
         <li class="inline-block mr3" v-for="item in pages" :key="item.id">
-          <router-link :to="{name: 'Page', params: {lang: $route.params.lang, slug: item.slug}}">{{ item.title }}</router-link>
+          <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
         </li>
         <li class="inline-block"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)"></a></li>
       </ul>
       <span class="lg-hide md-hide"><a href="#" @click="showSideNav($event)">Меню</a></span>
 
       <ul class="list-reset m0">
-        <li class="inline-block" v-for="item in content.langs" :key="item.id">
-          <router-link class="mr3" v-show="lang !== item.path" :to="{path: getCurrentPathWithLang(item.path)}">{{ item.title }}</router-link>
+        <li class="inline-block" v-for="(item, index) in content.langs" :key="index">
+          <router-link class="mr3" v-show="lang !== item.slug" :to="{path: getCurrentPathWithLang(item.slug)}">{{ item.title }}</router-link>
         </li>
       </ul>
 
       <section id="sidenav" class="flex flex-column justify-between" v-if="sideNavVisible" @click="stopPropagation($event)">
         <ul class="list-reset m0 p3">
-          <li class="mb2" v-for="item in content.items" :key="item.id"><a href="#">{{ item.title }}</a></li>
+          <li class="mb1" v-for="(item, index) in content.main" :key="index">
+            <router-link :to="{path: item.slug}">{{ item.title }}</router-link>
+          </li>
+          <li class="mb1" v-for="item in pages" :key="item.id">
+            <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
+          </li>
+          <li class="mb1"><a id="movieRefSideMenu" href="" title="Stop E40" @click="showMovie($event)"></a></li>
         </ul>
         <h1 class="font-ferry m0 px3 py3 h2 blue">#stop_e40</h1>
       </section>
@@ -40,22 +46,23 @@ export default {
   props: ['isWhite', 'hasLogo', 'lang'],
 
   created () {
+    this.lang = this.lang || this.$route.params.lang || this.defineDefaultLang()
     this.content = this.loadContent(this.lang, 'top-nav')
     this.pages = this.getPages(this.lang).sort(this.compareById)
   },
 
   mounted () {
-    let img = document.createElement('img')
-    img.src = movieIcon
-    img.style = 'width: 30px; position: relative; top: 15px; margin-top: -20px'
+    let img1 = document.createElement('img')
+    img1.src = movieIcon
+    img1.style = 'width: 30px; position: relative; top: 15px; margin-top: -20px'
     let movieRef = document.getElementById('movieRef')
-    movieRef.appendChild(img)
+    movieRef.appendChild(img1)
   },
 
   watch: {
     '$route' (to, from) {
-      console.log('watch')
       if (from.params.lang !== to.params.lang) {
+        this.lang = this.lang || this.$route.params.lang || this.defineDefaultLang()
         this.content = this.loadContent(this.lang, 'top-nav')
         this.pages = this.getPages(this.lang).sort(this.compareById)
       }
@@ -110,6 +117,13 @@ export default {
       let parts = window.location.pathname.split('/')
       parts[1] = lang
       return parts.join('/')
+    },
+
+    smoothScroll: function (event, sid) {
+      event.preventDefault()
+      let ref = document.getElementById(sid)
+      ref.scrollIntoView({behavior: 'smooth'})
+      window.location.hash = sid
     }
   }
 }
