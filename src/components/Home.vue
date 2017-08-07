@@ -4,7 +4,7 @@
       <top-nav :isWhite="false" :lang="$route.params.lang || defaultLang"></top-nav>
       <hero-unit :lang="$route.params.lang || defaultLang"></hero-unit>
     </header>
-    <section class="">
+    <section class="mb4">
       <problem-description :lang="$route.params.lang || defaultLang"></problem-description>
       <articles-list :lang="$route.params.lang || defaultLang"></articles-list>
       <media-publications :lang="$route.params.lang || defaultLang"></media-publications>
