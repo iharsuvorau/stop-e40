@@ -39,7 +39,6 @@ export default {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang) {
         this.content = this.loadContent(this.lang, 'media-publications')
-        this.posts = this.getPosts(this.lang).sort(this.compareById)
       }
     }
   },
