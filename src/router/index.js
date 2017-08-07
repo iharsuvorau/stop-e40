@@ -62,7 +62,6 @@ Vue.mixin({
 })
 
 const router = new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',
