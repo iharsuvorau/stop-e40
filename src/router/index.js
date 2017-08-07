@@ -65,6 +65,13 @@ const router = new Router({
   mode: 'history',
   routes: [
     {
+      path: '/',
+      name: 'Home',
+      components: {
+        default: Home
+      }
+    },
+    {
       path: '/:lang',
       name: 'HomeLang',
       components: {
