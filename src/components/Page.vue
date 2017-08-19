@@ -25,9 +25,17 @@
           <h2 class="h2" :id="'section'+index" v-if="section.title" v-html="section.title"></h2>
           <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.text" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
           <ul v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.list">
+            <!-- List -->
             <li v-for="(item, index) in paragraph.list" :key="index">
               <a v-if="item.link" :href="item.link" :title="item.text" v-html="item.text"></a>
               <span v-if="!item.link" v-html="item.text"></span>
+              <!-- List Meta -->
+              <ul class="list-reset m0 h6 dark-grey" v-if="item.meta">
+                <li class="inline-block mr2" v-for="(item, index) in item.meta" :key="index">
+                  <span v-if="item.name">{{ item.name }}: </span>
+                  <span v-if="item.value" v-html="item.value"></span>
+                </li>
+              </ul>
             </li>
           </ul>
 
@@ -36,6 +44,7 @@
               <h3 class="h3" v-if="section.title" v-html="section.title"></h3>
               <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.text" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
               <ul v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.list">
+                <!-- List -->
                 <li v-for="(item, index) in paragraph.list" :key="index">
                   <a v-if="item.link" :href="item.link" :title="item.text" v-html="item.text"></a>
                   <span v-if="!item.link" v-html="item.text"></span>

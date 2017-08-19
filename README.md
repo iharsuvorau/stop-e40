@@ -19,3 +19,17 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Internalization and translations
+
+The project contains two types of content to translate:
+
+* UI content
+* Main content
+
+*UI content* is located at `src/assets/content` folder and each file corresponds to a component in the Vue application.
+
+*Main content* is located at
+
+* `src/assets/content/articles`
+* `src/assets/content/pages`

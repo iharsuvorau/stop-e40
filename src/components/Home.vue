@@ -7,7 +7,6 @@
     <section class="mb4">
       <problem-description :lang="$route.params.lang || defaultLang"></problem-description>
       <articles-list :lang="$route.params.lang || defaultLang"></articles-list>
-      <media-publications :lang="$route.params.lang || defaultLang"></media-publications>
     </section>
   </div>
 </template>

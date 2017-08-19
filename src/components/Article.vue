@@ -27,8 +27,15 @@
         <p class="px3 mt4 h3 medium" v-if="content.lead" v-html="content.lead"></p>
         <section class="px3 mt4" v-for="(section, index) in content.sections" :key="index">
           <h2 class="h2" :id="'section'+index" v-if="section.title" v-html="section.title"></h2>
+          <!-- Images -->
+          <div v-if="section.images">
+            <figure class="m0" v-for="(img, index) in section.images" :key="index">
+              <img :src="img.link" :alt="img.caption">
+              <figcaption class="italic dark-grey h6" v-if="img.caption" v-html="img.caption"></figcaption>
+            </figure>
+          </div>
           <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
-
+          <!-- Subsections -->
           <div v-if="section.sections">
             <section v-for="(section, index) in section.sections" :key="index">
               <h3 class="h3" v-if="section.title" v-html="section.title"></h3>
