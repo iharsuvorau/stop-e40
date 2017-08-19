@@ -44,7 +44,7 @@ p a, .default-link {
   text-decoration: underline;
   transition: all 0.2s ease-out;
 }
-p a:visited, .default-link {
+p a:visited, .default-link:visited {
   color: purple;
 }
 .default-links a {

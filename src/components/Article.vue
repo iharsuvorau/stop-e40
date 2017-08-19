@@ -23,31 +23,47 @@
         </nav>
       </aside>
 
-      <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4">
+      <div class="lg-col-10 md-col-9 sm-col-12 xs-col-12 mb4">
         <p class="px3 mt4 h3 medium" v-if="content.lead" v-html="content.lead"></p>
-        <section class="px3 mt4" v-for="(section, index) in content.sections" :key="index">
-          <h2 class="h2" :id="'section'+index" v-if="section.title" v-html="section.title"></h2>
+        <section class="mt4" v-for="(section, index) in content.sections" :key="index">
+          <h2 class="px3 h2 lg-col-9 md-col-12 sm-col-12 xs-col-12" :id="'section'+index" v-if="section.title" v-html="section.title"></h2>
           <!-- Images -->
           <div v-if="section.images">
-            <figure class="m0" v-for="(img, index) in section.images" :key="index">
+            <figure class="pl3 m0" v-for="(img, index) in section.images" :key="index">
               <img :src="img.link" :alt="img.caption">
-              <figcaption class="italic dark-grey h6" v-if="img.caption" v-html="img.caption"></figcaption>
+              <figcaption class="italic dark-grey h6 lg-col-8 sm-col-12" v-if="img.caption" v-html="img.caption"></figcaption>
             </figure>
           </div>
-          <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
+          <p class="px3 lg-col-9 md-col-12 sm-col-12 xs-col-12" v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
           <!-- Subsections -->
           <div v-if="section.sections">
             <section v-for="(section, index) in section.sections" :key="index">
-              <h3 class="h3" v-if="section.title" v-html="section.title"></h3>
-              <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
+              <h3 class="px3 h3 lg-col-9 md-col-12 sm-col-12 xs-col-12" v-if="section.title" v-html="section.title"></h3>
+              <p class="px3 lg-col-9 md-col-12 sm-col-12 xs-col-12" v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
+              <!-- Tables -->
+              <div class="px3 pb2 lg-col-9 md-col-12 sm-col-12 xs-col-12" v-if="section.tables">
+                <table class="mt2 full-width" v-for="(table, index) in section.tables" :key="index">
+                  <caption class="h5 caps" v-if="table.caption" v-html="table.caption"></caption>
+                  <thead v-if="table.headers">
+                    <tr><th class="pr2 border-bottom" v-for="(th, index) in table.headers" :key="index" v-html="th"></th></tr>
+                  </thead>
+                  <tbody>
+                    <tr class="align-top h5" v-for="(tr, index) in table.rows" :key="index">
+                      <td class="pr2 py1 border-bottom" :class="{'caps': index === 0}" v-for="(td, index) in tr" :key="index" v-html="td"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </section>
           </div>
         </section>
       </div>
 
+      <!--
       <aside class="lg-col-3 md-col-12 sm-col-12 xs-col-12 mt4 px3">
         <action-nav class="sticky"></action-nav>
       </aside>
+       -->
 
     </article>
   </main>
