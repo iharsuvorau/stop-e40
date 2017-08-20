@@ -1,6 +1,6 @@
 <template>
   <footer class="p3">
-    <nav class="flex dark-grey justify-between">
+    <nav class="flex flex-wrap dark-grey justify-between">
       <ul class="m0 list-reset">
         <li class="inline-block mr2">&copy;&nbsp;{{ year }}</li>
         <li class="inline-block mr2" v-for="(item, index) in content.main" :key="index">

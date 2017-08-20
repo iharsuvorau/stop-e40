@@ -1,5 +1,5 @@
 <template>
-  <div class="full-width">
+  <div>
     <main class="flex flex-column">
       <top-nav :isWhite="false" :hasLogo="true" :lang="$route.params.lang"></top-nav>
       <article class="flex flex-wrap justify-between">

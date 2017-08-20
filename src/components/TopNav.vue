@@ -5,33 +5,27 @@
         <li class="h3 inline-block mr3" v-if="hasLogo">
           <router-link class="font-ferry black" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
         </li>
-        <!-- <li class="inline-block mr3" v-for="(item, index) in content.main" :key="index">
-          <a :href="'/#/' + item.slug" @click="smoothScroll($event, item.slug)">{{ item.title }}</a>
-        </li> -->
         <li class="inline-block mr3" v-for="item in pages" :key="item.id">
           <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
         </li>
         <li class="inline-block"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)"></a></li>
       </ul>
-      <span class="lg-hide md-hide"><a href="#" @click="showSideNav($event)">Меню</a></span>
+      <span class="lg-hide md-hide"><a href="#" @click.prevent="showSideNav($event)">{{ content.menuText }}</a></span>
 
       <ul class="list-reset m0">
         <li class="inline-block" v-for="(item, index) in content.langs" :key="index">
-          <router-link class="mr3" v-show="lang !== item.slug" :to="{path: getCurrentPathWithLang(item.slug)}">{{ item.title }}</router-link>
+          <router-link v-show="lang !== item.slug" :to="{path: getCurrentPathWithLang(item.slug)}">{{ item.title }}</router-link>
         </li>
       </ul>
 
       <section id="sidenav" class="flex flex-column justify-between" v-if="sideNavVisible" @click="stopPropagation($event)">
         <ul class="list-reset m0 p3">
-          <li class="mb1" v-for="(item, index) in content.main" :key="index">
-            <router-link :to="{path: item.slug}">{{ item.title }}</router-link>
-          </li>
-          <li class="mb1" v-for="item in pages" :key="item.id">
+          <li class="mb1" v-for="item in pages" :key="item.id" @click="hideSideNav">
             <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
           </li>
           <li class="mb1"><a id="movieRefSideMenu" href="" title="Stop E40" @click="showMovie($event)"></a></li>
         </ul>
-        <h1 class="font-ferry m0 px3 py3 h2 blue">#stop_e40</h1>
+        <router-link class="font-ferry m0 px3 py3 h2 blue" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
       </section>
 
       <div id="movie-modal" class="p4" v-if="movieVisible">
@@ -91,13 +85,19 @@ export default {
     },
 
     showSideNav (event) {
+      // do not propagate click listener while clicking on the menu panel
       event.stopPropagation()
 
       this.sideNavVisible = true
 
+      // listen for clicking outside the menu
       document.getElementsByTagName('body')[0].addEventListener('click', () => {
         this.sideNavVisible = false
       })
+    },
+
+    hideSideNav () {
+      this.sideNavVisible = false
     },
 
     showMovie (event) {
@@ -158,6 +158,7 @@ a {
   width: auto;
   background: white;
   box-shadow: 2px 0 4px $shadow-color;
+  z-index: 999;
 }
 
 #movie-modal {

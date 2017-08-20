@@ -1,10 +1,11 @@
 {
+  "menuText": "Menu",
   "main": [
-    {"title": "Materials", "slug": "materials"},
-    {"title": "Publications", "slug": "publications"}
+      { "title": "Materials", "slug": "materials" },
+      { "title": "Publications", "slug": "publications" }
   ],
   "langs": [
-    {"title": "English", "slug": "en"},
-    {"title": "русский", "slug": "ru"}
+      { "title": "English", "slug": "en" },
+      { "title": "русский", "slug": "ru" }
   ]
 }

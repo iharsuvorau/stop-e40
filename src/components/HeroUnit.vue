@@ -48,6 +48,10 @@ export default {
 h1 {
   font-size: 3.25rem;
   line-height: 1.05;
+
+  @media (max-width: 600px) {
+    font-size: 2.75em;
+  }
 }
 
 .tagline {
