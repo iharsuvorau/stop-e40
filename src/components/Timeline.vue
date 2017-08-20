@@ -1,15 +1,12 @@
 <template>
   <section class="px3">
     <h1 class="center" v-html="content.title"></h1>
-    <section class="flex flex-wrap" v-for="(events, year) in eventsByYear" :key="year">
-      <h2 class="h1 col-12 my2" v-html="year"></h2>
-      <div class="event pr2 pb2" v-for="(item, index) in events" :key="index">
+    <section class="flex flex-wrap mt3">
+      <div class="event pr2" v-for="(item, index) in content.events" :key="index">
         <article class="p2 border-top">
-          <header class="mb1">
-            <div class="h3 bold" v-html="item.date.monthDay"></div>
-          </header>
-          <div class="h4 dark-grey" v-if="item.place" v-html="item.place"></div>
-          <p class="h4 m0 regular" v-html="item.title"></p>
+          <div class="h3 mb1 bold" v-html="item.date.monthDay + ', ' + item.date.year"></div>
+          <span class="h4 dark-grey" v-if="item.place" v-html="item.place"></span>
+          <p class="h4 m0 mb1 regular" v-html="item.title"></p>
         </article>
       </div>
     </section>
@@ -64,6 +61,7 @@ article {
   // background-color: $light-grey;
   transition: all 0.2s ease-in;
   // height: 400px;
+  height: 100%;
 
   &:hover, &:focus {
     background-color: $light-grey;
