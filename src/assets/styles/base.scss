@@ -19,6 +19,10 @@
   border-style: solid;
 }
 
+.border-bold {
+  border-width: 3px;
+}
+
 .border-btn {
   min-height: 4.5em;
   max-width: 20em;
@@ -28,6 +32,10 @@
 
 .border-btn:hover {
   cursor: pointer;
+}
+
+.border-light-grey {
+  border-color: $light-grey;
 }
 
 /* ... */

@@ -7,6 +7,7 @@
     <section class="mb4">
       <problem-description :lang="$route.params.lang || defaultLang"></problem-description>
       <articles-list :lang="$route.params.lang || defaultLang"></articles-list>
+      <time-line :lang="$route.params.lang || defaultLang"></time-line>
     </section>
   </div>
 </template>
@@ -17,6 +18,7 @@ import TopNav from '@/components/TopNav'
 import ProblemDescription from '@/components/ProblemDescription'
 import ArticlesList from '@/components/ArticlesList'
 import MediaPublications from '@/components/MediaPublications'
+import Timeline from '@/components/Timeline'
 
 export default {
   name: 'home',
@@ -26,7 +28,8 @@ export default {
     'top-nav': TopNav,
     'problem-description': ProblemDescription,
     'articles-list': ArticlesList,
-    'media-publications': MediaPublications
+    'media-publications': MediaPublications,
+    'time-line': Timeline
   },
 
   data () {
