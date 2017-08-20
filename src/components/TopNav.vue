@@ -5,10 +5,10 @@
         <li class="h3 inline-block mr3" v-if="hasLogo">
           <router-link class="font-ferry black" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
         </li>
+        <li class="inline-block mr3"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)">{{ content.movieText }}</a></li>
         <li class="inline-block mr3" v-for="item in pages" :key="item.id">
           <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
         </li>
-        <li class="inline-block"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)"></a></li>
       </ul>
       <span class="lg-hide md-hide"><a href="#" @click.prevent="showSideNav($event)">{{ content.menuText }}</a></span>
 
@@ -23,7 +23,7 @@
           <li class="mb1" v-for="item in pages" :key="item.id" @click="hideSideNav">
             <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
           </li>
-          <li class="mb1"><a id="movieRefSideMenu" href="" title="Stop E40" @click="showMovie($event)"></a></li>
+          <li class="mb1"><a href="https://www.youtube.com/watch?v=75KGIq7SToU" :title="content.movieText">{{ content.movieText }}</a></li>
         </ul>
         <router-link class="font-ferry m0 px3 py3 h2 blue" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
       </section>
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-var movieIcon = require('../assets/images/movie.svg')
+// var movieIcon = require('../assets/images/movie.svg')
 
 export default {
   props: ['isWhite', 'hasLogo', 'lang'],
@@ -48,11 +48,13 @@ export default {
   },
 
   mounted () {
-    let img1 = document.createElement('img')
-    img1.src = movieIcon
-    img1.style = 'width: 30px; position: relative; top: 15px; margin-top: -20px'
-    let movieRef = document.getElementById('movieRef')
-    movieRef.appendChild(img1)
+    // add movie icon
+    //
+    // let img1 = document.createElement('img')
+    // img1.src = movieIcon
+    // img1.style = 'width: 30px; position: relative; top: 15px; margin-top: -20px'
+    // let movieRef = document.getElementById('movieRef')
+    // movieRef.appendChild(img1)
   },
 
   watch: {
@@ -173,5 +175,6 @@ a {
   background: white;
   box-shadow: 0 2px 40px $shadow-dark-color;
   border-radius: 15px;
+  z-index: 998;
 }
 </style>

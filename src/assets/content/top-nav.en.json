@@ -1,5 +1,6 @@
 {
   "menuText": "Menu",
+  "movieText": "Е40 Movie",
   "main": [
       { "title": "Materials", "slug": "materials" },
       { "title": "Publications", "slug": "publications" }
