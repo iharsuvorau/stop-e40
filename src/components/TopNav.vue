@@ -116,9 +116,13 @@ export default {
     },
 
     getCurrentPathWithLang (lang) {
-      let parts = window.location.pathname.split('/')
-      parts[1] = lang
-      return parts.join('/')
+      // NOTE: lang switching simplified and redirects to '/'
+      // so that you don't need to check the translation availability
+
+      // let parts = window.location.hash.split('/')
+      // parts[1] = lang
+      // return '/' + parts.slice(1, parts.length).join('/')
+      return '/' + lang
     },
 
     smoothScroll: function (event, sid) {
