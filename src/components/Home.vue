@@ -9,6 +9,7 @@
       <articles-list :lang="$route.params.lang || defaultLang"></articles-list>
       <time-line :lang="$route.params.lang || defaultLang"></time-line>
     </section>
+    <footer-bar :lang="$route.params.lang || defaultLang"></footer-bar>
   </div>
 </template>
 
@@ -19,6 +20,8 @@ import ProblemDescription from '@/components/ProblemDescription'
 import ArticlesList from '@/components/ArticlesList'
 import MediaPublications from '@/components/MediaPublications'
 import Timeline from '@/components/Timeline'
+import Footer from '@/components/Footer'
+import SocialFeeds from '@/components/SocialFeeds'
 
 export default {
   name: 'home',
@@ -29,7 +32,9 @@ export default {
     'problem-description': ProblemDescription,
     'articles-list': ArticlesList,
     'media-publications': MediaPublications,
-    'time-line': Timeline
+    'time-line': Timeline,
+    'footer-bar': Footer,
+    'social-feeds': SocialFeeds
   },
 
   data () {

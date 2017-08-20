@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-wrap">
-    <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12 image1"></div>
-    <div class="descr-block lg-col-6 md-col-12 sm-col-12 xs-col-12 flex flex-column justify-between">
+    <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 col-12 image1"></div>
+    <div class="descr-block lg-col-6 col-12 flex flex-column justify-between">
       <article class="pt3 pl3 pr3" v-for="tab in content.tabs" :key="tab.id" v-if="tab.show">
         <h1 class="h2 m0"><a href="" v-html="tab.title"></a></h1>
         <p v-for="p in tab.paragraphs" :key="p.id" v-html="p.text"></p>
