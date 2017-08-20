@@ -3,10 +3,13 @@
     <h1 class="center" v-html="content.title"></h1>
     <section class="flex flex-wrap mt3">
       <div class="event pr2" v-for="(item, index) in content.events" :key="index">
-        <article class="p2 border-top">
+        <article class="py2" @click="showDescr($event, index, item)">
           <div class="h3 mb1 bold" v-html="item.date.monthDay + ', ' + item.date.year"></div>
           <span class="h4 dark-grey" v-if="item.place" v-html="item.place"></span>
           <p class="h4 m0 mb1 regular" v-html="item.title"></p>
+          <div v-show="item.isActive" v-if="item.paragraphs" class="h5 mt3">
+            <p class="" v-for="(item, index) in item.paragraphs" :key="index" v-html="item.text"></p>
+          </div>
         </article>
       </div>
     </section>
@@ -20,7 +23,7 @@ export default {
   created: function () {
     // loadContent is a global helper method
     this.content = this.loadContent(this.lang, 'timeline')
-    this.eventsByYear = this.sortEventsByYear(this.content.events)
+    // this.eventsByYear = this.sortEventsByYear(this.content.events)
   },
 
   watch: {
@@ -49,6 +52,20 @@ export default {
         }
       })
       return sorted
+    },
+
+    showDescr (event, index, item) {
+      if (item.isActive) {
+        item.isActive = false
+      } else {
+        item.isActive = true
+      }
+
+      this.content.events.forEach((el) => {
+        if (el !== item) {
+          el.isActive = false
+        }
+      })
     }
   }
 }
@@ -58,17 +75,27 @@ export default {
 @import '../assets/styles/colors';
 
 article {
-  // background-color: $light-grey;
   transition: all 0.2s ease-in;
-  // height: 400px;
   height: 100%;
+  border-top: 1px black dotted;
 
   &:hover, &:focus {
-    background-color: $light-grey;
+    // background-color: $light-grey;
+    cursor: pointer;
+    & .h3 {
+      color: $blue;
+      transition: all 0.2s ease-in;
+    }
+
+    border-color: $blue;
   }
 }
 
 .event {
   flex-basis: 17.75em;
+
+  @media (max-width: 915px) {
+    flex-basis: 100%;
+  }
 }
 </style>
