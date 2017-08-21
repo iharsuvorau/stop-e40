@@ -1,6 +1,6 @@
 <template>
   <section class="flex flex-wrap">
-    <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 col-12 image1"></div>
+    <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 col-12 image0"></div>
     <div class="descr-block lg-col-6 col-12 flex flex-column justify-between">
       <article class="pt3 pl3 pr3" v-for="tab in content.tabs" :key="tab.id" v-if="tab.show">
         <h1 class="h2 m0"><a href="" v-html="tab.title"></a></h1>
