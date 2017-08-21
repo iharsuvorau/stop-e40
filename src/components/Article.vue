@@ -144,4 +144,8 @@ export default {
 #toc {
   font-size: .8em;
 }
+
+td.caps {
+  width: 200px;
+}
 </style>
