@@ -77,7 +77,7 @@ export default {
 article {
   transition: all 0.2s ease-in;
   height: 100%;
-  border-top: 1px black dotted;
+  border-top: 1px lighten($dark-grey, 35%) solid;
 
   &:hover, &:focus {
     // background-color: $light-grey;

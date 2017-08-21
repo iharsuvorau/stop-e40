@@ -1,11 +1,11 @@
 <template>
   <section class="hero-unit p3 py4 flex flex-wrap justify-center col-12">
-    <div class="lg-col-9 md-col-9 col-12 pr4 flex flex-column justify-between">
-      <h1 class="m0 mb4 col-12 font-ferry">{{ content.title }}</h1>
-      <p class="tagline h1 m0 pb2" v-html="content.tagline"></p>
+    <div class="center pr4 flex flex-column justify-between">
+      <!-- <h1 class="m0 mb4 col-12 font-ferry">{{ content.title }}</h1> -->
+      <p class="tagline h1 m0 pb2 px4" v-html="content.tagline"></p>
     </div>
 
-    <action-nav :isWhite="false" class="lg-col-3 md-col-3 col-12 py2"></action-nav>
+    <!-- <action-nav :isWhite="false" class="lg-col-3 md-col-3 col-12 py2"></action-nav> -->
   </section>
 </template>
 
@@ -56,5 +56,7 @@ h1 {
 
 .tagline {
   max-width: 40em;
+  font-size: 2.7em;
+  font-family: 'Agipo';
 }
 </style>

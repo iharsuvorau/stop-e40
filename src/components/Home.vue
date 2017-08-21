@@ -1,7 +1,7 @@
 <template>
   <div class="home flex flex-column full-width">
     <header class="">
-      <top-nav :isWhite="false" :lang="$route.params.lang || defaultLang"></top-nav>
+      <top-nav :hasLogo="true" :isWhite="false" :lang="$route.params.lang || defaultLang"></top-nav>
       <hero-unit :lang="$route.params.lang || defaultLang"></hero-unit>
     </header>
     <section class="mb4">
