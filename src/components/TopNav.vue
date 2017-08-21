@@ -1,9 +1,9 @@
 <template>
   <nav class="px3 py2 bold shadow-bottom" :class="{white: isWhite}">
     <div class="flex flex-wrap justify-between">
-      <ul class="list-reset m0 sm-hide xs-hide">
+      <ul class="list-reset m0 sm-hide xs-hide flex flex-wrap items-center">
         <li class="h3 inline-block mr3" v-if="hasLogo">
-          <router-link class="font-ferry black" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
+          <router-link class="logo font-ferry black" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
         </li>
         <li class="inline-block mr3"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)">{{ content.movieText }}</a></li>
         <li class="inline-block mr3" v-for="item in pages" :key="item.id">
@@ -12,7 +12,7 @@
       </ul>
       <span class="lg-hide md-hide"><a href="#" @click.prevent="showSideNav($event)">{{ content.menuText }}</a></span>
 
-      <ul class="list-reset m0">
+      <ul class="list-reset m0 flex flex-wrap items-center">
         <li class="inline-block" v-for="(item, index) in content.langs" :key="index">
           <router-link v-show="lang !== item.slug" :to="{path: getCurrentPathWithLang(item.slug)}">{{ item.title }}</router-link>
         </li>
@@ -154,6 +154,10 @@ a {
   &:hover, &:focus, &.router-link-active {
     color: black;
   }
+}
+
+.logo {
+  font-size: .95em;
 }
 
 #sidenav {
