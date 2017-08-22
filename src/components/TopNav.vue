@@ -6,11 +6,12 @@
           <router-link class="logo font-ferry black" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
         </li>
       </ul>
-      <span class="lg-hide md-hide"><a href="#" @click.prevent="showSideNav($event)">{{ content.menuText }}</a></span>
+      <span class="lg-hide md-hide bold"><a href="#" @click.prevent="showSideNav($event)">{{ content.menuText }}</a></span>
+      <router-link class="logo lg-hide md-hide font-ferry black" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
 
       <ul class="list-reset m0 flex flex-wrap items-center bold">
-        <li class="inline-block mr3"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)">{{ content.movieText }}</a></li>
-        <li class="inline-block mr3" v-for="item in pages" :key="item.id">
+        <li class="inline-block mr3 sm-hide xs-hide"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)">{{ content.movieText }}</a></li>
+        <li class="inline-block mr3 sm-hide xs-hide" v-for="item in pages" :key="item.id">
           <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
         </li>
         <li class="inline-block" v-for="(item, index) in content.langs" :key="index">

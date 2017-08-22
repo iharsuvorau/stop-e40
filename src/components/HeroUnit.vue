@@ -1,8 +1,8 @@
 <template>
-  <section class="hero-unit p3 py4 flex flex-wrap justify-center col-12">
-    <div class="center pr4 flex flex-column justify-between">
+  <section class="hero-unit p3 py4 flex flex-wrap justify-center">
+    <div class="center flex flex-column justify-between">
       <!-- <h1 class="m0 mb4 col-12 font-ferry">{{ content.title }}</h1> -->
-      <p class="tagline h1 m0 pb2 px4" v-html="content.tagline"></p>
+      <p class="tagline h1 m0" v-html="content.tagline"></p>
     </div>
 
     <!-- <action-nav :isWhite="false" class="lg-col-3 md-col-3 col-12 py2"></action-nav> -->
@@ -55,8 +55,17 @@ h1 {
 }
 
 .tagline {
-  max-width: 40em;
-  font-size: 2.7em;
   font-family: 'Agipo';
+  padding: 0 4rem 2rem 4rem;
+
+  font-size: 2.7em;
+  @media (max-width: 600px) {
+    padding: 0 0 2rem 0;
+    font-size: 2em;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.75em;
+  }
 }
 </style>

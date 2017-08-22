@@ -120,5 +120,17 @@ hr {
 
 @font-face {
   font-family: Ferry;
-  src: url('../fonts/ferry.otf');
+  src:
+    url('../fonts/Ferry-Black.woff') format("woff"),
+    url('../fonts/Ferry-Black.eot') format("eot"),
+    url('../fonts/Ferry-Black.svg') format("svg"),
+    url('../fonts/Ferry-Black.ttf') format("ttf");
+}
+
+@font-face {
+  font-family: Agipo;
+  src:
+    url('../fonts/agipo_light-webfont.woff') format("woff"),
+    url('../fonts/agipo_light-webfont.eot') format("eot"),
+    url('../fonts/agipo_light-webfont.ttf') format("ttf");
 }

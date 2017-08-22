@@ -1,5 +1,5 @@
 <template>
-  <div class="home flex flex-column full-width">
+  <div class="full-width">
     <header class="">
       <top-nav :hasLogo="true" :isWhite="false" :lang="$route.params.lang || defaultLang"></top-nav>
       <hero-unit :lang="$route.params.lang || defaultLang"></hero-unit>
