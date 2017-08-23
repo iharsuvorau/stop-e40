@@ -1,7 +1,7 @@
 <template>
   <section id="materials" class="pt4 px3">
-    <h1 class="m0 center" v-html="content.title"></h1>
-    <div class="py3 flex flex-wrap justify-center">
+    <h1 class="m0 mb3 center" v-html="content.title"></h1>
+    <div class="flex flex-wrap justify-center">
       <article class="flex flex-column justify-between m2" v-for="item in posts" :key="item.id">
         <header class="p2">
           <h2 class="h3 m0 mb2"><router-link class="" :to="{name: 'Article', params: {lang: lang, slug: item.slug}}" v-html="item.title"></router-link></h2>

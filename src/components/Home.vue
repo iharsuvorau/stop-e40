@@ -7,6 +7,7 @@
     <section class="mb4">
       <problem-description :lang="$route.params.lang || defaultLang"></problem-description>
       <articles-list :lang="$route.params.lang || defaultLang"></articles-list>
+      <film-bar :lang="$route.params.lang || defaultLang"></film-bar>
       <time-line :lang="$route.params.lang || defaultLang"></time-line>
     </section>
     <footer-bar :lang="$route.params.lang || defaultLang"></footer-bar>
@@ -22,6 +23,7 @@ import MediaPublications from '@/components/MediaPublications'
 import Timeline from '@/components/Timeline'
 import Footer from '@/components/Footer'
 import SocialFeeds from '@/components/SocialFeeds'
+import Film from '@/components/Film'
 
 export default {
   name: 'home',
@@ -34,7 +36,8 @@ export default {
     'media-publications': MediaPublications,
     'time-line': Timeline,
     'footer-bar': Footer,
-    'social-feeds': SocialFeeds
+    'social-feeds': SocialFeeds,
+    'film-bar': Film
   },
 
   data () {

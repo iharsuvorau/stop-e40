@@ -1,6 +1,6 @@
 <template>
-  <section class="px3">
-    <h1 class="center" v-html="content.title"></h1>
+  <section class="px3 pt4">
+    <h1 class="center m0 mb3" v-html="content.title"></h1>
     <section class="flex flex-wrap mt3">
       <div class="event pr2" v-for="(item, index) in content.events" :key="index">
         <article class="py2" @click="showDescr($event, index, item)">
