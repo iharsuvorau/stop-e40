@@ -8,30 +8,16 @@
   "date": "",
   "sections": [
     {
-      "title": "Материалы к&nbsp;пресс-конференции",
+      "title": "Общие материалы",
       "isActive": false,
       "paragraphs": [
         {
           "list": [
-            {"text": "Журнал к&nbsp;пресс-конференции против Е40", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3SkVxS1prazcxeDg"},
-            {"text": "Видео-презентация кампании против строительства водного пути Е40", "link": "https://www.youtube.com/watch?v=75KGIq7SToU"},
-            {"text": "Фотографии c пресс-конференции", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3QUxpS09Ca3lObUk"},
-            {"text": "Пресс-релиз к&nbsp;конференции со&nbsp;СМИ 17&nbsp;июля 2017", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3OEhNbXJueXB5Ym8"}
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Тезисы экспертов",
-      "isActive": false,
-      "paragraphs": [
-        {
-          "list": [
-            {"text": "Тезисы Герасименко И.О.", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3WVNYTzFoM3ZnaUU"},
-            {"text": "Тезисы Волосюка И.О.", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3TzlhVGwxUTU3cUk"},
-            {"text": "Тезисы Пинчику И.О. и Карлинова И.О.", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3WGNDTEJRZTd0ZEk"},
-            {"text": "Тезисы Винчевского И.О.", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3dmJWckV5V1V0NnM"},
-            {"text": "Общая позиция", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3dmJWckV5V1V0NnM"}
+            {"text": "Пресс-релиз к&nbsp;конференции со&nbsp;СМИ 17&nbsp;июля 2017", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3OEhNbXJueXB5Ym8/view?usp=sharing"},
+            {"text": "Пресс-релиз о&nbsp;старте петиции против строительства водного пути Е40", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3emZ1VjdjeVoyRmM/view?usp=sharing"},
+            {"text": "Пост-релиз экологической коалиции &laquo;Стоп Е40&raquo;", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3Q1FpOVlwS19oNUU/view?usp=sharing"},
+            {"text": "Тезисы экспертов о&nbsp;экологических и&nbsp;экономических последствиях строительства новой водной магистрали Е40", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3SkVxS1prazcxeDg/view?usp=sharing"},
+            {"text": "Презентационный ролик кампании #Stop_E40", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3c1VhaHhSeEd6RVE/view?usp=sharing"}
           ]
         }
       ]
@@ -42,34 +28,55 @@
       "paragraphs": [
         {
           "list": [
-            {"text": "Фотографии с Припяти", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3SjVRUXk2ZWd6ZWs"},
-            {"text": "Фотографии с акции против строительства водного пути Е40", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3UXZON09FMWZoZm8"}
+            {"text": "Фотографии с&nbsp;пресс-конференции 17&nbsp;июля 2017. Фотографы: Яна Демиденко и&nbsp;Ольга Каскевич", "link": "https://drive.google.com/drive/folders/0B1Oup9NEQTK3QUxpS09Ca3lObUk?usp=sharing"},
+            {"text": "Фотографии Припяти с&nbsp;экспедиции летом 2017. Фотограф: Ольга Каскевич", "link": "https://drive.google.com/drive/folders/0B1Oup9NEQTK3SjVRUXk2ZWd6ZWs?usp=sharing"},
+            {"text": "Фотографии с&nbsp;акции протеста против строительства водного пути Е40. Фотограф: Алексей Заяц", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3UXZON09FMWZoZm8"}
           ]
         }
       ]
     },
     {
-      "title": "Ответы госорганизаций по вопросу Е40",
+      "title": "Независимая биологическая, экономическая и&nbsp;гидрологическая оценка экспертов",
       "isActive": false,
       "paragraphs": [
         {
           "list": [
-            {"text": "Академия наук РБ", "link": "#"},
-            {"text": "БЖД", "link": "#"},
-            {"text": "Гомельоблисполком", "link": "#"},
-            {"text": "Госинспекция", "link": "#"},
-            {"text": "Днепро-Буг канал", "link": "#"},
-            {"text": "Ивановский райисполком", "link": "#"},
-            {"text": "Минприроды", "link": "#"},
-            {"text": "Минсельхозпро", "link": "#"},
-            {"text": "Минспорта и туризма", "link": "#"},
-            {"text": "Минэкономики", "link": "#"},
-            {"text": "Полесский радиологический заповедник РБ", "link": "#"},
-            {"text": "Припятский нацпарк РБ", "link": "#"},
-            {"text": "Управление делами президента", "link": "#"},
-            {"text": "Министерство транспорта и туриза", "link": "#"},
-            {"text": "Брестоблисполком", "link": "#"},
-            {"text": "ЦНИИКИВР", "link": "#"}
+            {"text": "Биологическая часть. Оринитологический отчет научных сотрудников лаборатории орнитологии Научно-практического центра Национальной академии наук Беларуси по&nbsp;биоресурсам. Пинчук и&nbsp;Карлеонова, 2017", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3N192VjJQcU9WeDA/view?usp=sharing"},
+            {"text": "Биологическая часть. Оценка влияния на&nbsp;природные комплексы Полесья и&nbsp;биоразнообразие региона. НПЦ по&nbsp;биоресурсам НАН Беларуси", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3aW5aNS0xTy1XNkE/view?usp=sharing"},
+            {"text": "Гидрологическая часть. Кандидат технических наук доцент Брестского государственного технического университета, гидролог Николай Шешко", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3eEFvaWpwWHJqWUk/view?usp=sharing"},
+            {"text": "Гидрологическая часть. Комментарий гидролога Dr&nbsp;Janusz Żelaziński, Варшавский университет", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3MlZfemlGS2d1QUk/view?usp=sharing"},
+            {"text": "Экономическая часть. О&nbsp;инвестиционных рисках проекта по&nbsp;обустройству водного пути Е40. Бизнес союз предпринимателей и&nbsp;нанимателей имени профессора М.&nbsp;С.&nbsp;Кунявского (БСПН)", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3amotVXZ1TTlIUjA/view?usp=sharing"},
+            {"text": "Экономическая часть. Оценка документа &laquo;Restoration of&nbsp;Inland Waterway E40 Dnieper-Vistula: from Strategy to&nbsp;Planning. Final Feasibility Study Report&raquo; (технико-экономическое обоснование проекта). Варшавский университет, экономист С.&nbsp;Волосюк и&nbsp;профессор М.Чайковский", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3NTNOQVMyYzItem8/view?usp=sharing"},
+            {"text": "Карта-схема необходимых работ на&nbsp;реке Припять", "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3ZmlKSVQ5SzI4U1k/view?usp=sharing"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Предоставленные документы по&nbsp;проекту восстановления водного пути Е40",
+      "isActive": false,
+      "paragraphs": [
+        {
+          "list": [
+            {"text": "Брошюра о&nbsp;проекте", "link": "https://drive.google.com/drive/folders/0B1Oup9NEQTK3YndKdGs4d2JONWs?usp=sharing"},
+            {"text": "Рекомендации экспертов", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3Ym52c196M0lWMnM"},
+            {"text": "Экологическая оценка", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3R2ZMdjctbzlQYjg"},
+            {"text": "05.2015, Первый промежуточный отчёт", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3WFU5eGF3RHRheU0"},
+            {"text": "06.2016, ООН Протокол заседания Экологического совета", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3Y3dyUkhFQVpDSk0"},
+            {"text": "08.2015, Второй промежуточный отчёт", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3cFJBMTlJT0VhcU0"},
+            {"text": "30.06.2015, Comments by&nbsp;DNEPROBUG on&nbsp;the 1st IntR_En", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3aXpOUzNacS04M0U"},
+            {"text": "Описание проекта", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3TXN0dmdUaGxhUVU"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Позиция госорганизаций о&nbsp;проекте восстановления магистрального водного пути Е40",
+      "isActive": false,
+      "paragraphs": [
+        {
+          "list": [
+            {"text": "Письменные ответы от&nbsp;государственных организаций", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3TFExckZOdTUzZjQ"}
           ]
         }
       ]

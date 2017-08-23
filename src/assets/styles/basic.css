@@ -52,7 +52,7 @@ p a:visited, .default-link:visited {
   text-decoration: underline;
   transition: all 0.2s ease-out;
 }
-.default-links a {
+.default-links a:visited {
   color: purple;
 }
 

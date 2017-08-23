@@ -2,6 +2,20 @@
 
 /* ... */
 
+.default-links-nodeco a {
+  color: #07c;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: purple;
+  }
+}
+
 .medium {
   font-weight: 500;
 }

@@ -20,14 +20,14 @@
           </nav>
         </aside>
 
-        <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4 default-links">
+        <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4 default-links-nodeco">
           <p class="px3 mt4 h3 medium" v-if="content.lead" v-html="content.lead"></p>
           <section class="px3 mt4" v-for="(section, index) in content.sections" :key="index">
             <h2 class="h2" :id="'section'+index" v-if="section.title" v-html="section.title"></h2>
             <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.text" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic', 'bold': paragraph.style === 'bold', 'h3': paragraph.style === 'h3', 'h2': paragraph.style === 'h2'}"></p>
             <ul v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.list">
               <!-- List -->
-              <li v-for="(item, index) in paragraph.list" :key="index">
+              <li class="mb1" v-for="(item, index) in paragraph.list" :key="index">
                 <a v-if="item.link" :href="item.link" :title="item.text" v-html="item.text"></a>
                 <span v-if="!item.link" v-html="item.text"></span>
                 <!-- List Meta -->
@@ -46,7 +46,7 @@
                 <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.text" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic', 'bold': paragraph.style === 'bold'}"></p>
                 <ul v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.list">
                   <!-- List -->
-                  <li v-for="(item, index) in paragraph.list" :key="index">
+                  <li class="mb1" v-for="(item, index) in paragraph.list" :key="index">
                     <a v-if="item.link" :href="item.link" :title="item.text" v-html="item.text"></a>
                     <span v-if="!item.link" v-html="item.text"></span>
                   </li>
