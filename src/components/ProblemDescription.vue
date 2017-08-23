@@ -3,7 +3,7 @@
     <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 col-12 image0"></div>
     <div class="descr-block lg-col-6 col-12 flex flex-column justify-between">
       <article class="pt3 pl3 pr3" v-for="tab in content.tabs" :key="tab.id" v-if="tab.show">
-        <h1 class="h2 m0"><a href="" v-html="tab.title"></a></h1>
+        <h1 class="h2 m0" v-html="tab.title"></h1>
         <p v-for="p in tab.paragraphs" :key="p.id" v-html="p.text"></p>
       </article>
       <nav class="flex bold px3 pb2">
@@ -118,22 +118,41 @@ section {
   overflow-y: hidden;
 }
 
+#problem-description {
+  height: 380px;
+
+  @media (max-device-width: 1023px) {
+    height: auto;
+  }
+
+  .descr-block {
+    @media (max-device-width: 1023px) {
+      height: auto;
+      min-height: 380px;
+    }
+  }
+}
+
 .descr-image-wrapper {
   transition: all 0.5s ease-out;
   background: $light-grey;
   background-size: cover;
   background-position-y: 50%;
   height: 380px;
+  width: 100%;
+  @media (min-width: 1024px) {
+    width: 50%;
+  }
 }
 
 .descr-block {
   background: $yellow;
   overflow-y: scroll;
-  height: 380px;
-  @media (max-device-width: 1025px) {
-    height: auto;
-    min-height: 380px;
-  }
+  // height: 380px;
+  // @media (max-device-width: 1025px) {
+  //   height: auto;
+  //   min-height: 380px;
+  // }
 }
 
 .image0 {

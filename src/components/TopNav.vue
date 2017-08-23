@@ -24,7 +24,7 @@
           <li class="mb1" v-for="item in pages" :key="item.id" @click="hideSideNav">
             <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
           </li>
-          <li class="mb1"><a href="https://www.youtube.com/watch?v=75KGIq7SToU" :title="content.movieText">{{ content.movieText }}</a></li>
+          <!-- <li class="mb1"><a href="https://www.youtube.com/watch?v=75KGIq7SToU" :title="content.movieText">{{ content.movieText }}</a></li> -->
         </ul>
         <router-link class="font-ferry m0 px3 py3 h2 blue" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
       </section>
@@ -143,6 +143,10 @@ export default {
 
 nav {
   z-index: 999;
+  @media (max-width: 375px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .shadow-bottom {

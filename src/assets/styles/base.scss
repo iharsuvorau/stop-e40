@@ -2,6 +2,14 @@
 
 /* ... */
 
+h1 {
+  @media (max-width: 568px) {
+    font-size: 1.75rem;
+  }
+}
+
+/* ... */
+
 .default-links-nodeco a {
   color: #07c;
   text-decoration: none;
