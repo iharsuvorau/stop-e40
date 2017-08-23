@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-wrap">
+  <section id="problem-description" class="flex flex-wrap">
     <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 col-12 image0"></div>
     <div class="descr-block lg-col-6 col-12 flex flex-column justify-between">
       <article class="pt3 pl3 pr3" v-for="tab in content.tabs" :key="tab.id" v-if="tab.show">
@@ -21,6 +21,21 @@ export default {
     this.content = this.loadContent(this.lang, 'problem-description')
   },
 
+  mounted () {
+    this.autoSwitch()
+
+    let section = document.getElementById('problem-description')
+    let self = this
+
+    section.addEventListener('mouseenter', function () {
+      window.clearInterval(self.intervalID)
+    })
+
+    section.addEventListener('mouseleave', function () {
+      self.autoSwitch()
+    })
+  },
+
   watch: {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang) {
@@ -31,14 +46,19 @@ export default {
 
   data () {
     return {
-      content: {}
+      content: {},
+      autoTabID: 1,
+      intervalID: undefined
     }
   },
 
   methods: {
-    showTab: (e, id, tabs) => {
-      e.preventDefault()
+    showTab: function (e, id, tabs) {
+      if (e) {
+        e.preventDefault()
+      }
 
+      this.autoTabID = id
       let imageClass = ''
 
       for (let t of tabs) {
@@ -53,6 +73,20 @@ export default {
       }
 
       document.getElementById('descr-image-wrapper').className = 'descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12  ' + imageClass
+    },
+
+    autoSwitch: function () {
+      this.intervalID = window.setInterval(this.switchHandler, 5000)
+    },
+
+    switchHandler: function () {
+      if (this.autoTabID >= this.content.tabs.length) {
+        this.autoTabID = 1
+      } else {
+        this.autoTabID++
+      }
+
+      this.showTab(false, this.autoTabID, this.content.tabs)
     }
   }
 }
@@ -66,7 +100,7 @@ nav a {
   font-size: 1.5em;
   font-weight: 900;
 
-  &:hover, &:focus, &.active {
+  &:hover, &.active {
     color: white;
   }
 }
@@ -103,12 +137,23 @@ section {
 }
 
 .image0 {
-  background-image: url('../assets/images/pripyat-google.jpg');
+  background-image: url('../assets/images/problem-descr-pripyat-earth.jpg');
+  @media (-webkit-min-device-pixel-ration: 2), (min-resolution: 192dpi) {
+    background-image: url('../assets/images/problem-descr-pripyat-earth@2x.jpg');
+  }
 }
+
 .image1 {
-  background-image: url('../assets/images/pripyat-2-opt.jpg');
+  background-image: url('../assets/images/problem-descr-tree.jpg');
+  @media (-webkit-min-device-pixel-ration: 2), (min-resolution: 192dpi) {
+    background-image: url('../assets/images/problem-descr-tree@2x.jpg');
+  }
 }
+
 .image2 {
-  background-image: url('../assets/images/problem-descr-map.jpg');
+  background-image: url('../assets/images/problem-descr-e40-stop.jpg');
+  @media (-webkit-min-device-pixel-ration: 2), (min-resolution: 192dpi) {
+    background-image: url('../assets/images/problem-descr-e40-stop@2x.jpg');
+  }
 }
 </style>
