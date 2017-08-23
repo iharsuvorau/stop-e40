@@ -109,6 +109,6 @@ section {
   background-image: url('../assets/images/pripyat-2-opt.jpg');
 }
 .image2 {
-  background-image: url('../assets/images/map-opt.jpg');
+  background-image: url('../assets/images/problem-descr-map.jpg');
 }
 </style>
