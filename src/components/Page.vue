@@ -82,12 +82,14 @@ export default {
 
   created () {
     this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
+    document.title = this.content.title
   },
 
   watch: {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang || from.params.slug !== to.params.slug) {
         this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
+        document.title = this.content.title
       }
     }
   },

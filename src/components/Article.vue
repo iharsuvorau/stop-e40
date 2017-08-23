@@ -81,12 +81,14 @@ import Footer from '@/components/Footer'
 export default {
   created () {
     this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
+    document.title = this.content.title.replace(/&nbsp;/g, ' ')
   },
 
   watch: {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang) {
         this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
+        document.title = this.content.title.replace(/&nbsp;/g, ' ')
       }
     }
   },

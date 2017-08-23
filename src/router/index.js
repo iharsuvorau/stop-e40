@@ -13,7 +13,8 @@ Vue.use(Router)
 Vue.mixin({
   data () {
     return {
-      acceptableLangs: ['en', 'be', 'ru']
+      acceptableLangs: ['en', 'be', 'ru'],
+      defaultTitle: 'Public campaign against the E40 waterway rennovation | Общественная кампания против восстановления водного пути Е40'
     }
   },
 

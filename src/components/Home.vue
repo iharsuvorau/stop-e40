@@ -48,6 +48,7 @@ export default {
 
   created: function () {
     this.defaultLang = this.defineDefaultLang(this.$route.params.lang)
+    document.title = this.defaultTitle
   }
 }
 </script>
