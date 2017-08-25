@@ -72,7 +72,10 @@ export default {
         }
       }
 
-      document.getElementById('descr-image-wrapper').className = 'descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12  ' + imageClass
+      let imgWrapper = document.getElementById('descr-image-wrapper')
+      if (imgWrapper) {
+        imgWrapper.className = 'descr-image-wrapper lg-col-6 md-col-12 sm-col-12 xs-col-12  ' + imageClass
+      }
     },
 
     autoSwitch: function () {

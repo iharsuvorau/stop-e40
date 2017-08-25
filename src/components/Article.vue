@@ -3,12 +3,11 @@
     <main class="flex flex-column">
       <top-nav :isWhite="false" :hasLogo="true" :lang="$route.params.lang"></top-nav>
       <article class="flex flex-wrap justify-between">
-        <header class="px3 py4 col-12 bg-light-grey">
+        <header :id="'article_header_' + content.id" class="px3 py4 col-12 bg-light-grey" :class="{'white': content.cover}">
           <div class="col-9">
             <h1 class="m0" v-html="content.title"></h1>
-            <ul class="list-reset dark-grey">
+            <ul class="list-reset" :class="{'white': content.cover, 'dark-grey': !content.cover}">
               <li class="inline-block mr2" v-if="content.date">{{ content.date }}</li>
-              <li class="inline-block mr2" v-if="content.tag">{{ content.tag.title }}</li>
             </ul>
             <p class="m0 h3 mt3" v-html="content.teaser"></p>
           </div>
@@ -84,6 +83,10 @@ export default {
     document.title = this.content.title.replace(/&nbsp;/g, ' ')
   },
 
+  mounted () {
+    this.addBgImage(this.content.cover, this.content.id)
+  },
+
   watch: {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang) {
@@ -129,6 +132,16 @@ export default {
         window.location.hash = parts.slice(0, parts.length - 1).join('/') + '/' + prevHashes.join('#')
       } else {
         window.location.hash += '#section' + sid
+      }
+    },
+
+    addBgImage: function (url, id) {
+      if (url && url.length > 0) {
+        let header = document.getElementById('article_header_' + id)
+        header.style.backgroundImage = 'linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(' + url + ')'
+        header.style.backgroundSize = 'cover'
+      } else {
+        // no image
       }
     }
   }

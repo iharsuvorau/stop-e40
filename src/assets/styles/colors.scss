@@ -11,6 +11,20 @@ $shadow-dark-color: rgba(130, 147, 153, .4);
   color: $blue;
 }
 
+.blue-blue-link {
+  color: $blue;
+  &:hover {
+    color: $blue;
+  }
+}
+
+.black-blue-link {
+  color: black;
+  &:hover {
+    color: $blue;
+  }
+}
+
 .white {
   color: white;
 }

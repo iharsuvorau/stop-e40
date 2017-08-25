@@ -68,6 +68,10 @@ h1 {
   border-color: $light-grey;
 }
 
+.bg-blue {
+  filter: blur(25px)
+}
+
 /* ... */
 
 abbr {

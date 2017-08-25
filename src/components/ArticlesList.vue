@@ -3,13 +3,18 @@
     <h1 class="m0 mb3 center" v-html="content.title"></h1>
     <div class="flex flex-wrap justify-center">
       <article class="flex flex-column justify-between m2" v-for="item in posts" :key="item.id">
-        <header class="p2">
-          <h2 class="h3 m0 mb2"><router-link class="" :to="{name: 'Article', params: {lang: lang, slug: item.slug}}" v-html="item.title"></router-link></h2>
-          <p class="lead m0" v-html="item.teaser"></p>
+        <header>
+          <router-link class="" :to="{name: 'Article', params: {lang: lang, slug: item.slug}}">
+            <div :id="'cover_' + item.id" class="cover" v-if="item.cover"></div>
+          </router-link>
+          <div class="p2">
+            <h2 class="h3 m0"><router-link class="black-blue-link" :id="'title_link_' + item.id" :to="{name: 'Article', params: {lang: lang, slug: item.slug}}" v-html="item.title"></router-link></h2>
+            <p class="lead m0 pt2 pb1" v-if="!item.cover" v-html="item.teaser"></p>
+          </div>
         </header>
-        <footer class="flex items-end flex-auto p2">
-          <ul class="list-reset m0">
-            <li class="inline-block mr1">{{ item.date }}</li>
+        <footer class="p2">
+          <ul class="list-reset m0 dark-grey">
+            <li class="inline-block mr1 h6">{{ item.date }}</li>
           </ul>
         </footer>
       </article>
@@ -21,10 +26,14 @@
 export default {
   props: ['lang'],
 
-  created: function () {
+  created () {
     // loadContent is a global helper method
     this.content = this.loadContent(this.lang, 'articles-list')
     this.posts = this.getPosts(this.lang).sort(this.compareById)
+  },
+
+  mounted () {
+    this.addCovers()
   },
 
   watch: {
@@ -32,6 +41,12 @@ export default {
       if (from.params.lang !== to.params.lang) {
         this.content = this.loadContent(this.lang, 'articles-list')
         this.posts = this.getPosts(this.lang).sort(this.compareById)
+
+        // NOTE: a hack to render covers after the DOM will be updated
+        // TODO: find a better solution
+        setTimeout(() => {
+          this.addCovers()
+        }, 0)
       }
     }
   },
@@ -72,6 +87,26 @@ export default {
       }, this)
 
       this.tags = tags
+    },
+
+    addCovers () {
+      this.posts.forEach((el) => {
+        let cover = document.getElementById('cover_' + el.id)
+        if (cover && el.cover && el.cover.length > 0) {
+          // add an image
+          cover.style.backgroundImage = 'url(' + el.cover + ')'
+          cover.style.backgroundSize = 'cover'
+
+          // highlight the corresponding title
+          let title = document.getElementById('title_link_' + el.id)
+          cover.addEventListener('mouseover', (event) => {
+            title.className = 'blue-blue-link'
+          })
+          cover.addEventListener('mouseout', (event) => {
+            title.className = 'black-blue-link'
+          })
+        }
+      }, this)
     }
   }
 }
@@ -80,24 +115,21 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/colors';
 
+$article-height: 25em;
+
 article {
-  height: 25em;
+  height: $article-height;
   background: rgb(242, 246, 247);
   width: 20em;
+  overflow: hidden;
+  position: relative;
 }
 
-h2 a {
-  color: black;
-}
-h2 a:hover, h2 a:focus {
-  color: #4CD0FF;
-}
-
-article footer a {
-  color: $dark-grey;
-  &:hover, &:focus {
-    color: black;
-  }
+.cover {
+  height: $article-height / 2;
+  width: 100%;
+  background: lighten($dark-grey, 30%);
+  transition: all 0.2s ease-out;
 }
 
 .tag-list a {
