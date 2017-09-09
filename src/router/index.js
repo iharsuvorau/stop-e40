@@ -2,12 +2,18 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Article from '@/components/Article'
+import ArticlesHome from '@/components/ArticlesHome'
 import Page from '@/components/Page'
 import NotFound from '@/components/NotFound'
+import TopNav from '@/components/TopNav'
+import Footer from '@/components/Footer'
 
 require('smoothscroll-polyfill').polyfill()
 
 Vue.use(Router)
+
+Vue.component('top-nav', TopNav)
+Vue.component('footer-bar', Footer)
 
 // global data and methods
 Vue.mixin({
@@ -77,6 +83,11 @@ const router = new Router({
       components: {
         default: Home
       }
+    },
+    {
+      path: '/:lang/articles',
+      name: 'ArticlesHome',
+      component: ArticlesHome
     },
     {
       path: '/:lang/articles/:slug',

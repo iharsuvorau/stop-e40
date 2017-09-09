@@ -73,9 +73,7 @@
 
 <script>
 import HeroUnit from '@/components/HeroUnit'
-import TopNav from '@/components/TopNav'
 import ActionNav from '@/components/ActionNav'
-import Footer from '@/components/Footer'
 
 export default {
   created () {
@@ -98,9 +96,7 @@ export default {
 
   components: {
     'hero-unit': HeroUnit,
-    'top-nav': TopNav,
-    'action-nav': ActionNav,
-    'footer-bar': Footer
+    'action-nav': ActionNav
   },
 
   data () {

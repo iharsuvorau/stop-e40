@@ -1,6 +1,6 @@
 <template>
   <div class="full-width">
-    <header class="">
+    <header>
       <top-nav :hasLogo="true" :isWhite="false" :lang="$route.params.lang || defaultLang"></top-nav>
       <hero-unit :lang="$route.params.lang || defaultLang"></hero-unit>
     </header>
@@ -16,12 +16,10 @@
 
 <script>
 import HeroUnit from '@/components/HeroUnit'
-import TopNav from '@/components/TopNav'
 import ProblemDescription from '@/components/ProblemDescription'
 import ArticlesList from '@/components/ArticlesList'
 import MediaPublications from '@/components/MediaPublications'
 import Timeline from '@/components/Timeline'
-import Footer from '@/components/Footer'
 import SocialFeeds from '@/components/SocialFeeds'
 import Film from '@/components/Film'
 
@@ -30,12 +28,10 @@ export default {
 
   components: {
     'hero-unit': HeroUnit,
-    'top-nav': TopNav,
     'problem-description': ProblemDescription,
     'articles-list': ArticlesList,
     'media-publications': MediaPublications,
     'time-line': Timeline,
-    'footer-bar': Footer,
     'social-feeds': SocialFeeds,
     'film-bar': Film
   },

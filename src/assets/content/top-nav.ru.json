@@ -1,6 +1,7 @@
 {
   "menuText": "Меню",
   "movieText": "Фильм Е40",
+  "materialsText": "Материалы",
   "main": [],
   "langs": [
     { "title": "English", "slug": "en" },
