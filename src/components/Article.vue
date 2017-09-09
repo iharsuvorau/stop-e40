@@ -26,7 +26,18 @@
         <div class="lg-col-10 md-col-9 sm-col-12 xs-col-12 mb4">
           <p class="px3 mt4 h3 medium" v-if="content.lead" v-html="content.lead"></p>
           <section class="mt4" v-for="(section, index) in content.sections" :key="index">
-            <h2 class="px3 h2 lg-col-9 md-col-12 sm-col-12 xs-col-12" :id="'section'+index" v-if="section.title" v-html="section.title"></h2>
+            <!-- Header (show if no profile) -->
+            <h2 class="px3 h2 lg-col-9 md-col-12 sm-col-12 xs-col-12" :id="'section'+index" v-if="section.title && !section.profile" v-html="section.title"></h2>
+            <!-- Profile -->
+            <div :id="'section'+index" class="clearfix px3 lg-col-9" v-if="section.profile">
+              <div class="left">
+                <img class="circle" :src="section.profile.portrait" :alt="section.profile.name" width="150">
+              </div>
+              <div class="overflow-hidden pt2 pl3">
+                <h2 class="h2 m0" v-html="section.profile.name"></h2>
+                <p class="italic h5" v-html="section.profile.caption"></p>
+              </div>
+            </div>
             <!-- Images -->
             <div v-if="section.images">
               <figure class="pl3 m0" v-for="(img, index) in section.images" :key="index">

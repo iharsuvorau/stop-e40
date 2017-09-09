@@ -4,7 +4,7 @@
     <main class="flex flex-column">
       <article class="flex flex-wrap justify-between">
         <header class="px3 py4 col-12">
-          <div class="col-9">
+          <div class="lg-col-9">
             <h1 class="m0" v-if="content.title" v-html="content.title"></h1>
             <p class="m0 h3 mt3" v-if="content.teaser" v-html="content.teaser"></p>
           </div>
@@ -23,7 +23,25 @@
         <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4 default-links-nodeco">
           <p class="px3 mt4 h3 medium" v-if="content.lead" v-html="content.lead"></p>
           <section class="px3 mt4" v-for="(section, index) in content.sections" :key="index">
-            <h2 class="h2" :id="'section'+index" v-if="section.title" v-html="section.title"></h2>
+            <!-- Profile -->
+            <div :id="'section'+index" class="clearfix" v-if="section.profile">
+              <div class="left">
+                <img class="circle" :src="section.profile.portrait" :alt="section.profile.name" width="150">
+              </div>
+              <div class="overflow-hidden pt2 pl3">
+                <h2 class="h2 m0" v-html="section.profile.name"></h2>
+                <p class="italic h5" v-html="section.profile.caption"></p>
+              </div>
+            </div>
+            <!-- Header (show if no profile) -->
+            <h2 class="h2" :id="'section'+index" v-if="section.title && !section.profile" v-html="section.title"></h2>
+            <!-- Images -->
+            <div v-if="section.images">
+              <figure class="p0 m0" v-for="(img, index) in section.images" :key="index">
+                <img class="circle" :src="img.link" :alt="img.caption" :width="img.width">
+                <figcaption class="italic dark-grey h6 lg-col-8 sm-col-12" v-if="img.caption" v-html="img.caption"></figcaption>
+              </figure>
+            </div>
             <p v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.text" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic', 'bold': paragraph.style === 'bold', 'h3': paragraph.style === 'h3', 'h2': paragraph.style === 'h2'}"></p>
             <ul v-for="(paragraph, index) in section.paragraphs" :key="index" v-if="paragraph.list">
               <!-- List -->

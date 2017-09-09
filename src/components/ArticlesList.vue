@@ -13,9 +13,9 @@
           </div>
         </header>
         <footer class="p2">
-          <ul class="list-reset m0 dark-grey">
-            <li class="inline-block mr1 h6">{{ item.date }}</li>
-          </ul>
+          <div class="dark-grey h6 flex items-center">
+            <span>{{ item.date }}</span>
+          </div>
         </footer>
       </article>
     </div>

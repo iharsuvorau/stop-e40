@@ -10,9 +10,11 @@
     {
       "title": "Александр Винчевский",
       "isActive": false,
-      "paragraphs": [
-        {"style": "italic", "text": "Директор общественной организации &laquo;Ахова птушак Бацькаўшчыны&raquo;, орнитолог."}
-      ],
+      "profile": {
+        "name": "Александр Винчевский",
+        "caption": "Директор общественной организации &laquo;Ахова птушак Бацькаўшчыны&raquo;, орнитолог",
+        "portrait": "/static/experts/vintchevsky@2x.jpg"
+      },
       "sections": [
         {
           "title": "",
@@ -29,9 +31,11 @@
     {
       "title": "Ольга Каскевич",
       "isActive": false,
-      "paragraphs": [
-        {"style": "italic", "text": "Председатель общественной организации &laquo;Багна&raquo;, координатор кампании &laquo;Стоп Е40!&raquo;."}
-      ],
+      "profile": {
+        "name": "Ольга Каскевич",
+        "caption": "Председатель общественной организации &laquo;Багна&raquo;, координатор кампании &laquo;Стоп Е40!&raquo;",
+        "portrait": "/static/experts/kaskevich@2x.jpg"
+      },
       "sections": [
         {
           "title": "Почему про Е40 заговорили сейчас и&nbsp;почему до&nbsp;этого про проект было почти ничего не&nbsp;слышно?",
