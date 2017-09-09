@@ -4,7 +4,13 @@
     <section class="flex flex-wrap mt3">
       <div class="event pr2" v-for="(item, index) in content.events" :key="index">
         <article class="py2" @click="showDescr($event, index, item)">
-          <div class="h3 mb1 bold" v-html="item.date.monthDay + ', ' + item.date.year"></div>
+          <div class="mb1 flex items-center justify-between">
+            <span class="h3 bold" v-html="item.date.monthDay + ', ' + item.date.year"></span>
+            <span class="flex items-center" v-if="item.paragraphs.length > 0">
+              <i v-if="item.isActive" class="material-icons">&#xE5CE;</i>
+              <i v-else class="blue material-icons">&#xE5CF;</i>
+            </span>
+          </div>
           <span class="h4 dark-grey" v-if="item.place" v-html="item.place"></span>
           <p class="h4 m0 mb1 regular" v-html="item.title"></p>
           <div v-show="item.isActive" v-if="item.paragraphs" class="h5 mt3">
