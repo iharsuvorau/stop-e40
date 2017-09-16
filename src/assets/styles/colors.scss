@@ -4,8 +4,18 @@ $light-grey: rgb(242, 246, 247);
 $yellow: rgb(255, 228, 94);
 $red: #FA5C77;
 $dark-grey: #829399;
+$dark-dark-grey: #71797C;
 $shadow-color: rgba(130, 147, 153, .2);
 $shadow-dark-color: rgba(130, 147, 153, .4);
+$green: #70FFA0;
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: $red;
+}
 
 .blue {
   color: $blue;
@@ -39,6 +49,10 @@ $shadow-dark-color: rgba(130, 147, 153, .4);
 
 .dark-grey {
   color: $dark-grey;
+}
+
+.darkdark-grey {
+  color: $dark-dark-grey;
 }
 
 a.dark-grey {

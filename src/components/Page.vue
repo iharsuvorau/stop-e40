@@ -12,17 +12,19 @@
 
         <aside class="lg-col-2 md-col-3 sm-col-12 xs-col-12 mt4 pl3">
           <nav id="toc" class="sticky">
-            <ul class="list-reset m0">
+            <ul class="list-reset m0" v-if="!showPetitionStats">
               <li class="mb2" v-for="(section, index) in content.sections" :key="index">
                 <a :href="'#section'+index" class="dark-grey" :class="{'active': section.isActive}" v-html="section.title" @click="smoothScroll($event, index)"></a>
               </li>
             </ul>
+            <petition-stats v-if="showPetitionStats"></petition-stats>
           </nav>
+
         </aside>
 
         <div class="lg-col-7 md-col-9 sm-col-12 xs-col-12 mb4 default-links-nodeco">
           <p class="px3 mt4 h3 medium" v-if="content.lead" v-html="content.lead"></p>
-          <section class="px3 mt4" v-for="(section, index) in content.sections" :key="index">
+          <section class="px3 my4" v-for="(section, index) in content.sections" :key="index">
             <!-- Profile -->
             <div :id="'section'+index" class="clearfix" v-if="section.profile">
               <div class="left">
@@ -72,6 +74,8 @@
               </section>
             </div>
           </section>
+
+          <petition-reasons v-if="showPetitionReasons"></petition-reasons>
         </div>
 
         <aside class="lg-col-3 md-col-12 sm-col-12 xs-col-12 mt4 px3">
@@ -85,36 +89,46 @@
 </template>
 
 <script>
-import HeroUnit from '@/components/HeroUnit'
-import ActionNav from '@/components/ActionNav'
+import PetitionStats from '@/components/PetitionStats'
+import PetitionReasons from '@/components/PetitionReasons'
 
 export default {
   components: {
-    'hero-unit': HeroUnit,
-    'action-nav': ActionNav
+    'petition-stats': PetitionStats,
+    'petition-reasons': PetitionReasons
   },
 
   created () {
-    this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
-    document.title = this.content.title
+    this.init()
+    this.initPetition()
   },
 
   watch: {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang || from.params.slug !== to.params.slug) {
-        this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
-        document.title = this.content.title
+        this.init()
+        this.initPetition()
       }
     }
   },
 
   data () {
     return {
-      content: {}
+      content: {},
+      changeOrgAPI: 'https://api.change.org/v1/petitions/11887498?api_key=9d6e9d6859fff4e530136ed1b83c5ee941d73fd443aa3898b5bf283058de0fb0',
+      corsProxy: 'https://cors-anywhere.herokuapp.com/',
+      petitionData: {},
+      showPetitionStats: false,
+      showPetitionReasons: false
     }
   },
 
   methods: {
+    init: function () {
+      this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
+      document.title = this.content.title
+    },
+
     smoothScroll: function (event, sid) {
       event.preventDefault()
       this.content.sections.forEach((el) => {
@@ -137,6 +151,16 @@ export default {
         window.location.hash = parts.slice(0, parts.length - 1).join('/') + '/' + prevHashes.join('#')
       } else {
         window.location.hash += '#section' + sid
+      }
+    },
+
+    initPetition: function () {
+      if (this.$route.params.slug === 'petition') {
+        this.showPetitionStats = true
+        this.showPetitionReasons = true
+      } else {
+        this.showPetitionStats = false
+        this.showPetitionReasons = false
       }
     }
   }
