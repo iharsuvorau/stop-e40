@@ -10,16 +10,17 @@
       <router-link class="logo lg-hide md-hide font-ferry black" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
 
       <ul class="list-reset m0 flex flex-wrap items-center bold">
-        <!-- <li class="inline-block mr3 sm-hide xs-hide"><a id="movieRef" href="" title="Stop E40" @click="showMovie($event)">{{ content.movieText }}</a></li> -->
         <li class="inline-block mr3 sm-hide xs-hide">
           <router-link :to="{name: 'ArticlesHome', params: {lang: lang}}">{{ content.materialsText }}</router-link>
         </li>
         <li class="inline-block mr3 sm-hide xs-hide" v-for="item in pages" :key="item.id">
           <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
         </li>
+        <!--
         <li class="inline-block" v-for="(item, index) in content.langs" :key="index">
           <router-link v-show="lang !== item.slug" :to="{path: getCurrentPathWithLang(item.slug)}">{{ item.title }}</router-link>
         </li>
+         -->
       </ul>
 
       <section id="sidenav" class="flex flex-column justify-between" v-if="sideNavVisible" @click="stopPropagation($event)">
@@ -30,7 +31,6 @@
           <li class="mb1" v-for="item in pages" :key="item.id" @click="hideSideNav">
             <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
           </li>
-          <!-- <li class="mb1"><a href="https://www.youtube.com/watch?v=75KGIq7SToU" :title="content.movieText">{{ content.movieText }}</a></li> -->
         </ul>
         <router-link class="font-ferry m0 px3 py3 h2 blue" :to="{name: 'HomeLang', params: {lang: lang}}">#STOP_E40</router-link>
       </section>

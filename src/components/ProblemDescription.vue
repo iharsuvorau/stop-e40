@@ -1,5 +1,5 @@
 <template>
-  <section id="problem-description" class="flex flex-wrap">
+  <section id="problem-description" class="flex flex-wrap mb4">
     <div id="descr-image-wrapper" class="descr-image-wrapper lg-col-6 col-12 image0"></div>
     <div class="descr-block lg-col-6 col-12 flex flex-column justify-between">
       <article class="pt3 pl3 pr3" v-for="tab in content.tabs" :key="tab.id" v-if="tab.show">

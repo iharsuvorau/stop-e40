@@ -1,5 +1,5 @@
 <template>
-  <section id="materials" class="pt4 px3">
+  <section id="materials" class="py4 px3">
     <h1 class="m0 mb3 center" :class="{'mb3': !standalone, 'mb4': standalone}" v-html="content.title"></h1>
     <div class="flex flex-wrap justify-center">
       <article class="flex flex-column justify-between m2" v-for="item in posts" :key="item.id">

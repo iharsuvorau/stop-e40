@@ -1,14 +1,14 @@
 <template>
-  <section class="px3 pt4">
+  <section id="timeline-section" class="px3 py4">
     <h1 class="center m0 mb3" v-html="content.title"></h1>
     <section class="flex flex-wrap mt3">
       <div class="event pr2" v-for="(item, index) in content.events" :key="index">
         <article class="py2" @click="showDescr($event, index, item)">
-          <div class="mb1 flex items-center justify-between">
-            <span class="h3 bold" v-html="item.date.monthDay + ', ' + item.date.year"></span>
-            <span class="flex items-center" v-if="item.paragraphs.length > 0">
-              <i v-if="item.isActive" class="material-icons">&#xE5CE;</i>
-              <i v-else class="blue material-icons">&#xE5CF;</i>
+          <div class="mb1 flex justify-between">
+            <span class="h3 mb1 bold" v-html="item.date.monthDay + ', ' + item.date.year"></span>
+            <span class="" v-if="item.paragraphs.length > 0">
+              <span v-if="item.isActive" class="icon-size">&ndash;</span>
+              <span v-else class="blue icon-size">+</span>
             </span>
           </div>
           <span class="h4 dark-grey" v-if="item.place" v-html="item.place"></span>
@@ -103,5 +103,10 @@ article {
   @media (max-width: 915px) {
     flex-basis: 100%;
   }
+}
+
+.icon-size {
+  font-size: 1.5em;
+  line-height: 1.175em;
 }
 </style>

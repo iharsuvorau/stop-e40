@@ -1,7 +1,7 @@
 {
   "items": [
     {"title": "Петиция", "slug": "petition"},
-    {"title": "Позиция организаций", "slug": "position"},
-    {"title": "Пресс-кит", "slug": "press-kit"}
+    {"title": "Заявление организаций", "slug": "position"},
+    {"title": "Для прессы", "slug": "press-kit"}
   ]
 }

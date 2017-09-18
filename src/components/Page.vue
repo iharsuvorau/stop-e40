@@ -69,6 +69,13 @@
                   <li class="mb1" v-for="(item, index) in paragraph.list" :key="index">
                     <a v-if="item.link" :href="item.link" :title="item.text" v-html="item.text"></a>
                     <span v-if="!item.link" v-html="item.text"></span>
+                    <!-- List Meta -->
+                    <ul class="list-reset m0 h6 dark-grey" v-if="item.meta">
+                      <li class="inline-block mr2" v-for="(item, index) in item.meta" :key="index">
+                        <span v-if="item.name">{{ item.name }}: </span>
+                        <span v-if="item.value" v-html="item.value"></span>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </section>

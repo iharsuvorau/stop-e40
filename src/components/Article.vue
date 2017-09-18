@@ -4,12 +4,9 @@
       <top-nav :isWhite="false" :hasLogo="true" :lang="$route.params.lang"></top-nav>
       <article class="flex flex-wrap justify-between">
         <header :id="'article_header_' + content.id" class="px3 py4 col-12 bg-light-grey" :class="{'white': content.cover}">
-          <div class="col-9">
+          <div class="col-9" :class="{'white': content.cover, 'black': !content.cover}">
             <h1 class="m0" v-html="content.title"></h1>
-            <ul class="list-reset" :class="{'white': content.cover, 'dark-grey': !content.cover}">
-              <li class="inline-block mr2" v-if="content.date">{{ content.date }}</li>
-            </ul>
-            <p class="m0 h3 mt3" v-html="content.teaser"></p>
+            <p class="m0 mt3" v-if="content.date" v-html="content.date"></p>
           </div>
         </header>
 
@@ -26,6 +23,8 @@
         <div class="lg-col-10 md-col-9 sm-col-12 xs-col-12 mb4">
           <p class="px3 mt4 h3 medium" v-if="content.lead" v-html="content.lead"></p>
           <section class="mt4" v-for="(section, index) in content.sections" :key="index">
+            <!-- Quote -->
+            <div class="quote px1" v-if="section.quote" v-html="section.quote.text"></div>
             <!-- Header (show if no profile) -->
             <h2 class="px3 h2 lg-col-9 md-col-12 sm-col-12 xs-col-12" :id="'section'+index" v-if="section.title && !section.profile" v-html="section.title"></h2>
             <!-- Profile -->
@@ -45,11 +44,16 @@
                 <figcaption class="italic dark-grey h6 lg-col-8 sm-col-12" v-if="img.caption" v-html="img.caption"></figcaption>
               </figure>
             </div>
+            <!-- Paragraphs -->
             <p class="px3 lg-col-9 md-col-12 sm-col-12 xs-col-12" v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
             <!-- Subsections -->
             <div v-if="section.sections">
               <section v-for="(section, index) in section.sections" :key="index">
+                <!-- Quote -->
+                <div class="quote px1" v-if="section.quote" v-html="section.quote.text"></div>
+                <!-- Header -->
                 <h3 class="px3 h3 lg-col-9 md-col-12 sm-col-12 xs-col-12" v-if="section.title" v-html="section.title"></h3>
+                <!-- Paragraphs -->
                 <p class="px3 lg-col-9 md-col-12 sm-col-12 xs-col-12" v-for="(paragraph, index) in section.paragraphs" :key="index" v-html="paragraph.text" :class="{'italic': paragraph.style === 'italic'}"></p>
                 <!-- Tables -->
                 <div class="px3 pb2 lg-col-9 md-col-12 sm-col-12 xs-col-12" v-if="section.tables">
@@ -98,9 +102,14 @@ export default {
 
   watch: {
     '$route' (to, from) {
-      if (from.params.lang !== to.params.lang) {
+      if (from.params.lang !== to.params.lang || from.params.slug !== to.params.slug) {
         this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
         document.title = this.content.title.replace(/&nbsp;/g, ' ')
+
+        // a hack to load the image for the same component
+        setTimeout(() => {
+          this.addBgImage(this.content.cover, this.content.id)
+        }, 0)
       }
     }
   },
@@ -158,6 +167,10 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/styles/colors';
 
+header {
+  min-height: 380px;
+}
+
 .sticky {
   position: sticky;
   top: 2em;
@@ -169,5 +182,16 @@ export default {
 
 td.caps {
   width: 200px;
+}
+
+.quote {
+  font-family: 'Agipo';
+  font-size: 2.45em;
+  line-height: 1.25em;
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
+  padding-right: 1em;
+  max-width: 30em;
+  color: $dark-grey;
 }
 </style>

@@ -1,0 +1,40 @@
+{
+  "id": 6,
+  "slug": "e40",
+  "title": "О Е40",
+  "teaser": "Документы о&nbsp;проекте Е40 и ответы государственных организаций на запросы общественности",
+  "lead": "",
+  "cover": "",
+  "date": "",
+  "sections": [
+    {
+      "title": "Предоставленные документы по&nbsp;проекту восстановления водного пути Е40",
+      "isActive": false,
+      "paragraphs": [
+        {
+          "list": [
+            {"text": "Брошюра о&nbsp;проекте", "link": "https://drive.google.com/drive/folders/0B1Oup9NEQTK3YndKdGs4d2JONWs?usp=sharing"},
+            {"text": "Рекомендации экспертов", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3Ym52c196M0lWMnM"},
+            {"text": "Экологическая оценка", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3R2ZMdjctbzlQYjg"},
+            {"text": "05.2015, Первый промежуточный отчёт", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3WFU5eGF3RHRheU0"},
+            {"text": "06.2016, ООН Протокол заседания Экологического совета", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3Y3dyUkhFQVpDSk0"},
+            {"text": "08.2015, Второй промежуточный отчёт", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3cFJBMTlJT0VhcU0"},
+            {"text": "30.06.2015, Comments by&nbsp;DNEPROBUG on&nbsp;the 1st IntR_En", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3aXpOUzNacS04M0U"},
+            {"text": "Описание проекта", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3TXN0dmdUaGxhUVU"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Позиция госорганизаций о&nbsp;проекте восстановления магистрального водного пути Е40",
+      "isActive": false,
+      "paragraphs": [
+        {
+          "list": [
+            {"text": "Письменные ответы от&nbsp;государственных организаций", "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3TFExckZOdTUzZjQ"}
+          ]
+        }
+      ]
+    }
+  ]
+}
