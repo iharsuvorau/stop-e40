@@ -26,7 +26,7 @@ Vue.mixin({
   data () {
     return {
       acceptableLangs: ['en', 'be', 'ru'],
-      defaultTitle: 'Public campaign against the E40 waterway rennovation | Общественная кампания против восстановления водного пути Е40'
+      defaultTitle: 'Общественная кампания против восстановления водного пути Е40'
     }
   },
 
