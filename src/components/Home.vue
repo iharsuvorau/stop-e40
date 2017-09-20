@@ -17,7 +17,6 @@
 <script>
 import HeroUnit from '@/components/HeroUnit'
 import ProblemDescription from '@/components/ProblemDescription'
-import ArticlesList from '@/components/ArticlesList'
 import MediaPublications from '@/components/MediaPublications'
 import Timeline from '@/components/Timeline'
 import SocialFeeds from '@/components/SocialFeeds'
@@ -29,7 +28,6 @@ export default {
   components: {
     'hero-unit': HeroUnit,
     'problem-description': ProblemDescription,
-    'articles-list': ArticlesList,
     'media-publications': MediaPublications,
     'time-line': Timeline,
     'social-feeds': SocialFeeds,

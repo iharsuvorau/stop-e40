@@ -79,9 +79,10 @@
           <action-nav class="sticky"></action-nav>
         </aside>
         -->
-
       </article>
     </main>
+    <hr width="150">
+    <articles-list :lang="$route.params.lang"></articles-list>
     <footer-bar :lang="$route.params.lang"></footer-bar>
   </div>
 </template>

@@ -9,6 +9,7 @@ import TopNav from '@/components/TopNav'
 import Footer from '@/components/Footer'
 import HeroUnit from '@/components/HeroUnit'
 import ActionNav from '@/components/ActionNav'
+import ArticlesList from '@/components/ArticlesList'
 
 require('smoothscroll-polyfill').polyfill()
 
@@ -18,6 +19,7 @@ Vue.component('top-nav', TopNav)
 Vue.component('footer-bar', Footer)
 Vue.component('hero-unit', HeroUnit)
 Vue.component('action-nav', ActionNav)
+Vue.component('articles-list', ArticlesList)
 
 // global data and methods
 Vue.mixin({
