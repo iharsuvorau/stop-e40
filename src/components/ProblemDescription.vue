@@ -25,14 +25,13 @@ export default {
     this.autoSwitch()
 
     let section = document.getElementById('problem-description')
-    let self = this
 
-    section.addEventListener('mouseenter', function () {
-      window.clearInterval(self.intervalID)
+    section.addEventListener('mouseenter', () => {
+      window.clearInterval(this.intervalID)
     })
 
-    section.addEventListener('mouseleave', function () {
-      self.autoSwitch()
+    section.addEventListener('mouseleave', () => {
+      this.autoSwitch()
     })
   },
 
