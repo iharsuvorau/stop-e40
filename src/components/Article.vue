@@ -29,7 +29,7 @@
             <h2 class="px3 h2 lg-col-9 md-col-12 sm-col-12 xs-col-12" :id="'section'+index" v-if="section.title && !section.profile" v-html="section.title"></h2>
             <!-- Profile -->
             <div :id="'section'+index" class="clearfix px3 lg-col-9" v-if="section.profile">
-              <div class="left">
+              <div class="left" v-if="section.profile.portrait">
                 <img class="circle" :src="section.profile.portrait" :alt="section.profile.name" width="150">
               </div>
               <div class="overflow-hidden pt2 pl3">
