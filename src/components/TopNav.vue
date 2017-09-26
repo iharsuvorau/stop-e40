@@ -14,7 +14,7 @@
           <router-link :to="{name: 'ArticlesHome', params: {lang: lang}}">{{ content.materialsText }}</router-link>
         </li>
         <li class="inline-block mr3 sm-hide xs-hide" v-for="item in pages" :key="item.id">
-          <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}">{{ item.title }}</router-link>
+          <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}" :class="{'red': item.slug === 'petition'}">{{ item.title }}</router-link>
         </li>
         <!--
         <li class="inline-block" v-for="(item, index) in content.langs" :key="index">
