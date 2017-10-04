@@ -1,1 +1,48 @@
-{"cover":"","date":"","id":2,"lead":"","sections":[{"paragraphs":[{"list":[{"link":"https://drive.google.com/file/d/0B1Oup9NEQTK3N192VjJQcU9WeDA/view?usp=sharing","text":"Biological part. Orinithological report of the Ornithology Laboratory research workers in the Scientific and Practical Center on bioresources in the National Academy of Sciences of Belarus. Pinchuk and Karlionova, 2017"},{"link":"https://drive.google.com/file/d/0B1Oup9NEQTK3aW5aNS0xTy1XNkE/view?usp=sharing","text":"Biological part. Assessment of the impact on the Polesye natural complexes and the region biodiversity. SPC on bioresources in the National Academy of Sciences of Belarus"},{"link":"https://drive.google.com/file/d/0B1Oup9NEQTK3eEFvaWpwWHJqWUk/view?usp=sharing","text":"Hydrological part. Comment by Candidate of Technical Sciences Associate Professor of the Brest State Technical University, hydrologist Nikolay Sheshko"},{"link":"https://drive.google.com/file/d/0B1Oup9NEQTK3MlZfemlGS2d1QUk/view?usp=sharing","text":"Hydrological part. Comment by hydrologist Dr Janusz Żelaziński, University of Warsaw"},{"link":"https://drive.google.com/file/d/0B1Oup9NEQTK3amotVXZ1TTlIUjA/view?usp=sharing","text":"Economic part. On the investment risks of the E40 waterway construction project. The business union of entrepreneurs and employers named after Professor M. S. Kunyavsky (BSPN)"},{"link":"https://drive.google.com/file/d/0B1Oup9NEQTK3NTNOQVMyYzItem8/view?usp=sharing","text":"Economic part. On the investment risks of the E40 waterway construction project. The business union of entrepreneurs and employers named after Professor M. S. Kunyavsky (BSPN)"},{"link":"https://drive.google.com/file/d/0B1Oup9NEQTK3ZmlKSVQ5SzI4U1k/view?usp=sharing","text":"Sketch map of necessary works on the Pripyat River"}]}],"title":"Independent biological, economic and hydrological assessment of the E40 waterway restoration project"}],"slug":"expertise","teaser":"","title":"Expertise"}
+{
+    "cover": "",
+    "date": "",
+    "id": 2,
+    "lead": "",
+    "sections": [
+        {
+            "paragraphs": [
+                {
+                    "list": [
+                        {
+                            "link": "https://drive.google.com/open?id=0BxEL2fyaXxP4VmpSNDh4TTZmbG8",
+                            "text": "Biological part. Orinithological report of the Ornithology Laboratory research workers in the Scientific and Practical Center on bioresources in the National Academy of Sciences of Belarus. Pinchuk and Karlionova, 2017"
+                        },
+                        {
+                            "link": "https://drive.google.com/open?id=0BxEL2fyaXxP4NTZaV3RwVWlIc0U",
+                            "text": "Biological part. Assessment of the impact on the Polesye natural complexes and the region biodiversity. SPC on bioresources in the National Academy of Sciences of Belarus"
+                        },
+                        {
+                            "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3eEFvaWpwWHJqWUk/view?usp=sharing",
+                            "text": "Hydrological part. Comment by Candidate of Technical Sciences Associate Professor of the Brest State Technical University, hydrologist Nikolay Sheshko"
+                        },
+                        {
+                            "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3MlZfemlGS2d1QUk/view?usp=sharing",
+                            "text": "Hydrological part. Comment by hydrologist Dr Janusz Żelaziński, University of Warsaw"
+                        },
+                        {
+                            "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3amotVXZ1TTlIUjA/view?usp=sharing",
+                            "text": "Economic part. On the investment risks of the E40 waterway construction project. The business union of entrepreneurs and employers named after Professor M. S. Kunyavsky (BSPN)"
+                        },
+                        {
+                            "link": "https://drive.google.com/open?id=0BxEL2fyaXxP4UVhQQTJGU0JSVUU",
+                            "text": "Economic part. The evaluation of the document &laquo;Restoration of&nbsp;Inland Waterway E40 Dnieper-Vistula: from Strategy to&nbsp;Planning. Final Feasibility Study Report&raquo;. The Warsaw University, S.&nbsp;Volosuk and&nbsp;M.Chaykovsky"
+                        },
+                        {
+                            "link": "https://drive.google.com/file/d/0B1Oup9NEQTK3ZmlKSVQ5SzI4U1k/view?usp=sharing",
+                            "text": "Sketch map of necessary works on the Pripyat River"
+                        }
+                    ]
+                }
+            ],
+            "title": "Independent biological, economic and hydrological assessment of the E40 waterway restoration project"
+        }
+    ],
+    "slug": "expertise",
+    "teaser": "",
+    "title": "Expertise"
+}
