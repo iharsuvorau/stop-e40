@@ -17,7 +17,7 @@
                 <a :href="'#section'+index" class="dark-grey" :class="{'active': section.isActive}" v-html="section.title" @click="smoothScroll($event, index)"></a>
               </li>
             </ul>
-            <petition-stats v-if="showPetitionStats"></petition-stats>
+            <petition-stats :lang="$route.params.lang" v-if="showPetitionStats"></petition-stats>
           </nav>
 
         </aside>
@@ -82,7 +82,7 @@
             </div>
           </section>
 
-          <petition-reasons v-if="showPetitionReasons"></petition-reasons>
+          <petition-reasons :lang="$route.params.lang" v-if="showPetitionReasons"></petition-reasons>
         </div>
 
         <aside class="lg-col-3 md-col-12 sm-col-12 xs-col-12 mt4 px3">

@@ -1,53 +1,81 @@
 {
-  "id": 1,
-  "slug": "about",
-  "title": "About",
-  "teaser": "translation",
-  "lead": "",
-  "cover": "",
-  "date": "",
-  "sections": [
-    {
-      "title": "Александр Винчевский",
-      "isActive": false,
-      "paragraphs": [
-        {"style": "italic", "text": "Директор общественной организации &laquo;Ахова птушак Бацькаўшчыны&raquo;, орнитолог."}
-      ],
-      "sections": [
+    "cover": "",
+    "date": "",
+    "id": 1,
+    "lead": "",
+    "sections": [
         {
-          "title": "",
-          "isActive": false,
-          "paragraphs": [
-            {"text": "&laquo;Проект Е40 для меня аналогичен проекту по&nbsp;повороту северных рек в&nbsp;пустыни юга: дивиденды&nbsp;&mdash; небольшой группе разработчиков и&nbsp;строителей, и&nbsp;необратимые масштабные последствия для природы Полесья. Кто-то из&nbsp;местных жителей получит работу на&nbsp;Е40, но&nbsp;большинство будет страдать от&nbsp;искусственных изменений экосистем региона. Полесье&nbsp;&mdash; территория глобальной значимости и&nbsp;защитить её&nbsp;от&nbsp;катастрофичного вмешательства можно только объединившись: экологистам, полешукам, туристам, рыболовам, охотникам и&nbsp;другим группам населения&raquo;."},
-            {"text": "В&nbsp;июне 2016 года к&nbsp;независимым экологическим организациям Беларуси начали обращаться жители Полесья с&nbsp;просьбой организовать сбор подписей под петицией против водного пути Е40. В&nbsp;марте 2017 года была создана коалиция экологических организаций, которые выступают против восстановления водного пути Е40 для перемещения грузов и&nbsp;значительного вмешательства в&nbsp;экологические системы Полесья. В&nbsp;коалицию вошли следующие организации: <ul><li>ОО&nbsp;&laquo;Багна&raquo;,</li> <li>ОО&nbsp;&laquo;Ахова птушак Бацькаўшчыны&raquo;</li> <li>ОО&nbsp;&laquo;Экодом&raquo;</li> <li>Товарищество &laquo;Зеленая сеть&raquo;</li> <li>Учреждение &laquo;Центр экологических решений&raquo;</li> <li>Фонд &laquo;За&nbsp;чистую Припять&raquo;</li> <li>ОО&nbsp;&laquo;Время Земли&raquo;</li></ul>"},
-            {"text": "В&nbsp;2017 году от&nbsp;оргкомитета кампании были направлены официальные обращения с&nbsp;просьбой высказать свою позицию по&nbsp;проекту строительства водного пути Е40&nbsp;в следующие государственные органы: Управление делами Президента Республики Беларусь, Гомельский и&nbsp;Брестский областной исполнительный комитеты, Министерство природных ресурсов и&nbsp;охраны окружающей среды, ряд других министерств, ЦНИИКИВР, районных исполнительных комитетов, администрации национального парка &laquo;Припятский&raquo;, Полесского радиационно-экологического заповедника и&nbsp;ряд заказников республиканского значения."},
-            {"text": "Против строительства водного пути Е40 высказалась администрация национального парка &laquo;Припятский&raquo;, Полесского радиационно-экологического заповедника и&nbsp;ЦНИИКИВР. Остальные государственные органы сообщали, что не&nbsp;могут пока высказать свою позицию, так как проект находится на&nbsp;стадии планирования."}
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Ольга Каскевич",
-      "isActive": false,
-      "paragraphs": [
-        {"style": "italic", "text": "Председатель общественной организации &laquo;Багна&raquo;, координатор кампании &laquo;Стоп Е40!&raquo;."}
-      ],
-      "sections": [
-        {
-          "title": "Почему про Е40 заговорили сейчас и&nbsp;почему до&nbsp;этого про проект было почти ничего не&nbsp;слышно?",
-          "isActive": false,
-          "paragraphs": [
-            {"text": "Масштабный проект Е40 может изменить в&nbsp;худшую сторону привычное для нас Полесье. Водный путь затронет сеть важных природных территорий национального и&nbsp;международного значения. Припятское Полесье -&mdash; это огромный водный бассейн (ширина разлива достигает 30&nbsp;км) с&nbsp;уникальным пойменным ландшафтом: именно меандры реки, многочисленные старицы, старичные озера и&nbsp;заливы формируют оригинальные экосистемы этого региона, в&nbsp;том числе редкие пойменные дубравы, дюны, крупнейшие болотные массивы и&nbsp;естественные заливные луга. Мы&nbsp;убеждены, что в&nbsp;XXI веке корабли нужно изменять под реки, а&nbsp;не&nbsp;реки&nbsp;&mdash; под корабли."}
-          ]
+            "sections": [
+                {
+                    "paragraphs": [
+                        {
+                            "text": "\"Stop E40\" is a public campaign against the construction of the E40 waterway that can pass through the rivers of Poland, Belarus and Ukraine. The developers of this project assume that the E40 will become a new trade route between the ports of the Baltic and Black seas, attract investments to the region and create new jobs. We, <a href='/#/ru/articles/public-opinion'> the environmental coalition </a>, believe that the project is ill-conceived, economically inefficient, and that the construction of the E40 will be a disaster both for the unique region of the Belarusian Polesie, as and for a number of valuable natural territories of Poland and Ukraine."
+                        }
+                    ],
+                    "title": ""
+                }
+            ],
+            "title": "What is #Stop_E40?"
         },
         {
-          "title": "Дальнейшие шаги экологов?",
-          "isActive": false,
-          "paragraphs": [
-            {"text": "..."}
-          ]
+            "paragraphs": [
+                {
+                    "text": "This is a project to establish a navigable route longer than 2,000 km that they want to construct through the Vistula, Pripyat and Dnieper in order to connect the Baltic and Black seas. Project proponents call it the \"reconstruction\" because the E40 trunk waterway (on the route Gdansk-Warsaw-Brest-Pinsk-Mozyr-Kiev-Kherson) <a href='http://docs.cntd.ru/document/901784389'> exists on paper since 1996 </a>. Except that from Warsaw to Brest it is not navigable, therefore, plans for the \"reconstruction\" of the E40 suggest building a bypass canal in Poland, six or seven dams and locks in Pripyat, as well as dredging on the entire route so that multitonnage \"river-sea\" vessels can follow the course of our rivers."
+                },
+                {
+                    "text": "The development of the project began at the end of 2013 and continues to the present day. The initiator of the E40 construction is the coalition of organizations from three countries (Belarus, Poland and Ukraine) headed by the Republican Unitary Operational and Construction Enterprise \"Dnepro-Bugsky Waterway\". Feasibility study, (the most important project document, which specifies what, where and why will be built), was developed by a consortium led by the Maritime Institute in Gdansk. The work on the project was funded by the European Union within the Programme for Transboundary Cooperation between three countries. Now the initiators of the project are in search of funding for further research and work."
+                }
+            ],
+            "title": "It's the first time I hear about the E40 waterway project, what is it?"
+        },
+        {
+            "paragraphs": [
+                {
+                    "text": "The problem is that projects of this scale have both positive and negative effects - and the latter, of course, are poorly defined in the documentation of the developers. We wondered what consequences such a drastic change in the rivers would have for the entire region. To answer this question, we asked independent experts from different areas to evaluate the existing feasibility study and express their opinion on the possible outcomes of the E40 waterway construction."
+                }
+            ],
+            "title": "So what's the problem?"
+        },
+        {
+            "paragraphs": [
+                {
+                    "text": "In short, everyone says that the feasibility study is not credible. For example, the economic part of this document is poorly researched. It turned out that the analysis of the benefits and costs of the project <a href='/#/en/articles/economic-mistakes'>does not include € 12 billion of investment costs</a>, external costs are estimated incorrectly, and besides, the calculations are made only for two Polish sections of the route. <a href='/#/ru/articles/negative-economics'> Another group of experts has noted</a> that the risks are poorly analyzed, the calculations for taking in cargoes from the railroads and automobile roads are not specified, and on the whole, the E40 waterway threatens to become another subsidized project."
+                },
+                {
+                    "text": "Some points are not taken into account in the feasibility study at all — for example, the fact that the E40 waterway and its construction works will be carried out in the areas contaminated by radiation as a consequence of the Chernobyl disaster. <a href='/#/ru/articles/xrays'>Ukraine can be exposed to the most drastic consequences</a>. The E40 waterway will pass through more than 70 valuable natural areas of Poland, Belarus and Ukraine that will be suffer from irreparable damage. There’s almost no mention of the threats to the biodiversity of the whole region in the existing documents, therefore we asked several experts <a href='/#/ru/articles/biodiversity'>what impact the construction of the E40 may have on Pripyat and Polesie.</a>"
+                }
+            ],
+            "title": "And what do independent experts say?"
+        },
+        {
+            "paragraphs": [
+                {
+                    "text": "Among large European rivers, Pripyat is one of the least spoilt by humans, and the entire life of the Polesie region is indissolubly tied to it. Each year, 1.5 million birds gain strength in the floodplain of the Pripyat during migration, and more than 90% of the total number of birds in Belarus are recorded in Polesie. There are a lot of rare biotopes here, for example, unique floodplain oak groves and black alder forests; it’s home to a large number of protected species of animals and plants, many of which are listed in the Red Book of the Republic of Belarus. Moreover, Polesie has a lot of swamps that absorb 20 times more CO2 than forests and can be severely damaged due to the change in the hydrological regime of the region. It should be noted that the E40 waterway will affect <a href='/#/ru/articles/protected-areas'>some of the most valuable natural territories</a> in Belarus: Pripyat National Park, Polesie Radioecological Reserve, 11 republican sanctuaries and six local ones. Of these sites, 12 are of international importance."
+                }
+            ],
+            "title": "And why the Pripyat river and the Polesie region are valuable?"
+        },
+        {
+            "paragraphs": [
+                {
+                    "text": "First and foremost, we want to draw the attention of the Polish, Belarusian, Ukrainian governments and the European Parliament to this issue. We want to demonstrate that any decisions on the E40 waterway construction project should be made with the active involvement of the public and independent experts. We point to the fact that the E40 waterway project has a questionable economic value but definitely poses a serious threat to nature. We remind you: <a href='/#/ru/articles/similar-stories'>the world practice has proved</a> that in the 21st century it’s ships that should be adapted to rivers, not rivers to ships."
+                }
+            ],
+            "title": "So what do you want to achieve?"
+        },
+        {
+            "paragraphs": [
+                {
+                    "text": "You can sign a <a href='/#/ru/pages/petition'> petition </a>that we will file to the governments of Poland, Belarus and Ukraine. If you represent any legal entity, you can join the <a href='/#/en/pages/position'> petition for organisations </a>."
+                },
+                {
+                    "text": "You can tell about this issue to your family and friends in person. And, of course, you can like, share and repost the story in social networks — the more people know about this issue, the more chances are that landmark decisions will be made not on the sidelines, but with our participation."
+                }
+            ],
+            "title": "I'm convinced. How can I help you?"
         }
-      ]
-    }
-  ]
+    ],
+    "slug": "about",
+    "teaser": "",
+    "title": "About"
 }

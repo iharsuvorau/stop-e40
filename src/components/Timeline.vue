@@ -6,7 +6,7 @@
         <article class="py2" @click="showDescr($event, index, item)">
           <div class="mb1 flex justify-between">
             <span class="h3 mb1 bold" v-html="item.date.monthDay + ', ' + item.date.year"></span>
-            <span class="" v-if="item.paragraphs.length > 0">
+            <span class="" v-if="item.paragraphs && item.paragraphs.length > 0">
               <span v-if="item.isActive" class="icon-size">&ndash;</span>
               <span v-else class="blue icon-size">+</span>
             </span>

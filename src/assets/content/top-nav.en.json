@@ -1,12 +1,14 @@
 {
-  "menuText": "Menu",
-  "movieText": "Е40 Movie",
-  "main": [
-      { "title": "Materials", "slug": "materials" },
-      { "title": "Publications", "slug": "publications" }
-  ],
-  "langs": [
-      { "title": "English", "slug": "en" },
-      { "title": "русский", "slug": "ru" }
-  ]
+    "langs": [
+        {
+            "slug": "en",
+            "title": "English"
+        },
+        {
+            "slug": "ru",
+            "title": "Russian"
+        }
+    ],
+    "materialsText": "Articles",
+    "menuText": "Menu"
 }

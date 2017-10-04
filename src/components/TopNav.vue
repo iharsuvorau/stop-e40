@@ -16,11 +16,9 @@
         <li class="inline-block mr3 sm-hide xs-hide" v-for="item in pages" :key="item.id">
           <router-link :to="{name: 'Page', params: {lang: lang, slug: item.slug}}" :class="{'red': item.slug === 'petition'}">{{ item.title }}</router-link>
         </li>
-        <!--
         <li class="inline-block" v-for="(item, index) in content.langs" :key="index">
           <router-link v-show="lang !== item.slug" :to="{path: getCurrentPathWithLang(item.slug)}">{{ item.title }}</router-link>
         </li>
-         -->
       </ul>
 
       <section id="sidenav" class="flex flex-column justify-between" v-if="sideNavVisible" @click="stopPropagation($event)">

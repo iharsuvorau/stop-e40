@@ -3,11 +3,11 @@
     <ul class="list-reset mt3" v-if="petitionData">
       <li class="center pt1">
         <div class="stat_number red">{{ petitionData.signature_count }}</div>
-        <div class="stat_label">подписей собрано</div>
+        <div class="stat_label">{{ currentLabel }}</div>
       </li>
       <li class="mt2 center pt2">
         <div class="stat_number red">{{ petitionData.goal }}</div>
-        <div class="stat_label">ближайшая цель</div>
+        <div class="stat_label">{{ goalLabel }}</div>
       </li>
     </ul>
   </div>
@@ -31,13 +31,16 @@ export default {
     return {
       petitionAPI: 'https://api.change.org/v1/petitions/11887498?api_key=9d6e9d6859fff4e530136ed1b83c5ee941d73fd443aa3898b5bf283058de0fb0',
       corsProxy: 'https://cors-anywhere.herokuapp.com/',
-      petitionData: null
+      petitionData: null,
+      currentLabel: '',
+      goalLabel: ''
     }
   },
 
   methods: {
     init: function () {
       this.petitionStats()
+      this.fillLabels()
     },
 
     petitionStats: function () {
@@ -49,6 +52,16 @@ export default {
       }).catch((err) => {
         console.log('error:', err)
       })
+    },
+
+    fillLabels: function () {
+      if (this.lang === 'ru') {
+        this.currentLabel = 'подписей собрано'
+        this.goalLabel = 'ближайшая цель'
+      } else {
+        this.currentLabel = 'signs collected'
+        this.goalLabel = 'our goal'
+      }
     }
   }
 }

@@ -49,16 +49,15 @@ Vue.mixin({
 
     defineDefaultLang (paramLang) {
       // define the browser's default language which matches accepted languages
-      // TODO: while there are no translations launch without EN version
-      // if (!paramLang) {
-      //   let userLangs = window.navigator.languages
-      //   for (let i = 0; i < userLangs.length; i++) {
-      //     let lang = userLangs[i].split('-')[0]
-      //     if (this.acceptableLangs.indexOf(lang) > -1) {
-      //       return lang
-      //     }
-      //   }
-      // }
+      if (!paramLang) {
+        let userLangs = window.navigator.languages
+        for (let i = 0; i < userLangs.length; i++) {
+          let lang = userLangs[i].split('-')[0]
+          if (this.acceptableLangs.indexOf(lang) > -1) {
+            return lang
+          }
+        }
+      }
       return 'ru'
     },
 
