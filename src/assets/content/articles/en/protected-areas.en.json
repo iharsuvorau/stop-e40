@@ -2,7 +2,7 @@
     "cover": "/static/covers/protected-areas.jpg",
     "date": "2017-07-31",
     "id": 6,
-    "lead": "the E40 waterway will pass through one of the most valuable natural areas of Belarus: Pripyat National Park, Polesie Radioecological Reserve, 11 republican sanctuaries and six local ones. Of these facilities, 12 are of international importance - they are protected by the Ramsar Convention and are areas important for birds (TBPs). What are these objects and why are they valuable?",
+    "lead": "the E40 waterway will pass through one of the most valuable natural areas of Belarus: Pripyat National Park, Polesie Radioecological Reserve, 11 republican reserves and six local ones. Of these facilities, 12 are of international importance - they are protected by the Ramsar Convention and are areas important for birds (TBPs). What are these objects and why are they valuable?",
     "sections": [
         {
             "images": [
@@ -28,7 +28,7 @@
                         {
                             "caption": "Red Book",
 			    "rows": [
-				    ["Birds", "65  species of all birds registered in the Red  Book of Belarus is found in NP Pripyatsky. This is more than 90% of red-labeled birds  of the country. there are a gray crane, a black stork, a marsh owl, a green woodpecker, a azure tit, an erne among them\n"],
+				    ["Birds", "65 species of all birds registered in the Red Book of Belarus is found in NP Pripyatsky. This is more than 90% of red-labeled birds of the country. there are a gray crane, a black stork, a marsh owl, a green woodpecker, a azure tit, an erne among them\n"],
 				    ["Animals", "European mink, bison, European lynx, badger, garden dormouse, edible dormouse, hazel dormouse"],
 				    ["Plants", "44 types, <a class='default-link' href='http://www.npp.by/about_national_park/flora_fauna/'>full list of plants of the Red Book of the Republic of Belarus</a>"]
 		    
@@ -76,7 +76,7 @@
                         {
                             "caption": "Red Book",
 			    "rows": [
-				    ["Animals", "European pond turtle, 1 species of amphibians (Natterjack toad), 10 species of birds (Little bittern, Eurasian bittern, Eurasian hobby, Red-footed falcon, Eurasian oystercatcher, Common greenshank, Little gull, Sterna, Common kingfisher)  and 4 species of mammals  (European badger, Lesser noctule, Garden dormouse, Hazel dormouse)\n"],
+				    ["Animals", "European pond turtle, 1 species of amphibians (Natterjack toad), 10 species of birds (Little bittern, Eurasian bittern, Eurasian hobby, Red-footed falcon, Eurasian oystercatcher, Common greenshank, Little gull, Sterna, Common kingfisher) and 4 species of mammals (European badger, Lesser noctule, Garden dormouse, Hazel dormouse)\n"],
                             	    ["Plants", "26 species, <a class='default-link' href='https://trofei.by/articles/raznoe/%C2%ABstrel-skij%C2%BB-respublikanskij-landshaftnyj-zakaznik'>complete list of plants</a>"]
 			    ]
                         }
@@ -188,7 +188,7 @@
 			    "rows": [
 				    ["Area", "1019,7 hectares"],
                             	    ["Foundation date", "1986"],
-                            	    ["Specialty", "here grows relict plant ordinary snakeroot. it has the first and highest, category of protection in the Republican Red Book. In Belarus, there are only two habitats of these species are known: the reserve Mozyrskie ovragi and the Belovezhskaya Pushcha National Park. Absolute heights reach more than 200  meters. it  is the maximum for  the Belarusian Polesye region. Located in  the city"]
+                            	    ["Specialty", "here grows relict plant ordinary snakeroot. it has the first and highest, category of protection in the Republican Red Book. In Belarus, there are only two habitats of these species are known: the reserve Mozyrskie ovragi and the Belovezhskaya Pushcha National Park. Absolute heights reach more than 200 meters. it is the maximum for the Belarusian Polesye region. Located in the city"]
 			    ]
                         },
                         {
@@ -201,7 +201,7 @@
                     "title": "Republican Landscape Reserve \"Mozyr Gullies\" "
                 }
             ],
-            "title": "Republican Wildlife Sanctuary"
+            "title": "Republican Reserves"
         },
         {
             "sections": [
@@ -210,14 +210,14 @@
                         {
                             "caption": "General info",
 			    "rows": [
-				    ["Area", "The  land is a fragment of downriver of  the Pripyat valley, with a total length of more than 50 km and a width from 2 to 8.5 km between Petrykov and Mozyr cities"],
+				    ["Area", "The land is a fragment of downriver of the Pripyat valley, with a total length of more than 50 km and a width from 2 to 8.5 km between Petrykov and Mozyr cities"],
                             	    ["Specialty", "A unique river valley with an exceptional wealth of meadow, forest and wetland biotopes. Within the area there is more than 80 km of the river bed. The bed of the river, on average with a width of 200 to 300 m, was completely preserved in its natural state. The river forms large meanders, numerous large and small old people, the territory is heavily indented by old people. Within the area there are more than 100 floodplain lakes. The territory is difficult to access because of the numerous old men and old people. In the spring, a large area is flooded with flood waters. Within the territory are dominated by open meadow, cottage communities and marshes (about 70%)"]
 			    ]
                         },
                         {
                             "caption": "Red Book",
 			    "rows": [
-				    ["Birds", "here nest such species as: Ixobrychus minutus, Aquila pomarina, Pernis apivorus,  Ciconia nigra, Grus grus, Gallinago media, Dendrocopos leucotos, Caprimulgus europaeus, Lullula arborea, a number of other species. The number of a number of species is equal to or more than 1% of the national population. They are such kinds as: Botaurus stellaris, Circus aeruginosus, Crex crex, Chlidonias niger,  Alcedo atthis, and etc. The number of such species as: Dendrocopos medius, Sterna albifrons,  Lanius collurio, Luscinia svecica\u00a0\u2014 more than 2%; Sylvia nisoria, Xenus cinereus, Ficedula albicollis \u2014 more than 5% of the national population."],
+				    ["Birds", "here nest such species as: Ixobrychus minutus, Aquila pomarina, Pernis apivorus, Ciconia nigra, Grus grus, Gallinago media, Dendrocopos leucotos, Caprimulgus europaeus, Lullula arborea, a number of other species. The number of a number of species is equal to or more than 1% of the national population. They are such kinds as: Botaurus stellaris, Circus aeruginosus, Crex crex, Chlidonias niger, Alcedo atthis, and etc. The number of such species as: Dendrocopos medius, Sterna albifrons, Lanius collurio, Luscinia svecica\u00a0\u2014 more than 2%; Sylvia nisoria, Xenus cinereus, Ficedula albicollis \u2014 more than 5% of the national population."],
                             	    ["Animals", "there are about 90 protected species of animals and plants \nin the fauna and flora of the territory. The territory is an important habitat for some spieces of fish: Gobio albipinnatus, Aspius aspius, Eudontomyzon mari\n"]
 			    ]
                         }
@@ -229,13 +229,13 @@
                         {
                             "caption": "General information",
 			    "rows": [
-				    ["Specialty", "The place of nesting and habitat of birds registered in the Red Book. key migration route that connects  north and  east with the Mediterranean and even with  the African continent. It is also known as a key nesting site for waders in Belarus"]
+				    ["Specialty", "The place of nesting and habitat of birds registered in the Red Book. key migration route that connects north and east with the Mediterranean and even with  the African continent. It is also known as a key nesting site for waders in Belarus"]
 			    ]
                         },
                         {
                             "caption": "Red book",
 			    "rows": [
-				    ["Birds", "here nest such species as little bittern Ixobrychus minutus, lesser spotted eagle Aquila pomarina, common pern Pinnis apivorus, black stork Ciconia nigra, gray crane Grus grus, double snipe Gallinago media, white-backed woodpecker Dendrocopos leucotos, goatsucker Caprimulgus europaeus, forest lark Lullula arborea, and number of other species. The number of  some species is equal to or more than 1% of the national population. These are species such as  the bittern Botaurus stellaris, the marsh harrier Circus aeruginosus, the corncrake Crex crex, the black tern Chlidonias niger, the halcyon Alcedo atthis, and others. The number of such species as: middle woodpecker, Dendrocopos medius, small tern Sterna albifrons, red-backed shrike Lanius collurio, Bluethroat Luscinia svecica - more than 2%; barred warbler Sylvia nisoria and Terek sandpiper Xenus cinereus, white-collared flycatcher Ficedula albicollis - more than 5% of the national population\n"],
+				    ["Birds", "here nest such species as little bittern Ixobrychus minutus, lesser spotted eagle Aquila pomarina, common pern Pinnis apivorus, black stork Ciconia nigra, gray crane Grus grus, double snipe Gallinago media, white-backed woodpecker Dendrocopos leucotos, goatsucker Caprimulgus europaeus, forest lark Lullula arborea, and number of other species. The number of some species is equal to or more than 1% of the national population. These are species such as the bittern Botaurus stellaris, the marsh harrier Circus aeruginosus, the corncrake Crex crex, the black tern Chlidonias niger, the halcyon Alcedo atthis, and others. The number of such species as: middle woodpecker, Dendrocopos medius, small tern Sterna albifrons, red-backed shrike Lanius collurio, Bluethroat Luscinia svecica - more than 2%; barred warbler Sylvia nisoria and Terek sandpiper Xenus cinereus, white-collared flycatcher Ficedula albicollis - more than 5% of the national population\n"],
                             	    ["Animals", "The fauna and flora of the territory includes about 90 protected species of animals and plants. The territory is an important habitat for a number of fish species: Gobio albipinnatus, Aspius aspius, Eudontomyzon mari"]
 			    ]
                         }
@@ -253,7 +253,7 @@
                         {
                             "caption": "Red Book",
 			    "rows": [
-				    ["Birds", "The number of  some species is equal to or more than 1% of the national population. These are species such as  the bittern Botaurus stellaris, the marsh harrier Circus aeruginosus, the corncrake Crex crex, the black tern Chlidonias niger, the halcyon Alcedo atthis, and others. The number of such species as: middle woodpecker, Dendrocopos medius, small tern Sterna albifrons, red-backed shrike Lanius collurio, Bluethroat Luscinia svecica - more than 2%; barred warbler Sylvia nisoria and Terek sandpiper Xenus cinereus, white-collared flycatcher Ficedula albicollis - more than 5% of the national population"],
+				    ["Birds", "Here are nesting species such as: Ixobrychus minutus, Aquila pomarina, Pernis apivorus, Ciconia nigra, Grus grus, Gallinago media, Dendrocopos leucotos, Caprimulgus europaeus, Lullula arborea, and others.The number of some species is equal to or more than 1% of the national population. These are species such as the bittern Botaurus stellaris, the marsh harrier Circus aeruginosus, the corncrake Crex crex, the black tern Chlidonias niger, the halcyon Alcedo atthis, and others. The number of such species as: middle woodpecker, Dendrocopos medius, small tern Sterna albifrons, red-backed shrike Lanius collurio, Bluethroat Luscinia svecica - more than 2%; barred warbler Sylvia nisoria and Terek sandpiper Xenus cinereus, white-collared flycatcher Ficedula albicollis - more than 5% of the national population"],
 				    ["Animals", "In fauna and flora of the territory there are about 90 protected species of animals and plants. The territory is an important habitat for a number of fish species: Gobio albipinnatus, Aspius aspius, Eudontomyzon mari"]
 			    ]
                         }
@@ -265,7 +265,7 @@
                         {
                             "caption": "General info",
 			    "rows": [
-				    ["Area", "467  hectares"],
+				    ["Area", "467 hectares"],
                             	    ["Foundation date", "1994"],
                             	    ["Specialty", "is located in the valley of the river Mukhavets"]
 			    ]
@@ -274,8 +274,8 @@
                             "caption": "Red book",
 			    "rows": [
 				    ["Birds", "76 species of birds have been identified in the reserve. In the northern and southern parts of the wildlife reserve, three pairs of ordinary (red book RB) are registered. At water there is a gull silvery (the Red book of Belarus)"],
-                            	    ["Animals", "among the large animals - moose, roe deer, wild boar, fox. Nests of hazel dormouse, as well as settlements of  river beaver and muskrat are registred"],
-                            	    ["Plants", "there are about 150 plant species in the reserve.  floating moss is  widespread in  floodwaters and lakes (the Red book of the Republic of Belarus). In some places it creates a  rug"]
+                            	    ["Animals", "among the large animals - moose, roe deer, wild boar, fox. Nests of hazel dormouse, as well as settlements of river beaver and muskrat are registred"],
+                            	    ["Plants", "there are about 150 plant species in the reserve. Floating moss is widespread in floodwaters and lakes (the Red book of the Republic of Belarus). In some places it creates a rug"]
 			    ]
                         }
                     ],
@@ -308,9 +308,9 @@
                         {
                             "caption": "General info",
 			    "rows": [
-				    ["Area", "65  hectares"],
+				    ["Area", "65 hectares"],
                             	    ["Foundation date", "1995"],
-                            	    ["Specialty", "It is located in  the eastern part of  Brest city to the south of  former Vychulki village. The reserve is completely in the bottom lands of the Mukhavets River"]
+                            	    ["Specialty", "It is located in the eastern part of Brest city to the south of former Vychulki village. The reserve is completely in the bottom lands of the Mukhavets River"]
 			    ]
                         },
                         {
@@ -325,7 +325,7 @@
                     "title": "Biological reserve Brestskyi\""
                 }
             ],
-            "title": "Local wildlife sanctuaries"
+            "title": "Local Reserves"
         },
         {
             "paragraphs": [
@@ -354,7 +354,7 @@
                     ]
                 }
             ],
-            "title": "Reserve of the Emergency Control Ministry of Republic of Belarus"
+            "title": "The Reserve of The Ministry of Emergency Situations of Republic of Belarus"
         },
         {
             "sections": [
@@ -388,7 +388,7 @@
 			    "rows": [
 				    ["Area", "10335 hectares"],
                             	    ["Status", "IBA international importance since. Transboundary Ramsar territory \"Stokhod-Pripyat-Prostir\" since 2009 (Belarus-Ukraine)"],
-                            	    ["IBA-forming species", "Greater spotted eagle, Spotted crake, Little crake, Great snipe, Black-tailed godwit, Savi's warbler,  Aquatic warbler"]
+                            	    ["IBA-forming species", "Greater spotted eagle, Spotted crake, Little crake, Great snipe, Black-tailed godwit, Savi's warbler, Aquatic warbler"]
 			    ]
                         }
                     ],
@@ -435,7 +435,7 @@
                         {
 			    "rows": [
 				    ["Area", "218318 hectares"],
-                            	    ["Status", "IBA international importance  since 2005"],
+                            	    ["Status", "IBA international importance since 2005"],
                             	    ["IBA forming species", "Eurasian bittern, Black stork, White-tailed eagle, Short-toed snake eagle, Lesser spotted eagle, Greater spotted eagle, Little crake, Corn crake, Common crane, Great snipe, Little tern, Eurasian eagle-owl, Common kingfisher"]
 			    ]
                         }
@@ -459,7 +459,7 @@
                         {
 			    "rows": [
 				    ["Area", "16124 hectares"],
-                            	    ["Status", "IBA international importance  since, Ramsar territory since 2012"],
+                            	    ["Status", "IBA international importance since, Ramsar territory since 2012"],
                             	    ["IBA forming species", "Greater spotted eagle"]
 			    ]
                         }
@@ -484,7 +484,7 @@
 			    "rows": [
 				    ["Area", "23000 hectares"],
                             	    ["Status", "IBA international importance since 2016. Ramsar Site"],
-                            	    ["IBA forming species", "Podiceps grisegena, Botaurus stellaris, Anas strepera, Aythya ferina, Aythya nyroca, Porzana parva, Grus communis, Chlidonias niger Sterna albifrons, Dendrocopos medius,Bubo bubo, Alcedo atthis, Caprimulgus europaeus, Riparia riparia,  Locustella luscinioides"]
+                            	    ["IBA forming species", "Podiceps grisegena, Botaurus stellaris, Anas strepera, Aythya ferina, Aythya nyroca, Porzana parva, Grus communis, Chlidonias niger Sterna albifrons, Dendrocopos medius,Bubo bubo, Alcedo atthis, Caprimulgus europaeus, Riparia riparia, Locustella luscinioides"]
 			    ]
                         }
                     ],
