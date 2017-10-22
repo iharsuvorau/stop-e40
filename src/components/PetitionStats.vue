@@ -55,7 +55,7 @@ export default {
     },
 
     fillLabels: function () {
-      if (this.lang === 'ru') {
+      if (this.$route.params.lang === 'ru') {
         this.currentLabel = 'подписей собрано'
         this.goalLabel = 'ближайшая цель'
       } else {
