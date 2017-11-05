@@ -36,7 +36,7 @@
                     ]
                 }
             ],
-            "title": "Common materials"
+            "title": "General materials"
         },
         {
             "paragraphs": [
@@ -48,11 +48,11 @@
                         },
                         {
                             "link": "https://drive.google.com/drive/folders/0B1Oup9NEQTK3SjVRUXk2ZWd6ZWs?usp=sharing",
-                            "text": "Photographs of Pripyat from expedition in summer 2017.Photographer Olga Kaskevich"
+                            "text": "Photographs of the Pripyat from expedition in summer 2017. Photographer Olga Kaskevich"
                         },
                         {
                             "link": "https://drive.google.com/open?id=0B1Oup9NEQTK3UXZON09FMWZoZm8",
-                            "text": "Photographs from the demonstration to protest construction of the E40 waterway. Photographer: Alexey Zayats"
+                            "text": "Photographs from the demonstration to protest against the construction of the E40 waterway. Photographer: Alexey Zayats"
                         }
                     ]
                 }
@@ -74,10 +74,10 @@
                                         },
                                         {
                                             "name": "",
-                                            "value": "ОО АПБ"
+                                            "value": "BirdLife Belarus"
                                         }
                                     ],
-                                    "text": "E40 waterway: so boats won't sail and Polesye will seize to exist?"
+                                    "text": "E40 waterway: So, boats will not sail and Polesye will seize to exist?"
                                 },
                                 {
                                     "link": "https://wildlife.by/ecology/news/ofitsialno-startovala-obshchestvennaya-kampaniya-stop-e40-/",
@@ -173,10 +173,10 @@
                                         },
                                         {
                                             "name": "authors",
-                                            "value": " АШ Anton Trofimovich"
+                                            "value": "ASh Anton Trofimovich"
                                         }
                                     ],
-                                    "text": "Polesye death or an alliance against Russia? Studying the E40 - plans to make Pripyat navigable"
+                                    "text": "Polesye death or an alliance against Russia? Studying the E40&mdash;plans to make the Pripyat navigable"
                                 },
                                 {
                                     "link": "https://realt.onliner.by/2017/07/19/e40",
@@ -191,10 +191,10 @@
                                         },
                                         {
                                             "name": "authors",
-                                            "value": "Dmitry Melehovets"
+                                            "value": "Dmitry Melekhovets"
                                         }
                                     ],
-                                    "text": "A water route through Belarus at the cost of milliards of euro is planned to be constructed. Ecologists and economists have stood aagainst the idea"
+                                    "text": "A water route through Belarus at the cost of billions of euro is planned to be constructed. Ecologists and economists have stood aagainst the idea"
                                 },
                                 {
                                     "link": "http://www.belmarket.by/v-belarusi-nachinaetsya-kampaniya-protiv-stroitelstva-vodnogo-puti-e40",
@@ -230,7 +230,7 @@
                                             "value": "Tatyana Manenok"
                                         }
                                     ],
-                                    "text": "E40 waterway: are there more pros of cons for Belarus"
+                                    "text": "E40 waterway: are there more pros or cons for Belarus"
                                 },
                                 {
                                     "link": "https://ej.by/news/economy/2017/07/21/evropeyskiy-vodnyy-put-novye-ekonomicheskie-vozmozhnosti-ili.html",
@@ -302,7 +302,7 @@
                                             "value": "Olga Bykovskaya"
                                         }
                                     ],
-                                    "text": "Straightening of Pripyat at the expence of Europe: ecologists protest and clerks are waiting for investment"
+                                    "text": "Straightening of Pripyat at the expense of Europe: ecologists protest and clerks are waiting for investment"
                                 },
                                 {
                                     "link": "http://www.belaruspartisan.org/bel/belnaviny/?ELEMENT_ID=388118",
@@ -320,7 +320,7 @@
                                             "value": "Ilya Paraskevich, Sergey Geslaga"
                                         }
                                     ],
-                                    "text": "Belarusian experts criticise the idea of the Visla-Muhavets-Pripyat-Dnieper water corridor"
+                                    "text": "Belarusian experts criticize the idea of the Visla-Mukhavets-Pripyat-Dnieper water corridor"
                                 },
                                 {
                                     "link": "https://www.interfax.by/news/belarus/1227650",
@@ -352,7 +352,7 @@
                                             "value": "Nataly Bazar"
                                         }
                                     ],
-                                    "text": "Will we manage to save Pripyat and other rivers in their natural satate?"
+                                    "text": "Will we manage to save the Pripyat and other rivers in their natural state?"
                                 },
                                 {
                                     "link": "http://tomin.by/news/2011-12-02-08-43-09/20178-698-stop-e40-kampaniya-protiv-vosstanovleniya-vodnogo-puti-za-150-mln-evro",

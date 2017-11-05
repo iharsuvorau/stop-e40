@@ -2,11 +2,11 @@
     "cover": "/static/covers/xrays.jpeg",
     "date": "2017-07-31",
     "id": 4,
-    "lead": "Part of the new navigable route will pass through the territories affected by the Chernobyl disaster in 1986. In Belarus it is a section of the Pripyat that flows through the Polesye Radiation Reserve, in Ukraine - a section of the Dnieper that runs through the Chernobyl Biosphere Reserve. Belarusian and Ukrainian experts talk about the consequences of the E40 waterway construction for the radiation situation in the region.",
+    "lead": "A part of the new navigable route will pass through the territories affected by the 1986 Chernobyl disaster. These are the section of the Pripyat river flowing through the Polesye Radiation Reserve (Belarus), and the section of the Dnieper flowing through the Chernobyl Biosphere Reserve (Ukraine). The Belarusian and Ukrainian experts talk about the consequences of the E40 waterway construction for the radiation situation in the region.",
     "sections": [
         {
             "profile": {
-                "caption": "Secretary of the USSR Supreme Soviet Commission to Consider the Accident Causes at the Chernobyl nuclear power plant, Doctor of Technical Sciences",
+                "caption": "Secretary of the USSR Supreme Council Commission to Consider the Accident Causes at the Chernobyl nuclear power plant, Candidate of Technical Sciences (Ph.D.)",
                 "name": "Yuri Voronezhtsev",
                 "portrait": "/static/experts/voronezhcev@2x.jpg"
             },
@@ -17,7 +17,7 @@
                             "text": "Monitoring is regularly performed by several agencies, in particular, the Republican Center for Hydrometeorology and the Ministry of Emergency Situations. Strontium, cesium and transuranium were mostly deposited in the contaminated areas. But now a new problem has arisen: plutonium-241 in the decay process turns into americium-241, whose distribution has not been sufficiently studied at the moment. The behavior of the same plutonium-241 and -239 is known, because nuclear weapons tests were conducted and the consequences of Hiroshima and Nagasaki explosions were studied. There is not enough information about americium-241 and its behavior cannot be predicted."
                         }
                     ],
-                    "title": "Which Belarusian authorities should monitor the areas contaminated by radiation? What elements are the most dangerous?"
+                    "title": "Which Belarusian authorities should monitor the areas contaminated by radiation? Which chemical elements are the most dangerous?"
                 },
                 {
                     "paragraphs": [
@@ -25,13 +25,13 @@
                             "text": "Yes, silt accumulates radionuclides. If silt is not touched, there is no particular danger, because in general the river is clean due to the constant flow. The threat is that during dredging works, the silt can be \"disturbed\" and can go downstream the Pripyat and Dnieper to the Kiev reservoir, while about 30 million Ukrainians receive water from it and related reservoirs. In Belarus the most dangerous areas are in the Polesye Radiation Reserve, where not many people live, but the threat still remains."
                         },
                         {
-                            "text": "It is interesting that the existing documents on the E40 waterway restoration make only brief reference to the fact that it will pass through unsafe areas with deposits of radionuclides. In my opinion, much of the rationale must focus on the radiological component. In general, it is strange to see this project. When I was the responsible secretary of the USSR Supreme Soviet Commission to overcome the Chernobyl disaster consequences, we controlled the expert group who developed the concept of safe living in these regions. These lands were deleted from all economic activity plans for many years, there was no question of digging, plowing and growing there."
+                            "text": "It is interesting that the existing documents on the E40 waterway restoration make only brief reference to the fact that it will pass through unsafe areas with deposits of radionuclides. In my opinion, much of the rationale must focus on the radiological component. In general, it is strange to see this project. When I was the responsible secretary of the USSR Supreme Council Commission to overcome the Chernobyl disaster consequences, we controlled the expert group who developed the concept of safe living in these regions. These lands were deleted from all economic activity plans for many years, there was no question of digging, plowing and growing there."
                         }
                     ],
                     "quote": {
-                        "text": "\"When conducting dredging works, silt can go downstream the Pripyat and Dnieper to the Kiev reservoir, and about 30 million Ukrainians receive water from it and related reservoirs\""
+                        "text": "\"Dredging works may get silt run downstream the Pripyat and Dnieper to the Kiev reservoir that, together with the connected reservoirs, supplies water to about 30 million Ukrainians\""
                     },
-                    "title": "It is assumed that a lot of radionuclides accumulate in the silt, and if it is \"disturbed\", recontamination can occur. It's right?"
+                    "title": "Silt is assumed to accumulate a lot of radionuclides. So, such a \"disturbance\" of silt may allegedly cause the recontamination. Is that right?"
                 },
                 {
                     "paragraphs": [
@@ -46,7 +46,7 @@
         },
         {
             "profile": {
-                "caption": "Philosophy Doctor of Biology, staff member of the Polesye State Radiation and Ecological Reserve",
+                "caption": "Candidate of Biological Sciences (Ph.D.), staff member of the Polesye State Radiation and Ecological Reserve",
                 "name": "Valery Dombrovsky",
                 "portrait": "/static/experts/dombrovsky@2x.jpg"
             },
@@ -54,13 +54,13 @@
                 {
                     "paragraphs": [
                         {
-                            "text": "According to the Belarusian laws, on the radiation reserve territory any activity other than scientific and environmental protection is prohibited. It is regulated by the Law of the Republic of Belarus \"<a href='http://kodeksy-by.com/zakon_rb_o_pravovom_rezhime_territorij_podvergshihsya_radioaktivnomu_zagryazneniyu_v_rezultate_katastrofy_na_chernobylskoj_aes.htm' title='On the legal regime of territories exposed to radioactive contamination as a result of the Chernobyl nuclear disaster’>On the legal regime of the territories exposed radioactive contamination as a result of the Chernobyl nuclear disaster’</a>\" and <a href='http://pravo.newsby.org/belarus/ukaz0/uk267.htm' title=’Statute on the Reserve of the Republic of Belarus’>Statute on the Reserve of the Republic of Belarus</a>. But not so long ago the President of Belarus Alexander Lukashenko came to our reserve and approved the economic activity development. Therefore, the Statute on the Reserve is quite possible to be changed, and then the whole of the construction work will be in accordance with the documentation."
+                            "text": "According to the Belarusian laws, in the radiation reserve territory any activity other than scientific and environmental protection is prohibited. It is regulated by the Law \"<a href='http://kodeksy-by.com/zakon_rb_o_pravovom_rezhime_territorij_podvergshihsya_radioaktivnomu_zagryazneniyu_v_rezultate_katastrofy_na_chernobylskoj_aes.htm' title='On the legal regime of territories exposed to radioactive contamination as a result of the Chernobyl nuclear disaster’>On the legal regime of the territories exposed radioactive contamination as a result of the Chernobyl nuclear disaster’</a>\" and <a href='http://pravo.newsby.org/belarus/ukaz0/uk267.htm' title=’Statute on the Reserve of the Republic of Belarus’>Statute on the Reserve of the Republic of Belarus</a>\". But not so long ago the President of Belarus Alexander Lukashenko came to our reserve and approved the economic activity development. Therefore, the Statute on the Reserve is quite possible to be changed, and then the whole of the construction work will be in accordance with the documentation."
                         },
                         {
-                            "text": "It is still dangerous to run any kind of construction on the Polesye Reserve territory. In 2011, there was a similar story with a change in its size, then they wanted to take away part of the territory and use it for economic purposes. A commission consisting of different institutions representatives was created, and they made an unambiguous conclusion: it is dangerous to use this land. Even on conditionally clean territories there are radiation specks. The Polesye Reserve reminds a mosaic: it does not have large areas free from radiation. So the established boundaries of the reserve should not be changed - this is the expert commission official conclusion, and the radiation background has not changed for six years. In my opinion, it is better to leave the reserve with the existing ecosystem. Nature here has almost recovered in the form it was before the appearance of man."
+                            "text": "It is still dangerous to run any kind of construction in the Polesye Reserve territory. In 2011, there was a similar story with a change in its size, then they wanted to take away part of the territory and use it for economic purposes. A commission consisting of different institutions representatives was created, and they made an unambiguous conclusion: it is dangerous to use this land. Even on conditionally clean territories there are radiation specks. The Polesye Reserve reminds a mosaic: it does not have large areas free from radiation. So the established boundaries of the reserve should not be changed - this is the expert commission official conclusion, and the radiation background has not changed for six years. In my opinion, it is better to leave the reserve with the existing ecosystem. Nature here has almost recovered in the form it was before the appearance of man."
                         }
                     ],
-                    "title": "How are different kinds of work regulated in the territory of the Polesye Radiation Reserve?"
+                    "title": "How are different activities on the territory of the Polesye Radiation Reserve regulated?"
                 },
                 {
                     "paragraphs": [
@@ -69,9 +69,9 @@
                         }
                     ],
                     "quote": {
-                        "text": "\"From the ecological point of view, the E40 project implementation equals a disaster, because the Pripyat floodplain determines the whole life of the Polesye Reserve\""
+                        "text": "\"Ecologically, the E40 project implementation equals a disaster, because the Pripyat floodplain determines the whole life of the Polesye Reserve\""
                     },
-                    "title": "The E40 waterway project sets out the Pripyat riverbed change and the dam construction near the town of Narovlya. How would you comment on these plans?"
+                    "title": "The E40 waterway project involves the Pripyat riverbed change and the dam construction near the town of Narovlya. How would you comment on these plans?"
                 },
                 {
                     "paragraphs": [
@@ -79,14 +79,14 @@
                             "text": "From the ecological point of view, the E40 project implementation equals a disaster, because the Pripyat floodplain determines the whole life of the reserve. This is a unique place. Many animals and birds are attached to it at different stages of their life cycle, so if the floodplain is changed, there will be a threat to their existence. In Europe, there are almost no floodplain oak forests, while in the Polesye Reserve they are preserved in a rather peculiar form. If they disappear, rare species of animals that live only there will be extinct."
                         }
                     ],
-                    "title": "How can the situation in the region change if the E40 waterway passes through the Polesye Reserve?"
+                    "title": "How can the situation in the region change if the E40 waterway does pass through the Polesye Reserve?"
                 }
             ],
             "title": "Valery Dombrovsky"
         },
         {
             "profile": {
-                "caption": "Deputy Chairman of the National Ecological Center of Ukraine, member of the expert group Ukraine Nature Conservation Society",
+                "caption": "Deputy Chairman, the National Ecological Center of Ukraine, a member of the expert group Ukraine Nature Conservation Society",
                 "name": "Alexey Vasilyuk",
                 "portrait": "/static/experts/vasiluk@2x.jpg"
             },
@@ -105,5 +105,5 @@
     ],
     "slug": "xrays",
     "teaser": "",
-    "title": "What are the dire consequences of the E40 waterway construction in areas contaminated by radiation? Opinion of experts"
+    "title": "Experts on the Dire Consequences of the E40 in the Radiation Contaminated Areas"
 }
