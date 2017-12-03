@@ -14,7 +14,7 @@
           <nav id="toc" class="sticky">
             <ul class="list-reset m0" v-if="!showPetitionStats">
               <li class="mb2" v-for="(section, index) in content.sections" :key="index">
-                <a :href="'#section'+index" class="dark-grey" :class="{'active': section.isActive}" v-html="section.title" @click="smoothScroll($event, index)"></a>
+                <a :href="'#section' + index" class="dark-grey" :class="{'active': section.isActive}" v-html="section.title" @click="scrollTo($event, 'section' + index)"></a>
               </li>
             </ul>
             <petition-stats :lang="$route.params.lang" v-if="showPetitionStats"></petition-stats>
@@ -134,31 +134,6 @@ export default {
     init: function () {
       this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
       document.title = this.content.title
-    },
-
-    smoothScroll: function (event, sid) {
-      event.preventDefault()
-      this.content.sections.forEach((el) => {
-        if (el.id === sid) {
-          el.isActive = true
-        } else {
-          el.isActive = false
-        }
-      })
-
-      // scroll to the target
-      let ref = document.getElementById('section' + sid)
-      ref.scrollIntoView({behavior: 'smooth'})
-
-      // update the URL
-      let parts = window.location.hash.split('/')
-      let prevHashes = parts[parts.length - 1].split('#')
-      if (prevHashes.length > 1) {
-        prevHashes[1] = 'section' + sid
-        window.location.hash = parts.slice(0, parts.length - 1).join('/') + '/' + prevHashes.join('#')
-      } else {
-        window.location.hash += '#section' + sid
-      }
     },
 
     initPetition: function () {

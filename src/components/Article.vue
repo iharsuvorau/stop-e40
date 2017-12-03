@@ -14,7 +14,7 @@
           <nav id="toc" class="sticky">
             <ul class="list-reset m0">
               <li class="mb2" v-for="(section, index) in content.sections" :key="index">
-                <a :href="'#section'+index" class="dark-grey" :class="{'active': section.isActive}" v-html="section.title" @click="smoothScroll($event, index)"></a>
+                <a :href="'#section'+index" class="dark-grey" :class="{'active': section.isActive}" v-html="section.title" @click="scrollTo($event, 'section' + index)"></a>
               </li>
             </ul>
           </nav>

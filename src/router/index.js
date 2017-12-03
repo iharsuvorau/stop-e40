@@ -70,6 +70,15 @@ Vue.mixin({
         return 1
       }
       return 0
+    },
+
+    scrollTo (event, elementID) {
+      event.preventDefault()
+      let el = document.getElementById(elementID)
+      if (el) {
+        el.scrollIntoView()
+        // window.location.hash = '#' + elementID
+      }
     }
   }
 })
