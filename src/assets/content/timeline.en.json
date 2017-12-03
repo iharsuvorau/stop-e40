@@ -1,172 +1,211 @@
 {
-    "events": [
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "March 27-28",
-            "year": 2014
-        },
-        "paragraphs": [
-            {
-                "text": "The session consists of over 70 people from 7 organisations:"
-            },
-            {
-                "text": "<ul><li>Dnieper-Bug waterway RUMCE (lead pertner, Belarus)</li><li>Brest regional executive committee (Belarus)</li><li>Local development of international dialogue and cooperation assistant fund called Interaction (Belarus)</li><li>Administration of marchal of Lublin province (Poland)</li><li>Association of regional and local development called Progress (Poland)</li><li>Volhynian regional water resources authority (Ukraine)</li><li>ОО  Volynian assosiation of scientists and innovators (Ukraine)</li></ul>"
-            },
-            {
-                "text": "<strong>Task</strong>: to develop Reconstruction of the E40 trunck waterway in the Dnieper-Visla area: from strategy to planning project in 2014-2015."
-            },
-            {
-                "text": "<strong>Budget</strong>:  € 912,657 (€ 821,281 of them are financed by the EU)"
-            },
-            {
-                "text": "<strong>Structure of the comission</strong>: Management committee, chairman Nikolay Timofeevich Kotetskiy (managing director at the Dnieper-Bug waterway RUMCE); secretariate with Andrey Alexandrivich Rekesh at the head (used to work at Dnieper-Bug waterway RUMCE)"
-            }
-        ],
-        "place": "Brest, Belarus",
-        "title": "First session of Cross-border comission on development of the E40 water transport connection in the Dnieper-Visla area"
+  "events": [
+    {
+      "isActive": false,
+      "date": {"year": 2005, "monthDay": "October 18&ndash;20"},
+      "title": "The 49th session of the United Nations Economic Commission for Europe (ECE) Working Party on Inland Water Transport was held in Geneva from 18 to 20 October 2005",
+      "place": "Geneva, Switzerland",
+      "paragraphs": [
+        {"text": "The working group of the Belarusian delegation led by the permanent deputy of the Republic of Belarus in Geneva Andrei Savinykh. Participants of the session considered the trends of development of inland water transport of the member countries, discussed measures aimed at stimulating the traffic on inland waterways. Particular attention was paid to the prospects for the development of water transport infrastructure."},
+	{"text": "Andrei Savinykh made a presentation on the prospects for the construction of the Dnipro-Vysla-Oder water transport connection. According to the Belarusian delegation, the development of trade between the East and the West insists on the restoration of the water union. The volume of transportation on the route 'Dnepr - Vistula-Oder' can make about 3 million tons of cargo per year. Of particular importance, this route may have for the transportation of bulk goods (coal, ores, gravel, cement, metal products, etc.) towards Germany and the Scandinavian countries, as its length is 885 kilometers shorter than the traditional route of delivery by water the Danube-Main-Rhine. By the waterways of this transport connection, various tourist routes can also be laid."},
+	{"text": "Having considered the arguments of the Belarusian side, the Working Group supported the proposal for a comprehensive economic and environmental assessment of the Dnipro-Vysla-Oder water union and the establishment of a Rapporteurs Group for the preparation of documents for this project within the framework of the UNECE Inland Transport Committee. For the question from our country further answered the head of the department of foreign economic activity of the Ministry of Transport and Communications of Belarus Sergey Negrei."}
+      ]
+    },
+    {
+      "isActive": false,
+      "date": {"year": 2005, "monthDay": "November 30"},
+      "title": "the Belorussian-Polish Transport Commission was established within the framework of a joint commission on economic cooperation",
+      "place": "",
+      "paragraphs": [
+        {"text": "The transport commission from the Belarusian side was headed by First Deputy Minister of Transport and Communications Nikolai Verkhnevets."}
+      ]
+    },    
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "March 27-28",
+        "year": 2014
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "May 21",
-            "year": 2014
+      "paragraphs": [
+        {
+          "text": "The session consists of over 70 people from 7 organisations:"
         },
-        "paragraphs": [
-            {
-                "text": "a technical project which serves as a basis for development of <abbr title='feasibility study'>FS</abbr> for reconstruction of the E40 waterway has been approved"
-            }
-        ],
-        "place": "Lublin, Poland",
-        "title": "meeting of the Commission experts"
+        {
+          "text": "<ul><li>Dnieper-Bug waterway RUMCE (lead pertner, Belarus)</li><li>Brest regional executive committee (Belarus)</li><li>Local development of international dialogue and cooperation assistant fund called Interaction (Belarus)</li><li>Administration of marchal of Lublin province (Poland)</li><li>Association of regional and local development called Progress (Poland)</li><li>Volhynian regional water resources authority (Ukraine)</li><li>ОО  Volynian assosiation of scientists and innovators (Ukraine)</li></ul>"
+        },
+        {
+          "text": "<strong>Task</strong>: to develop Reconstruction of the E40 trunck waterway in the Dnieper-Visla area: from strategy to planning project in 2014-2015."
+        },
+        {
+          "text": "<strong>Budget</strong>:  € 912,657 (€ 821,281 of them are financed by the EU)"
+        },
+        {
+          "text": "<strong>Structure of the comission</strong>: Management committee, chairman Nikolay Timofeevich Kotetskiy (managing director at the Dnieper-Bug waterway RUMCE); secretariate with Andrey Alexandrivich Rekesh at the head (used to work at Dnieper-Bug waterway RUMCE)"
+        }
+      ],
+      "place": "Brest, Belarus",
+      "title": "First session of Cross-border comission on development of the E40 water transport connection in the Dnieper-Visla area"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "May 21",
+        "year": 2014
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "June ",
-            "year": 2014
-        },
-        "place": "",
-        "title": "Commission puts out an international tender for development of a <abbr title='feasibility study'>FS</abbr>"
+      "paragraphs": [
+        {
+          "text": "a technical project which serves as a basis for development of <abbr title='feasibility study'>FS</abbr> for reconstruction of the E40 waterway has been approved"
+        }
+      ],
+      "place": "Lublin, Poland",
+      "title": "meeting of the Commission experts"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "June",
+        "year": 2014
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "January 29",
-            "year": 2015
-        },
-        "paragraphs": [
-            {
-                "text": "International consortium structure:"
-            },
-            {
-                "text": "<ul><li>Transportation and logistics economics Institute (Germany)</li><li> ChernomorNIIproekt Governmental design-research and scientific-research maritime institute (Ukraine)</li><li>European-Ukranian business and innovation agency (Germany)</li><li>National Academy of Sciences of Belarus</li></ul>"
-            },
-            {
-                "text": "<strong>Budget of development of <abbr title='feasibility study'>FS</abbr></strong>: € 365 thousand."
-            }
-        ],
-        "place": "",
-        "title": "signing contract with the winning bidder - international consortium headed by Maritime institute, Gdansk"
+      "place": "",
+      "title": "Commission puts out an international tender for development of a <abbr title='feasibility study'>FS</abbr>"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "January 29",
+        "year": 2015
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "June 15-17",
-            "year": 2015
+      "paragraphs": [
+        {
+          "text": "International consortium structure:"
         },
-        "paragraphs": [
-            {
-                "text": " <strong>Results</strong>: as a result of the meeting three scenarios of the E40 reconstruction which involve creation of a flume connection Poland and Belarus are approved - all the scenarios concern exclusively the territory of Poland."
-            }
-        ],
-        "place": "Lutsk, Ukraine",
-        "title": "Consortium of development of <abbr title='feasibility study'>FS</abbr> performs on its first progress made"
+        {
+          "text": "<ul><li>Transportation and logistics economics Institute (Germany)</li><li> ChernomorNIIproekt Governmental design-research and scientific-research maritime institute (Ukraine)</li><li>European-Ukranian business and innovation agency (Germany)</li><li>National Academy of Sciences of Belarus</li></ul>"
+        },
+        {
+          "text": "<strong>Budget of development of <abbr title='feasibility study'>FS</abbr></strong>: € 365 thousand."
+        }
+      ],
+      "place": "",
+      "title": "signing contract with the winning bidder - international consortium headed by Maritime institute, Gdansk"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "June 15-17",
+        "year": 2015
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "November 17",
-            "year": 2015
-        },
-        "paragraphs": [
-            {
-                "text": "<strong>Results</strong>: a proirity way of reconstruction of shipping along the whole length of the E40 has been determinated. According to the plan a flume of about 160 kilometers will be constructed on Polish territory, as well as modernisation and construction of water-control facilities on Visla, Dnieper, Pripyat and Dnieper-Bug canal will be conducted. Total price of the project amounts to about  €12 bln of which €12 is work on Polish territory, €96,2-171,2 mln in Belarus and €31mln in Ukraine."
-            }
-        ],
-        "place": "Brest, Belarus",
-        "title": "second session of the Cross-border Comission"
+      "paragraphs": [
+        {
+          "text": " <strong>Results</strong>: as a result of the meeting three scenarios of the E40 reconstruction which involve creation of a flume connection Poland and Belarus are approved - all the scenarios concern exclusively the territory of Poland."
+        }
+      ],
+      "place": "Lutsk, Ukraine",
+      "title": "Consortium of development of <abbr title='feasibility study'>FS</abbr> performs on its first progress made"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "November 17",
+        "year": 2015
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "Decemder 15",
-            "year": 2015
-        },
-        "paragraphs": [
-            {
-                "text": "<strong>Results</strong>: according to ecologists there is a necessity to study more carefully the issue of how reconstruction and utilization of the E40 waterway will influence the water conditions and biodiversity of rivers producing it: Visla, Western Bug, Pripyat and Dnieper, along which a huge amount of natural territories, including those of international significance, are located."
-            }
-        ],
-        "place": "Lublin, Poland",
-        "title": "Environmental forum which presents the results of the consortium work and where potential risks for the environment are discussed"
+      "paragraphs": [
+        {
+          "text": "<strong>Results</strong>: a proirity way of reconstruction of shipping along the whole length of the E40 has been determinated. According to the plan a flume of about 160 kilometers will be constructed on Polish territory, as well as modernisation and construction of water-control facilities on Visla, Dnieper, Pripyat and Dnieper-Bug canal will be conducted. Total price of the project amounts to about  €12 bln of which €12 is work on Polish territory, €96,2-171,2 mln in Belarus and €31mln in Ukraine."
+        }
+      ],
+      "place": "Brest, Belarus",
+      "title": "second session of the Cross-border Comission"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "Decemder 15",
+        "year": 2015
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "December 16",
-            "year": 2015
-        },
-        "paragraphs": [
-            {
-                "text": "<strong>Results</strong>: adoption of resolution in which certain points urge to conduct environment impact assessment (EIA)  for the whole E40 and present actions on restricting negative environmental impact."
-            }
-        ],
-        "place": "",
-        "title": "third session of the Cross-border Commission"
+      "paragraphs": [
+        {
+          "text": "<strong>Results</strong>: according to ecologists there is a necessity to study more carefully the issue of how reconstruction and utilization of the E40 waterway will influence the water conditions and biodiversity of rivers producing it: Visla, Western Bug, Pripyat and Dnieper, along which a huge amount of natural territories, including those of international significance, are located."
+        }
+      ],
+      "place": "Lublin, Poland",
+      "title": "Environmental forum which presents the results of the consortium work and where potential risks for the environment are discussed"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "December 16",
+        "year": 2015
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "December 8-9",
-            "year": 2016
-        },
-        "paragraphs": [
-            {
-                "text": "<strong>Results</strong>: the main courses of activity for the working group have been defined  — <abbr title='estimation of impact on the environment'>ОВОС</abbr>  and creation of new navigational routes at the E40 border section in the area of Belarusian-Polish border."
-            }
-        ],
-        "place": "Brest, Belarus",
-        "title": "first meeting of Belarusian-Polish working group on the E40 waterway development"
+      "paragraphs": [
+        {
+          "text": "<strong>Results</strong>: adoption of resolution in which certain points urge to conduct environment impact assessment (EIA)  for the whole E40 and present actions on restricting negative environmental impact."
+        }
+      ],
+      "place": "",
+      "title": "third session of the Cross-border Commission"
+    },
+    {
+      "isActive": false,
+      "date": {"year": 2016, "monthDay": "August 15"},
+      "title": "Chinese Tech Corp. and its representative office in Belarus signed a partnership agreement with <a href='https://polishinstitute.pl/water/'>the Polish Institute</a> on the creation of a new Chinese silk road",
+      "place": "",
+      "paragraphs": [
+        {"text": "<a href='http://polska-3-0.pl/wp-content/uploads/2017/05/Program-POLAND-3.0.pdf'>The program Poland 3.0</a>, in which Poland should become a trans-nationalist world center. Construction of the E40 is mentioned here as one of the components on the way to the realization of its idea - the creation of the most important infrastructure and the most powerful project in Europe. This project will revive the Silk Road and develop inland waterways in Poland from 2016 to 2030: 'It means that Poland 3.0 corresponds very well with the strategic plan for co-operation of Poland and China.' The funding for projects E30, E40 and E70 is 16.6 billion euros, half of the amount allocated for the development of E40"}
+      ]
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "December 8-9",
+        "year": 2016
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "June 26-27",
-            "year": 2017
-        },
-        "paragraphs": [
-            {
-                "text": "<strong>Results</strong>: a development project of the waterway cross-border territory in the Brest area addressing construction of a new harbour has been discussed. A list of additional research, which ought to be done before making a decision to realise the next step of the E40 reconstruction project has been defined."
-            }
-        ],
-        "place": "Mikolajki, Poland",
-        "title": "second meeting of Belarusian-Polish working group on the E40 waterway reconstruction"
+      "paragraphs": [
+        {
+          "text": "<strong>Results</strong>: the main courses of activity for the working group have been defined  — <abbr title='estimation of impact on the environment'>ОВОС</abbr>  and creation of new navigational routes at the E40 border section in the area of Belarusian-Polish border."
+        }
+      ],
+      "place": "Brest, Belarus",
+      "title": "first meeting of Belarusian-Polish working group on the E40 waterway development"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "June 26-27",
+        "year": 2017
       },
-      {
-        "isActive": false,
-        "date": {
-            "monthDay": "July 19",
-            "year": 2017
-        },
-        "paragraphs": [
-            {
-                "text": "<strong>Results</strong>: Stop E40! Ecologic and economic outcomes of a new waterway constructon press conference during which independent experts estimate the potential outcomes of the E40 construction in Belarus is taking place in Minsk. After the press conference a number of publications containing an alternative point of view of the plan to reconstruct the waterway appear in Mass Media"
-            }
-        ],
-        "place": "Minsk, Belarus",
-        "title": "<mark>start of Stop E40 public campaign</mark> initiated by BirdLife Belarus, Bahna, Ecohome, Environmental Solutions Centre and Green Network "
-      }
-    ],
-    "title": "Event history"
+      "paragraphs": [
+        {
+          "text": "<strong>Results</strong>: a development project of the waterway cross-border territory in the Brest area addressing construction of a new harbour has been discussed. A list of additional research, which ought to be done before making a decision to realise the next step of the E40 reconstruction project has been defined."
+        }
+      ],
+      "place": "Mikolajki, Poland",
+      "title": "second meeting of Belarusian-Polish working group on the E40 waterway reconstruction"
+    },
+    {
+      "isActive": false,
+      "date": {
+        "monthDay": "July 19",
+        "year": 2017
+      },
+      "paragraphs": [
+        {
+          "text": "<strong>Results</strong>: Stop E40! Ecologic and economic outcomes of a new waterway constructon press conference during which independent experts estimate the potential outcomes of the E40 construction in Belarus is taking place in Minsk. After the press conference a number of publications containing an alternative point of view of the plan to reconstruct the waterway appear in Mass Media"
+        }
+      ],
+      "place": "Minsk, Belarus",
+      "title": "<mark>start of Stop E40 public campaign</mark> initiated by BirdLife Belarus, Bahna, Ecohome, Environmental Solutions Centre and Green Network "
+    },
+    {
+      "isActive": false,
+      "title": "The Belarus environmental alliance has sent <a href='https://drive.google.com/open?id=0B1Oup9NEQTK3Q01hTmMzZzM5NWs'>an appeal</a> against the projected E40 waterway to the European Union and other international organizations",
+      "date": {"monthDay": "2017", "year": "November 1"},
+      "place": "",
+      "paragraphs": [
+	{"text": "The environmentalists are urging the organizations to support a petition to terminate the project, which would connect the Baltic and the Black Sea. The appeal was sent on behalf of forty-two non-governmental organisations and a number of local residents from three nations: Belarus, Ukraine and Poland. Online <a href='https://www.change.org/p/stop-e40-let-us-protect-our-rivers-together'>petitions</a> have been signed by 5,910 Belarusians and Ukrainians, and by <a href='http://www.godzinadlaziemi.pl/'>23,371</a> Poles."},
+	{"text": "The defenders of the Pripyat River invite investors’ attention to highly adverse consequences of E40 project implementation and call for ultimate abandonment of plans to fund the project. The appeal was sent to the governments of three countries, the <a href='https://drive.google.com/file/d/0B1Oup9NEQTK3VFNVcENFTFlfWWc/view'>European Parliament</a>, the Secretariats of the <a href='https://drive.google.com/file/d/0B1Oup9NEQTK3Q01hTmMzZzM5NWs/view'>Århus</a> and <a href='https://stope40.org/en/articles/law'>Espoo</a> Conventions, and to several investment banks."}
+      ]
+    }
+  ],
+  "title": "Event history"
 }
