@@ -30,6 +30,7 @@ export default {
   data () {
     return {
       petitionAPI: 'https://api.change.org/v1/petitions/11887498?api_key=9d6e9d6859fff4e530136ed1b83c5ee941d73fd443aa3898b5bf283058de0fb0',
+      plpetitionAPI: 'http://www.godzinadlaziemi.pl/index.php?action=count',
       corsProxy: 'https://cors-anywhere.herokuapp.com/',
       petitionData: null,
       currentLabel: '',
@@ -41,6 +42,7 @@ export default {
     init: function () {
       this.petitionStats()
       this.fillLabels()
+      this.plPetitionStats()
     },
 
     petitionStats: function () {
@@ -51,6 +53,19 @@ export default {
         this.petitionData = data
       }).catch((err) => {
         console.log('error:', err)
+      })
+    },
+
+    plPetitionStats: function () {
+      fetch(this.corsProxy + this.plpetitionAPI).then(function (response) {
+        return response.json()
+      }).then((data) => {
+        let el = document.getElementById('pl-petition-stats')
+        if (this.$route.params.lang === 'ru') {
+          el.innerHTML = '&nbsp;&mdash;&nbsp;<strong class=\'red\'>' + String(data.count) + '</strong> подписались'
+        } else {
+          el.innerHTML = '&nbsp;&mdash;&nbsp;<strong class=\'red\'>' + String(data.count) + '</strong> signs'
+        }
       })
     },
 
