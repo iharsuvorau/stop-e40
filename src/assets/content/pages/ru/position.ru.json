@@ -51,6 +51,84 @@
         {"style": "bold", "text": "Учитывая вышесказанное, мы, общественные организации Беларуси, Украины и&nbsp;Польши намерены препятствовать созданию гидротехнических сооружений на&nbsp;реках Припять и&nbsp;Висла на&nbsp;всех этапах проекта, а&nbsp;в&nbsp;случае если такая инфраструктура будет создана&nbsp;&mdash; добиваться ее&nbsp;демонтажа."},
         {"style": "bold", "text": "Мы&nbsp;призываем правительства трех стран и&nbsp;институциональных инвесторов сосредоточиться на&nbsp;иных, более эффективных проектах в&nbsp;развитии транспорта и&nbsp;логистики. Высказываемся категорически против данного проекта на&nbsp;территории Беларуси, Украины и&nbsp;Польши&nbsp;и, требуем учесть мнение общественных организаций трех стран при решении вопроса о&nbsp;реализации проекта."}
       ]
+    },
+    {
+      "title": "Под позицией подписались",
+      "isActive": false,
+      "sections": [
+	{
+	  "title": "в Беларуси",
+	  "isActive": false,
+	  "paragraphs": [
+	    {
+	      "list": [
+		{"text": "общественная организация «Ахова птушак Бацькаўшчыны»", "link": "http://www.ptushki.org/"},
+		{"text": "общественная организация «Багна»", "link": "http://bahna.land/"},
+		{"text": "общественная организация «Экодом»", "link": "http://ecohome-ngo.by/"},
+		{"text": "учреждение «Центр экологических решений»", "link": "http://www.ecoidea.by/ru"},
+		{"text": "фонд «За чистую Припять»", "link": "http://www.pripyatfond.by/"},
+		{"text": "общественная организация  «Время Земли»", "link": "https://vk.com/vremyazemli"},
+		{"text": "международное общественное объединение «Экопартнёрство»", "link": "http://ecopartnerstvo.by/"},
+		{"text": "культурно-экологическое учреждение «Эка-майстэрні»", "link": "http://www.ekamajsterni.by/"},
+		{"text": "центр этичного отношения к природе", "link": "https://www.ecoetika.by/"},
+		{"text": "просветительское общественное учреждение «Фонд имени Льва Сапеги»", "link": "http://sapieha.org/"},
+		{"text": "общественная организация «Земельная реформа»", "link": "https://land-reform.com/wp/"},
+		{"text": "общественная организация  «Образовательный центр Пост»", "link": "https://www.larpwriter.by/"},
+		{"text": "центр поддержки онкопациентов «Во имя жизни»", "link": "http://oncopatient.by/"},
+		{"text": "просветительское учреждение «Центр правовой трансформации»", "link": "http://www.lawtrend.org/"},
+		{"text": "общественная организация «Минское велосипедное общество»", "link": "http://bike.org.by/"},
+		{"text": "просветительское учреждение «Офис европейской экспертизы и коммуникации»", "link": "http://oeec.by/"},
+		{"text": "международное просветительское общественное объединение «АКТ»", "link": "http://www.actngo.info/"},
+		{"text": "социально-культурное учреждение «Крылы Халопа»", "link": "http://teatrkh.com/"},
+		{"text": "местный благотворительный фонд «Фонд развития Брестской крепости»", "link": "http://www.brestheritage.by/"},
+		{"text": "информационно-просветительское учреждение «За вело Брест»", "link": "https://vk.com/zavelobrest"}
+	      ]
+	    }
+	  ]
+	},	
+	{
+	  "title": "в Украине",
+	  "isActive": false,
+	  "paragraphs": [
+	    {
+	      "list": [
+		{"text": "WWF Украины", "link": "http://wwf.panda.org/uk/"},
+		{"text": "общественная кампания «Друзья парков»", "link": "https://www.facebook.com/DruziParkiv/"},
+		{"text": "экологический клуб «Край»", "link": "http://allref.com.ua/uk/skachaty/Ekologichniiy_klub_Kraiy_%28dityacha_organizaciya_ekologichnogo_spryamuvannya%29"},
+		{"text": "национальный экологический центр Украины", "link": "http://necu.org.ua/"},
+		{"text": "дружина охраны природы «Зелёное будущее»", "link": "http://pryroda.in.ua/dop-kyiv/"},
+		{"text": "экологическая группа «Печенеги»", "link": "http://pechenegy.org.ua/"},
+		{"text": "экспертная группа «Ukrainian Nature Conservation Group»", "link": ""},
+		{"text": "Никопольское отделение международного фонда Днепра", "link": "https://youcontrol.com.ua/catalog/company_details/25724058/"},
+		{"text": "западный центр украинского отделения международного центра научной культуры", "link": ""},
+		{"text": "украинская экологическая ассоциация «Зеленый мир»", "link": "http://www.zelenysvit.org.ua/"},
+		{"text": "благотворительный фонд спасения детей от последствий чернобыльской катастрофы", "link": ""},
+		{"text": "региональное молодёжное экологическое объединение «Экосфера»", "link": "http://www.ekosphera.org/index.php?option=com_content&view=article&id=2&Itemid=184"},
+		{"text": "(свое собственное исследование экологической составляющей рисков Е40 начала международная благотворительная организация «<a href='http://epl.org.ua/'>Экология-Право-Люди</a>»)", "link": ""}
+	      ]
+	    }
+	  ]
+	},
+	{
+	  "title": "в Европейском союзе",
+	  "isActive": false,
+	  "paragraphs": [
+	    {
+	      "list": [
+		{"text": "European Wilderness Society", "link": "http://wilderness-society.org/"},
+		{"text": "Greenpeace CEE", "link": "http://www.climatenetwork.org/profile/member/greenpeace-cee-central-and-eastern-europe"},
+		{"text": "Fundacja Dzika Polska", "link": "http://dzikapolska.org/"},
+		{"text": "France Nature Environnement (Agir pour l'environnement)", "link": "https://www.agirpourlenvironnement.org/node/49"},
+		{"text": "<a href='http://www.ramsar.org/'>Ramsar international</a> и <a href='https://www.wetlands.org/'>Wetlands International</a>"},
+		{"text": "WWF Poland", "link": "http://wwf.panda.org/who_we_are/wwf_offices/poland/"},
+		{"text": "Coalition Clean Baltic", "link": "http://www.ccb.se/"},
+		{"text": "Реки без границ", "link": "http://riverswithoutborders.org/"},
+		{"text": "(а также <a href='http://riverwatch.eu/'>RiverWatch</a> и <a href='http://wilderness-society.org/'>Europian Wilderness Society</a> создали <a href='https://drive.google.com/drive/u/1/folders/0B1Oup9NEQTK3Ql9pWjJFUjBnMEE'>письма поддержки</a>)"}
+	      ]
+	    }
+	  ]
+	}	
+      ]
     }
   ]
 }
