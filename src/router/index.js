@@ -10,9 +10,11 @@ import Footer from '@/components/Footer'
 import HeroUnit from '@/components/HeroUnit'
 import ActionNav from '@/components/ActionNav'
 import ArticlesList from '@/components/ArticlesList'
+import VueHead from 'vue-head'
 
 require('smoothscroll-polyfill').polyfill()
 
+Vue.use(VueHead)
 Vue.use(Router)
 
 Vue.component('top-nav', TopNav)
@@ -26,7 +28,11 @@ Vue.mixin({
   data () {
     return {
       acceptableLangs: ['en', 'be', 'ru'],
-      defaultTitle: 'Общественная кампания против восстановления водного пути Е40'
+      defaultTitle: 'Общественная кампания против восстановления водного пути Е40',
+      defaultPageTitle: {
+        'ru': 'Общественная кампания против восстановления водного пути Е40',
+        'en': 'Public campaign against the E40 waterway renovation project'
+      }
     }
   },
 

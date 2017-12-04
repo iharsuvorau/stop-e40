@@ -115,6 +115,7 @@ export default {
       if (from.params.lang !== to.params.lang || from.params.slug !== to.params.slug) {
         this.init()
         this.initPetition()
+        this.$emit('updateHead')
       }
     }
   },
@@ -130,10 +131,31 @@ export default {
     }
   },
 
+  // TODO: the head doesn't change between the same component pages
+
+  head: {
+    title: function () {
+      return {
+        inner: this.content.title,
+        separator: '/',
+        complement: this.defaultPageTitle[this.$route.params.lang]
+      }
+    },
+    meta: function () {
+      return [
+        {name: 'og:title', content: this.content.title},
+        {name: 'og:type', content: 'article'},
+        {name: 'og:image', content: window.location.host + '/static/covers/public_opinion-3@2x.jpg'},
+        {name: 'og:url', content: window.location},
+        {name: 'description', content: this.content.teaser}
+      ]
+    }
+  },
+
   methods: {
     init: function () {
       this.content = this.loadContent(this.$route.params.lang, 'pages/' + this.$route.params.lang + '/' + this.$route.params.slug)
-      document.title = this.content.title
+      // document.title = this.content.title
     },
 
     initPetition: function () {
@@ -143,6 +165,14 @@ export default {
       } else {
         this.showPetitionStats = false
         this.showPetitionReasons = false
+      }
+    },
+
+    getPageTitle: function () {
+      return {
+        inner: this.content.title,
+        separator: '/',
+        complement: this.defaultPageTitle[this.$route.params.lang]
       }
     }
   }

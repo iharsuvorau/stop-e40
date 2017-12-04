@@ -3,10 +3,13 @@
     <main class="flex flex-column">
       <top-nav :isWhite="false" :hasLogo="true" :lang="$route.params.lang"></top-nav>
       <article class="flex flex-wrap justify-between">
-        <header :id="'article_header_' + content.id" class="px3 py4 col-12 bg-light-grey" :class="{'white': content.cover}">
-          <div class="col-9" :class="{'white': content.cover, 'black': !content.cover}">
+        <header :id="'article_header_' + content.id" class="px3 py4 col-12 bg-light-grey flex flex-column items-stretch" :class="{'white': content.cover}">
+          <div class="col-9 flex flex-auto flex-column items-stretch" :class="{'white': content.cover, 'black': !content.cover}">
             <h1 class="m0" v-html="content.title"></h1>
-            <p class="m0 mt3" v-if="content.date" v-html="content.date"></p>
+            <div class="flex flex-column items-stretch flex-auto justify-between">
+              <p class="m0 mt3" v-if="content.date" v-html="content.date"></p>
+              <div id="social-sharing"></div>
+            </div>
           </div>
         </header>
 
@@ -91,20 +94,23 @@
 import HeroUnit from '@/components/HeroUnit'
 import ActionNav from '@/components/ActionNav'
 
+require('@/share.js') // Yandex Social Sharing API
+
 export default {
   created () {
     this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
-    document.title = this.content.title.replace(/&nbsp;/g, ' ')
   },
 
   mounted () {
     this.addBgImage(this.content.cover, this.content.id)
+    this.initSocialBtns()
   },
 
   watch: {
     '$route' (to, from) {
       if (from.params.lang !== to.params.lang || from.params.slug !== to.params.slug) {
         this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
+        this.$emit('updateHead')
         document.title = this.content.title.replace(/&nbsp;/g, ' ')
 
         // a hack to load the image for the same component
@@ -126,30 +132,40 @@ export default {
     }
   },
 
+  head: {
+    title: function () {
+      return {
+        inner: this.content.title,
+        separator: '/',
+        complement: this.defaultPageTitle[this.$route.params.lang]
+      }
+    },
+    meta: function () {
+      return [
+        {name: 'og:title', content: this.content.title},
+        {name: 'og:type', content: 'article'},
+        {name: 'og:image', content: window.location.host + this.content.cover},
+        {name: 'og:url', content: window.location},
+        {name: 'description', content: this.content.lead}
+      ]
+    }
+  },
+
   methods: {
-    smoothScroll: function (event, sid) {
-      event.preventDefault()
-      this.content.sections.forEach((el) => {
-        if (el.id === sid) {
-          el.isActive = true
-        } else {
-          el.isActive = false
+    initSocialBtns: function () {
+      window.Ya.share2('social-sharing', {
+        content: {
+          url: window.location,
+          title: this.content.title,
+          description: this.content.lead,
+          image: this.content.cover
+        },
+        theme: {
+          services: 'gplus,facebook,twitter,vkontakte',
+          counter: true,
+          lang: this.$route.params.lang
         }
       })
-
-      // scroll to the target
-      let ref = document.getElementById('section' + sid)
-      ref.scrollIntoView({behavior: 'smooth'})
-
-      // update the URL
-      let parts = window.location.hash.split('/')
-      let prevHashes = parts[parts.length - 1].split('#')
-      if (prevHashes.length > 1) {
-        prevHashes[1] = 'section' + sid
-        window.location.hash = parts.slice(0, parts.length - 1).join('/') + '/' + prevHashes.join('#')
-      } else {
-        window.location.hash += '#section' + sid
-      }
     },
 
     addBgImage: function (url, id) {

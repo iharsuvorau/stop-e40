@@ -12,7 +12,6 @@
 import ArticlesList from '@/components/ArticlesList'
 
 export default {
-
   components: {
     'articles-list': ArticlesList
   },
@@ -21,6 +20,33 @@ export default {
   },
 
   created () {
+  },
+
+  data () {
+    return {
+      titles: {
+        ru: 'Интервью экспертов и другие материалы',
+        en: 'Expert interviews and other materials'
+      }
+    }
+  },
+
+  head: {
+    title: function () {
+      return {
+        inner: this.titles[this.$route.params.lang],
+        separator: '/',
+        complement: this.defaultPageTitle[this.$route.params.lang]
+      }
+    },
+    meta: function () {
+      return [
+        {name: 'og:title', content: this.content.title},
+        {name: 'og:type', content: 'website'},
+        {name: 'og:image', content: window.location.host + '/static/covers/public_opinion-3@2x.jpg'},
+        {name: 'og:url', content: window.location}
+      ]
+    }
   }
 }
 </script>

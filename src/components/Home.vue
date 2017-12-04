@@ -40,9 +40,35 @@ export default {
     }
   },
 
+  watch: {
+    '$route' (to, from) {
+      if (from.params.lang !== to.params.lang) {
+        this.content = this.loadContent(this.lang, 'footer')
+      }
+    }
+  },
+
+  head: {
+    title: function () {
+      return {
+        inner: this.defaultPageTitle[this.defineDefaultLang()],
+        separator: ' ',
+        complement: ' '
+      }
+    },
+    meta: function () {
+      return [
+        {name: 'og:title', content: this.defaultPageTitle[this.$route.params.lang]},
+        {name: 'og:type', content: 'website'},
+        {name: 'og:image', content: window.location.host + '/static/covers/public_opinion-3@2x.jpg'},
+        {name: 'og:url', content: window.location}
+      ]
+    }
+  },
+
   created: function () {
     this.defaultLang = this.defineDefaultLang(this.$route.params.lang)
-    document.title = this.defaultTitle
+    // document.title = this.defaultTitle
   }
 }
 </script>
