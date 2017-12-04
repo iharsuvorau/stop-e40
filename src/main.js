@@ -8,6 +8,7 @@ import 'whatwg-fetch'
 
 require('./assets/styles/basscss.min.css')
 require('./assets/styles/basic.css')
+require('./assets/styles/fa.scss')
 
 Vue.config.productionTip = false
 

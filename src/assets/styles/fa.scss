@@ -1,0 +1,18 @@
+$fa-font-path: "../../../node_modules/font-awesome/fonts";
+@import '../../../node_modules/font-awesome/scss/font-awesome.scss';
+@import 'colors';
+
+.social-btn {
+    cursor: pointer;
+    font-size: 1.5em;
+    &:hover, &:focus {
+	color: $green;
+    }
+}
+
+.social-btn.on-light {
+    color: lighten($dark-grey, 30%);
+    &:hover, &:focus {
+	color: $green;
+    }
+}

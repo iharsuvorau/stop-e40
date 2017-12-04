@@ -16,12 +16,6 @@ export default {
     'articles-list': ArticlesList
   },
 
-  computed: {
-  },
-
-  created () {
-  },
-
   data () {
     return {
       titles: {
@@ -41,7 +35,7 @@ export default {
     },
     meta: function () {
       return [
-        {name: 'og:title', content: this.content.title},
+        {name: 'og:title', content: this.titles[this.$route.params.lang]},
         {name: 'og:type', content: 'website'},
         {name: 'og:image', content: window.location.host + '/static/covers/public_opinion-3@2x.jpg'},
         {name: 'og:url', content: window.location}

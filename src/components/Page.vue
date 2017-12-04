@@ -7,6 +7,29 @@
           <div class="lg-col-9">
             <h1 class="m0" v-if="content.title" v-html="content.title"></h1>
             <p class="m0 h3 mt3" v-if="content.teaser" v-html="content.teaser"></p>
+            <social-sharing :url="windowLocation"
+                            :title="content.title"
+                            :description="content.teaser"
+                            hashtags="stop_e40"
+                            inline-template>
+              <div class="mt2">
+                <network network="googleplus">
+                  <i class="fa fa-fw fa-google-plus social-btn on-light"></i>
+                </network>
+                <network network="facebook">
+                  <i class="fa fa-fw fa-facebook social-btn on-light"></i>
+                </network>
+                <network network="vk">
+                  <i class="fa fa-fw fa-vk social-btn on-light" aria-hidden="true"></i>
+                </network>
+                <network network="twitter">
+                  <i class="fa fa-fw fa-twitter social-btn on-light"></i>
+                </network>                
+                <network network="linkedin">
+                  <i class="fa fa-fw fa-linkedin social-btn on-light"></i>
+                </network>
+              </div>
+            </social-sharing>
           </div>
         </header>
 
@@ -116,6 +139,7 @@ export default {
         this.init()
         this.initPetition()
         this.$emit('updateHead')
+        this.windowLocation = String(window.location)
       }
     }
   },
@@ -127,7 +151,8 @@ export default {
       corsProxy: 'https://cors-anywhere.herokuapp.com/',
       petitionData: {},
       showPetitionStats: false,
-      showPetitionReasons: false
+      showPetitionReasons: false,
+      windowLocation: String(window.location)
     }
   },
 

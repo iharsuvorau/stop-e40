@@ -12,6 +12,9 @@ import ActionNav from '@/components/ActionNav'
 import ArticlesList from '@/components/ArticlesList'
 import VueHead from 'vue-head'
 
+var SocialSharing = require('vue-social-sharing')
+Vue.use(SocialSharing)
+
 require('smoothscroll-polyfill').polyfill()
 
 Vue.use(VueHead)
