@@ -88,6 +88,13 @@ Vue.mixin({
         el.scrollIntoView()
         // window.location.hash = '#' + elementID
       }
+    },
+
+    convertHTMLToText (s) {
+      let parser = new DOMParser()
+      let dom = parser.parseFromString('<!doctype html><body>' + s, 'text/html')
+      let decodedString = dom.body.textContent
+      return decodedString
     }
   }
 })

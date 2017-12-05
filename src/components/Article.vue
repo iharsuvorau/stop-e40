@@ -9,8 +9,8 @@
           <div class="flex flex-column items-stretch flex-auto justify-between">
             <p class="m0 mt3" v-if="content.date" v-html="content.date"></p>
             <social-sharing :url="windowLocation"
-                            :title="content.title"
-                            :description="content.lead"
+                            :title="convertHTMLToText(content.title)"
+                            :description="convertHTMLToText(content.lead)"
                             hashtags="stop_e40"
                             inline-template>
               <div class="mt1">
@@ -130,12 +130,10 @@ export default {
       if (from.params.lang !== to.params.lang || from.params.slug !== to.params.slug) {
         this.content = this.loadContent(this.$route.params.lang, 'articles/' + this.$route.params.lang + '/' + this.$route.params.slug)
         this.$emit('updateHead')
-        document.title = this.content.title.replace(/&nbsp;/g, ' ')
         this.windowLocation = String(window.location)
-        // a hack to load the image for the same component
         setTimeout(() => {
           this.addBgImage(this.content.cover, this.content.id)
-        }, 0)
+        }, 0) // a hack to load the image for the same component
       }
     }
   },
@@ -155,18 +153,18 @@ export default {
   head: {
     title: function () {
       return {
-        inner: this.content.title,
+        inner: this.convertHTMLToText(this.content.title),
         separator: '/',
         complement: this.defaultPageTitle[this.$route.params.lang]
       }
     },
     meta: function () {
       return [
-        {name: 'og:title', content: this.content.title},
+        {name: 'og:title', content: this.convertHTMLToText(this.content.title)},
         {name: 'og:type', content: 'article'},
         {name: 'og:image', content: window.location.host + this.content.cover},
         {name: 'og:url', content: window.location},
-        {name: 'description', content: this.content.lead}
+        {name: 'description', content: this.convertHTMLToText(this.content.lead)}
       ]
     }
   },

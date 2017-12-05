@@ -8,8 +8,8 @@
             <h1 class="m0" v-if="content.title" v-html="content.title"></h1>
             <p class="m0 h3 mt3" v-if="content.teaser" v-html="content.teaser"></p>
             <social-sharing :url="windowLocation"
-                            :title="content.title"
-                            :description="content.teaser"
+                            :title="convertHTMLToText(content.title)"
+                            :description="convertHTMLToText(content.teaser)"
                             hashtags="stop_e40"
                             inline-template>
               <div class="mt2">
@@ -161,18 +161,18 @@ export default {
   head: {
     title: function () {
       return {
-        inner: this.content.title,
+        inner: this.convertHTMLToText(this.content.title),
         separator: '/',
         complement: this.defaultPageTitle[this.$route.params.lang]
       }
     },
     meta: function () {
       return [
-        {name: 'og:title', content: this.content.title},
+        {name: 'og:title', content: this.convertHTMLToText(this.content.title)},
         {name: 'og:type', content: 'article'},
         {name: 'og:image', content: window.location.host + '/static/covers/public_opinion-3@2x.jpg'},
         {name: 'og:url', content: window.location},
-        {name: 'description', content: this.content.teaser}
+        {name: 'description', content: this.convertHTMLToText(this.content.teaser)}
       ]
     }
   },
