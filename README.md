@@ -33,3 +33,36 @@ The project contains two types of content to translate:
 
 * `src/assets/content/articles`
 * `src/assets/content/pages`
+
+## Deployment
+
+- Upload `./docs` folder to a server.
+- Setup a proxy server to serve it.
+- Setup the domain to point to the server.
+- Acquire an SSL-certificate.
+
+Below is the example configuration for caddy:
+
+```
+stope40.org {
+    root /path/to/stope40
+    rewrite {
+        regexp .*
+        to {path} /
+    }
+    log access.log {
+        rotate {
+            size 50  # Rotate after 50 MB
+            age  30  # Keep log files for 30 days
+            keep 20  # Keep at most 20 log files
+        }
+    }
+    errors {
+        log error.log {
+            size 50  # Rotate after 50 MB
+            age  30  # Keep rotated files for 30 days
+            keep 20  # Keep at most 20 log files
+        }
+    }
+}
+```
