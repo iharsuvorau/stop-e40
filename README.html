@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1 id="stop-e40">stop-e40</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The project is a <code>vue.js</code> project which uses <code>webpack</code> to run and build the final output. The output (<code>./docs/</code>) are static files so the site can be hosted anywhere. It&#8217;s generated using <code>vue cli</code> (https://cli.vuejs.org/).</p>
+
+<p>For development you need to run <code>npm dev</code> to run the site and autocompile all dependent source files.</p>
+
+<h2 id="buildsetup">Build Setup</h2>
+
+<pre><code class="bash"># install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+</code></pre>
+
+<p>For detailed explanation on how things work, checkout the <a href="http://vuejs-templates.github.io/webpack/">guide</a> and <a href="http://vuejs.github.io/vue-loader">docs for vue-loader</a>.</p>
+
+<h2 id="internalizationandtranslations">Internalization and translations</h2>
+
+<p>The project contains two types of content to translate:</p>
+
+<ul>
+<li>UI content</li>
+<li>Main content</li>
+</ul>
+
+<p><em>UI content</em> is located at <code>src/assets/content</code> folder and each file corresponds to a component in the Vue application.</p>
+
+<p><em>Main content</em> is located at</p>
+
+<ul>
+<li><code>src/assets/content/articles</code></li>
+<li><code>src/assets/content/pages</code></li>
+</ul>
+
+<p>There is a folder for <em>draft translations</em> at <code>./translations/</code>. These documents used only to generate the final JSON-files for the website.</p>
+
+<h2 id="deployment">Deployment</h2>
+
+<ul>
+<li>Upload <code>./docs</code> folder to a server.</li>
+<li>Setup a proxy server to serve it.</li>
+<li>Setup the domain to point to the server.</li>
+<li>Acquire an SSL-certificate.</li>
+</ul>
+
+<p>Below is the example configuration for caddy:</p>
+
+<pre><code>stope40.org {
+    root /path/to/stope40
+    rewrite {
+        regexp .*
+        to {path} /
+    }
+    log access.log {
+        rotate {
+            size 50  # Rotate after 50 MB
+            age  30  # Keep log files for 30 days
+            keep 20  # Keep at most 20 log files
+        }
+    }
+    errors {
+        log error.log {
+            size 50  # Rotate after 50 MB
+            age  30  # Keep rotated files for 30 days
+            keep 20  # Keep at most 20 log files
+        }
+    }
+}
+</code></pre>
+
+</body>
+</html>

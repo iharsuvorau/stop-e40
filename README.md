@@ -1,6 +1,10 @@
 # stop-e40
 
-> A Vue.js project
+## Introduction
+
+The project is a `vue.js` project which uses `webpack` to run and build the final output. The output (`./docs/`) are static files so the site can be hosted anywhere. It's generated using `vue cli` (https://cli.vuejs.org/).
+
+For development you need to run `npm dev` to run the site and autocompile all dependent source files. 
 
 ## Build Setup
 
@@ -33,6 +37,8 @@ The project contains two types of content to translate:
 
 * `src/assets/content/articles`
 * `src/assets/content/pages`
+
+There is a folder for *draft translations* at `./translations/`. These documents used only to generate the final JSON-files for the website.
 
 ## Deployment
 
