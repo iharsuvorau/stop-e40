@@ -96,6 +96,7 @@ export default {
           // add an image
           cover.style.backgroundImage = 'url(' + el.cover + ')'
           cover.style.backgroundSize = 'cover'
+          cover.style.backgroundPosition = 'center'
 
           // highlight the corresponding title
           let title = document.getElementById('title_link_' + el.id)
